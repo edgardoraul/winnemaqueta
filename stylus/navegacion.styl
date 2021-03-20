@@ -1,0 +1,37 @@
+// Navegación
+
+.encabezado__navegacion
+	background color_negro
+
+	&-ul
+		list-style none
+		margin 0
+		padding 0
+	
+	&-enlace
+		border-top 1px dotted rgba(color_texto,0.2)
+		color color_subtitulo
+		display block
+		font-family fuente_titulo
+		padding 0.5rem 1rem
+		text-decoration none
+		text-transform uppercase
+
+		&:hover
+			background color_fondo
+			color color_texto
+
+		&Activo
+			color color_advertencia
+			&:hover
+				color color_advertencia
+
+.abierto
+	height auto
+	opacity 1
+	visibility visible
+
+.cerrado
+	height 0
+	opacity 0
+	visibility hidden

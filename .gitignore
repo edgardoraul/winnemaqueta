@@ -1,0 +1,15 @@
+.htaccess
+*.php
+*.xml
+*.json
+*.zip
+*.rar
+*.txt
+demo.html
+
+.git
+demo-files
+git
+ie7
+node_modules
+test

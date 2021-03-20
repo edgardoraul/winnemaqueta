@@ -1,0 +1,38 @@
+.boton
+	background color_titulo
+	border none
+	border-radius 4rem
+	color color_blanco
+	font-family fuente_titulo
+	padding 1rem 2rem
+	text-decoration none
+	text-transform uppercase
+
+	&:hover
+		background color_subtitulo
+		cursor pointer
+
+
+	&-grande
+		font-size 1.5rem
+	
+	&-advertencia
+		background color_advertencia
+		color color_fondo
+		&:hover
+			background color_advertencia
+			color color_blanco
+			text-shadow 0px 0px 1px #000
+
+	&-deshabilitado
+		background color_texto
+		color color_blanco
+
+		&:hover
+			background color_texto
+			color color_blanco
+			cursor not-allowed
+
+	
+	&-correcto
+		background color_subtitulo_2
