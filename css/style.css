@@ -1,1283 +1,1007 @@
-/* normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@charset "UTF-8";
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+========================================================================== */
+/**
+* 1. Correct the line height in all browsers.
+* 2. Prevent adjustments of font size after orientation changes in iOS.
+*/
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+========================================================================== */
+/**
+* Remove the margin in all browsers.
+*/
 body {
-  margin: 0;
-}
+  margin: 0; }
+
+/**
+* Render the `main` element consistently in IE.
+*/
 main {
-  display: block;
-}
+  display: block; }
+
+/**
+* Correct the font size and margin on `h1` elements within `section` and
+* `article` contexts in Chrome, Firefox, and Safari.
+*/
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
+
+/* Grouping content
+========================================================================== */
+/**
+* 1. Add the correct box sizing in Firefox.
+* 2. Show the overflow in Edge and IE.
+*/
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+========================================================================== */
+/**
+* Remove the gray background on active links in IE 10.
+*/
 a {
-  background-color: transparent;
-}
+  background-color: transparent; }
+
+/**
+* 1. Remove the bottom border in Chrome 57-
+* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+* Add the correct font weight in Chrome, Edge, and Safari.
+*/
 b,
 strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+* Add the correct font size in all browsers.
+*/
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
+
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
+
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
+
+/* Embedded content
+========================================================================== */
+/**
+* Remove the border on images inside links in IE 10.
+*/
 img {
-  border-style: none;
-}
+  border-style: none; }
+
+/* Forms
+========================================================================== */
+/**
+* 1. Change the font styles in all browsers.
+* 2. Remove the margin in Firefox and Safari.
+*/
 button,
 input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+* Show the overflow in IE.
+* 1. Show the overflow in Edge.
+*/
 button,
 input {
-/* 1 */
-  overflow: visible;
-}
+  /* 1 */
+  overflow: visible; }
+
+/**
+* Remove the inheritance of text transform in Edge, Firefox, and IE.
+* 1. Remove the inheritance of text transform in Firefox.
+*/
 button,
 select {
-/* 1 */
-  text-transform: none;
-}
+  /* 1 */
+  text-transform: none; }
+
+/**
+* Correct the inability to style clickable types in iOS and Safari.
+*/
 button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
-}
+  -webkit-appearance: button; }
+
+/**
+* Remove the inner border and padding in Firefox.
+*/
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
+
+/**
+* Restore the focus styles unset by the previous rule.
+*/
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+  outline: 1px dotted ButtonText; }
+
+/**
+* Correct the padding in Firefox.
+*/
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+* 1. Correct the text wrapping in Edge and IE.
+* 2. Correct the color inheritance from `fieldset` elements in IE.
+* 3. Remove the padding so developers are not caught out when they zero out
+*    `fieldset` elements in all browsers.
+*/
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+* Add the correct vertical alignment in Chrome, Firefox, and Opera.
+*/
 progress {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
+
+/**
+* Remove the default vertical scrollbar in IE 10+.
+*/
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
+
+/**
+* 1. Add the correct box sizing in IE 10.
+* 2. Remove the padding in IE 10.
+*/
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+  height: auto; }
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+* Remove the inner padding in Chrome and Safari on macOS.
+*/
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
+
+/**
+* 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+========================================================================== */
+/*
+* Add the correct display in Edge, IE 10+, and Firefox.
+*/
 details {
-  display: block;
-}
+  display: block; }
+
+/*
+* Add the correct display in all browsers.
+*/
 summary {
-  display: list-item;
-}
+  display: list-item; }
+
+/* Misc
+========================================================================== */
+/**
+* Add the correct display in IE 10+.
+*/
 template {
-  display: none;
-}
+  display: none; }
+
+/**
+* Add the correct display in IE 10.
+*/
 [hidden] {
-  display: none;
-}
+  display: none; }
+
+.separador {
+  clear: both; }
+
 @font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?8s84u8");
-  src: url("../fonts/icomoon.eot?8s84u8#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?8s84u8") format('truetype'), url("../fonts/icomoon.woff?8s84u8") format('woff'), url("../fonts/icomoon.svg?8s84u8#icomoon") format('svg');
+  font-family: "icomoon";
+  src: url("../fonts/icomoon-v1.0/fonts/icomoon.eot?7ajrfd");
+  src: url("../fonts/icomoon-v1.0/fonts/icomoon.eot?7ajrfd#iefix") format("embedded-opentype"), url("../fonts/icomoon-v1.0/fonts/icomoon.ttf?7ajrfd") format("truetype"), url("../fonts/icomoon-v1.0/fonts/icomoon.woff?7ajrfd") format("woff"), url("../fonts/icomoon-v1.0/fonts/icomoon.svg?7ajrfd#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
-  font-display: block;
-}
+  font-display: block; }
 i {
-  font-family: 'icomoon' !important;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-/* Better Font Rendering =========== */
+  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
+
 .icon-bullhorn:before {
-  content: "\e946";
-}
+  content: ""; }
+
+.icon-price-tag:before {
+  content: ""; }
+
+.icon-price-tags:before {
+  content: ""; }
+
+.icon-barcode:before {
+  content: ""; }
+
+.icon-qrcode:before {
+  content: ""; }
+
+.icon-coin-dollar:before {
+  content: ""; }
+
+.icon-coin-euro:before {
+  content: ""; }
+
+.icon-coin-pound:before {
+  content: ""; }
+
+.icon-coin-yen:before {
+  content: ""; }
+
+.icon-credit-card:before {
+  content: ""; }
+
 .icon-phone2:before {
-  content: "\e947";
-}
+  content: ""; }
+
 .icon-phone-hang-up:before {
-  content: "\e948";
-}
+  content: ""; }
+
 .icon-location1:before {
-  content: "\e949";
-}
+  content: ""; }
+
 .icon-location2:before {
-  content: "\e94a";
-}
+  content: ""; }
+
 .icon-display:before {
-  content: "\e956";
-}
+  content: ""; }
+
 .icon-mobile2:before {
-  content: "\e958";
-}
+  content: ""; }
+
 .icon-tablet1:before {
-  content: "\e95a";
-}
+  content: ""; }
+
 .icon-bubble:before {
-  content: "\e96b";
-}
+  content: ""; }
+
 .icon-bubbles4:before {
-  content: "\e970";
-}
+  content: ""; }
+
 .icon-user1:before {
-  content: "\e971";
-}
+  content: ""; }
+
+.icon-users:before {
+  content: ""; }
+
 .icon-user-plus:before {
-  content: "\e973";
-}
+  content: ""; }
+
 .icon-quotes-left:before {
-  content: "\e977";
-}
+  content: ""; }
+
 .icon-quotes-right:before {
-  content: "\e978";
-}
+  content: ""; }
+
 .icon-spinner:before {
-  content: "\e97a";
-}
+  content: ""; }
+
 .icon-spinner2:before {
-  content: "\e97b";
-}
+  content: ""; }
+
 .icon-spinner3:before {
-  content: "\e97c";
-}
+  content: ""; }
+
+.icon-spinner6:before {
+  content: ""; }
+
 .icon-spinner9:before {
-  content: "\e982";
-}
+  content: ""; }
+
 .icon-spinner10:before {
-  content: "\e983";
-}
+  content: ""; }
+
 .icon-search2:before {
-  content: "\e986";
-}
+  content: ""; }
+
 .icon-switch1:before {
-  content: "\e9b6";
-}
+  content: ""; }
+
 .icon-list:before {
-  content: "\e9ba";
-}
+  content: ""; }
+
 .icon-list2:before {
-  content: "\e9bb";
-}
+  content: ""; }
+
 .icon-menu:before {
-  content: "\e9bd";
-}
+  content: ""; }
+
 .icon-link:before {
-  content: "\e9cb";
-}
+  content: ""; }
+
 .icon-attachment1:before {
-  content: "\e9cd";
-}
+  content: ""; }
+
 .icon-bookmark1:before {
-  content: "\e9d2";
-}
+  content: ""; }
+
 .icon-bookmarks:before {
-  content: "\e9d3";
-}
+  content: ""; }
+
 .icon-star-empty:before {
-  content: "\e9d7";
-}
+  content: ""; }
+
 .icon-star-half:before {
-  content: "\e9d8";
-}
+  content: ""; }
+
 .icon-star-full:before {
-  content: "\e9d9";
-}
+  content: ""; }
+
 .icon-man:before {
-  content: "\e9dc";
-}
+  content: ""; }
+
 .icon-woman:before {
-  content: "\e9dd";
-}
+  content: ""; }
+
 .icon-man-woman:before {
-  content: "\e9de";
-}
+  content: ""; }
+
 .icon-happy1:before {
-  content: "\e9df";
-}
+  content: ""; }
+
 .icon-smile:before {
-  content: "\e9e1";
-}
+  content: ""; }
+
 .icon-tongue:before {
-  content: "\e9e3";
-}
+  content: ""; }
+
 .icon-sad1:before {
-  content: "\e9e5";
-}
+  content: ""; }
+
 .icon-wink:before {
-  content: "\e9e7";
-}
+  content: ""; }
+
 .icon-grin:before {
-  content: "\e9e9";
-}
+  content: ""; }
+
 .icon-cool:before {
-  content: "\e9eb";
-}
+  content: ""; }
+
 .icon-angry:before {
-  content: "\e9ed";
-}
+  content: ""; }
+
 .icon-neutral:before {
-  content: "\e9f7";
-}
+  content: ""; }
+
 .icon-wondering:before {
-  content: "\e9fb";
-}
+  content: ""; }
+
 .icon-plus1:before {
-  content: "\ea0a";
-}
+  content: ""; }
+
 .icon-minus1:before {
-  content: "\ea0b";
-}
+  content: ""; }
+
 .icon-cross:before {
-  content: "\ea0f";
-}
+  content: ""; }
+
 .icon-checkmark1:before {
-  content: "\ea10";
-}
+  content: ""; }
+
 .icon-checkmark2:before {
-  content: "\ea11";
-}
+  content: ""; }
+
 .icon-enter:before {
-  content: "\ea13";
-}
+  content: ""; }
+
 .icon-exit:before {
-  content: "\ea14";
-}
+  content: ""; }
+
 .icon-play3:before {
-  content: "\ea1c";
-}
+  content: ""; }
+
 .icon-pause2:before {
-  content: "\ea1d";
-}
+  content: ""; }
+
 .icon-stop2:before {
-  content: "\ea1e";
-}
+  content: ""; }
+
 .icon-arrow-up:before {
-  content: "\ea32";
-}
+  content: ""; }
+
 .icon-arrow-right:before {
-  content: "\ea34";
-}
+  content: ""; }
+
 .icon-arrow-down:before {
-  content: "\ea36";
-}
+  content: ""; }
+
 .icon-arrow-left:before {
-  content: "\ea38";
-}
+  content: ""; }
+
 .icon-arrow-up2:before {
-  content: "\ea3a";
-}
+  content: ""; }
+
 .icon-arrow-right2:before {
-  content: "\ea3c";
-}
+  content: ""; }
+
 .icon-arrow-down2:before {
-  content: "\ea3e";
-}
+  content: ""; }
+
 .icon-arrow-left2:before {
-  content: "\ea40";
-}
+  content: ""; }
+
 .icon-checkbox-checked:before {
-  content: "\ea52";
-}
+  content: ""; }
+
 .icon-checkbox-unchecked:before {
-  content: "\ea53";
-}
+  content: ""; }
+
 .icon-radio-checked:before {
-  content: "\ea54";
-}
+  content: ""; }
+
 .icon-radio-checked2:before {
-  content: "\ea55";
-}
+  content: ""; }
+
 .icon-radio-unchecked:before {
-  content: "\ea56";
-}
+  content: ""; }
+
 .icon-facebook2:before {
-  content: "\ea90";
-}
+  content: ""; }
+
 .icon-instagram:before {
-  content: "\ea92";
-}
+  content: ""; }
+
 .icon-whatsapp1:before {
-  content: "\ea93";
-}
+  content: ""; }
+
 .icon-spotify:before {
-  content: "\ea94";
-}
+  content: ""; }
+
 .icon-telegram:before {
-  content: "\ea95";
-}
+  content: ""; }
+
 .icon-twitter2:before {
-  content: "\ea96";
-}
+  content: ""; }
+
 .icon-rss1:before {
-  content: "\ea9b";
-}
+  content: ""; }
+
 .icon-youtube1:before {
-  content: "\ea9d";
-}
+  content: ""; }
+
 .icon-soundcloud1:before {
-  content: "\eac3";
-}
+  content: ""; }
+
 .icon-linkedin2:before {
-  content: "\eaca";
-}
+  content: ""; }
+
 .icon-pinterest2:before {
-  content: "\ead2";
-}
+  content: ""; }
+
 .icon-svg:before {
-  content: "\eae9";
-}
+  content: ""; }
+
 .icon-warning:before {
-  content: "\e90e";
-}
+  content: ""; }
+
 .icon-locked:before {
-  content: "\e90f";
-}
+  content: ""; }
+
 .icon-inbox:before {
-  content: "\e910";
-}
+  content: ""; }
+
 .icon-comment:before {
-  content: "\e911";
-}
+  content: ""; }
+
 .icon-envelope1:before {
-  content: "\e912";
-}
+  content: ""; }
+
 .icon-cart:before {
-  content: "\e913";
-}
+  content: ""; }
+
 .icon-user:before {
-  content: "\e914";
-}
+  content: ""; }
+
 .icon-cog:before {
-  content: "\e915";
-}
+  content: ""; }
+
 .icon-music:before {
-  content: "\e916";
-}
+  content: ""; }
+
 .icon-pencil:before {
-  content: "\e917";
-}
+  content: ""; }
+
 .icon-switch:before {
-  content: "\e918";
-}
+  content: ""; }
+
 .icon-star:before {
-  content: "\e919";
-}
+  content: ""; }
+
 .icon-key1:before {
-  content: "\e91a";
-}
+  content: ""; }
+
 .icon-file:before {
-  content: "\e91b";
-}
+  content: ""; }
+
 .icon-plus:before {
-  content: "\e91c";
-}
+  content: ""; }
+
 .icon-minus:before {
-  content: "\e91d";
-}
+  content: ""; }
+
 .icon-picture1:before {
-  content: "\e91e";
-}
+  content: ""; }
+
 .icon-camera1:before {
-  content: "\e91f";
-}
+  content: ""; }
+
 .icon-search1:before {
-  content: "\e920";
-}
+  content: ""; }
+
 .icon-feed:before {
-  content: "\e921";
-}
+  content: ""; }
+
 .icon-blocked:before {
-  content: "\e922";
-}
+  content: ""; }
+
 .icon-play:before {
-  content: "\e923";
-}
+  content: ""; }
+
 .icon-pause:before {
-  content: "\e924";
-}
+  content: ""; }
+
 .icon-film:before {
-  content: "\e925";
-}
+  content: ""; }
+
 .icon-home:before {
-  content: "\e926";
-}
+  content: ""; }
+
 .icon-earth:before {
-  content: "\e927";
-}
+  content: ""; }
+
 .icon-location:before {
-  content: "\e928";
-}
+  content: ""; }
+
 .icon-info:before {
-  content: "\e929";
-}
+  content: ""; }
+
 .icon-heart1:before {
-  content: "\e92a";
-}
+  content: ""; }
+
 .icon-wrench:before {
-  content: "\e92b";
-}
+  content: ""; }
+
 .icon-calendar1:before {
-  content: "\e92c";
-}
+  content: ""; }
+
 .icon-monitor:before {
-  content: "\e92d";
-}
+  content: ""; }
+
 .icon-mobile1:before {
-  content: "\e92e";
-}
+  content: ""; }
+
 .icon-tag:before {
-  content: "\e92f";
-}
+  content: ""; }
+
 .icon-phone1:before {
-  content: "\e930";
-}
+  content: ""; }
+
 .icon-star1:before {
-  content: "\e931";
-}
+  content: ""; }
+
 .icon-thumbsup:before {
-  content: "\e932";
-}
+  content: ""; }
+
 .icon-thumbsdown:before {
-  content: "\e933";
-}
+  content: ""; }
+
 .icon-checkmark:before {
-  content: "\e934";
-}
+  content: ""; }
+
 .icon-cancel:before {
-  content: "\e935";
-}
+  content: ""; }
+
 .icon-gift:before {
-  content: "\e936";
-}
+  content: ""; }
+
 .icon-cone:before {
-  content: "\e937";
-}
+  content: ""; }
+
 .icon-coffee:before {
-  content: "\e938";
-}
+  content: ""; }
+
 .icon-flag:before {
-  content: "\e939";
-}
+  content: ""; }
+
 .icon-trashcan:before {
-  content: "\e93a";
-}
+  content: ""; }
+
 .icon-volume:before {
-  content: "\e93b";
-}
+  content: ""; }
+
 .icon-volume1:before {
-  content: "\e93c";
-}
+  content: ""; }
+
 .icon-forward:before {
-  content: "\e93d";
-}
+  content: ""; }
+
 .icon-paperclip1:before {
-  content: "\e93e";
-}
+  content: ""; }
+
 .icon-floppy:before {
-  content: "\e93f";
-}
+  content: ""; }
+
 .icon-trophy1:before {
-  content: "\e940";
-}
+  content: ""; }
+
 .icon-stop:before {
-  content: "\e941";
-}
+  content: ""; }
+
 .icon-smiley:before {
-  content: "\e942";
-}
+  content: ""; }
+
 .icon-shit:before {
-  content: "\e943";
-}
+  content: ""; }
+
 .icon-bookmark:before {
-  content: "\e944";
-}
+  content: ""; }
+
 .icon-creditcard:before {
-  content: "\e945";
-}
+  content: ""; }
+
 .icon-bitcoin:before {
-  content: "\e900";
-  color: #f7931a;
-}
+  content: "";
+  color: #f7931a; }
+
 .icon-blogger:before {
-  content: "\e901";
-  color: #ff5722;
-}
+  content: "";
+  color: #ff5722; }
+
 .icon-diaspora:before {
-  content: "\e902";
-}
+  content: ""; }
+
 .icon-digg:before {
-  content: "\e903";
-}
+  content: ""; }
+
 .icon-facebook:before {
-  content: "\e904";
-  color: #1877f2;
-}
+  content: "";
+  color: #1877f2; }
+
 .icon-gmail:before {
-  content: "\e905";
-  color: #d14836;
-}
+  content: "";
+  color: #d14836; }
+
 .icon-html5:before {
-  content: "\e906";
-  color: #e34f26;
-}
+  content: "";
+  color: #e34f26; }
+
 .icon-messenger:before {
-  content: "\e907";
-  color: #00b2ff;
-}
+  content: "";
+  color: #00b2ff; }
+
 .icon-paypal:before {
-  content: "\e908";
-  color: #00457c;
-}
+  content: "";
+  color: #00457c; }
+
 .icon-reverbnation:before {
-  content: "\e909";
-  color: #e43526;
-}
+  content: "";
+  color: #e43526; }
+
 .icon-soundcloud:before {
-  content: "\e90a";
-  color: #f30;
-}
+  content: "";
+  color: #f30; }
+
 .icon-twitter:before {
-  content: "\e90b";
-  color: #1da1f2;
-}
+  content: "";
+  color: #1da1f2; }
+
 .icon-whatsapp:before {
-  content: "\e90c";
-  color: #25d366;
-}
+  content: "";
+  color: #25d366; }
+
 .icon-youtube:before {
-  content: "\e90d";
-  color: #f00;
-}
+  content: "";
+  color: #f00; }
+
 .icon-mobile:before {
-  content: "\e000";
-}
+  content: ""; }
+
 .icon-laptop:before {
-  content: "\e001";
-}
+  content: ""; }
+
 .icon-tablet:before {
-  content: "\e003";
-}
+  content: ""; }
+
 .icon-phone:before {
-  content: "\e004";
-}
+  content: ""; }
+
 .icon-search:before {
-  content: "\e007";
-}
+  content: ""; }
+
 .icon-browser:before {
-  content: "\e00c";
-}
+  content: ""; }
+
 .icon-calendar:before {
-  content: "\e00d";
-}
+  content: ""; }
+
 .icon-picture:before {
-  content: "\e00f";
-}
+  content: ""; }
+
 .icon-pictures:before {
-  content: "\e010";
-}
+  content: ""; }
+
 .icon-video:before {
-  content: "\e011";
-}
+  content: ""; }
+
 .icon-camera:before {
-  content: "\e012";
-}
+  content: ""; }
+
 .icon-printer:before {
-  content: "\e013";
-}
+  content: ""; }
+
 .icon-edit:before {
-  content: "\e01c";
-}
+  content: ""; }
+
 .icon-ribbon:before {
-  content: "\e01e";
-}
+  content: ""; }
+
 .icon-lock:before {
-  content: "\e020";
-}
+  content: ""; }
+
 .icon-megaphone:before {
-  content: "\e021";
-}
+  content: ""; }
+
 .icon-trophy:before {
-  content: "\e023";
-}
+  content: ""; }
+
 .icon-map:before {
-  content: "\e025";
-}
+  content: ""; }
+
 .icon-envelope:before {
-  content: "\e028";
-}
+  content: ""; }
+
 .icon-gears:before {
-  content: "\e02b";
-}
+  content: ""; }
+
 .icon-key:before {
-  content: "\e02c";
-}
+  content: ""; }
+
 .icon-paperclip:before {
-  content: "\e02d";
-}
+  content: ""; }
+
 .icon-attachment:before {
-  content: "\e02e";
-}
+  content: ""; }
+
 .icon-pricetags:before {
-  content: "\e02f";
-}
+  content: ""; }
+
 .icon-magnifying-glass:before {
-  content: "\e037";
-}
+  content: ""; }
+
 .icon-caution:before {
-  content: "\e03d";
-}
+  content: ""; }
+
 .icon-recycle:before {
-  content: "\e03e";
-}
+  content: ""; }
+
 .icon-profile-male:before {
-  content: "\e040";
-}
+  content: ""; }
+
 .icon-profile-female:before {
-  content: "\e041";
-}
+  content: ""; }
+
 .icon-wine:before {
-  content: "\e043";
-}
+  content: ""; }
+
 .icon-map-pin:before {
-  content: "\e047";
-}
+  content: ""; }
+
 .icon-chat:before {
-  content: "\e049";
-}
+  content: ""; }
+
 .icon-heart:before {
-  content: "\e04a";
-}
+  content: ""; }
+
 .icon-clock:before {
-  content: "\e055";
-}
+  content: ""; }
+
 .icon-quote:before {
-  content: "\e057";
-}
+  content: ""; }
+
 .icon-alarmclock:before {
-  content: "\e059";
-}
+  content: ""; }
+
 .icon-refresh:before {
-  content: "\e05a";
-}
+  content: ""; }
+
 .icon-happy:before {
-  content: "\e05b";
-}
+  content: ""; }
+
 .icon-sad:before {
-  content: "\e05c";
-}
+  content: ""; }
+
 .icon-facebook1:before {
-  content: "\e05d";
-}
+  content: ""; }
+
 .icon-twitter1:before {
-  content: "\e05e";
-}
+  content: ""; }
+
 .icon-rss:before {
-  content: "\e060";
-}
+  content: ""; }
+
 .icon-linkedin:before {
-  content: "\e062";
-}
+  content: ""; }
+
 .icon-dribbble:before {
-  content: "\e063";
-}
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot?9r76sl");
-  src: url("../fonts/icomoon.eot?9r76sl#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?9r76sl") format('truetype'), url("../fonts/icomoon.woff?9r76sl") format('woff'), url("../fonts/icomoon.svg?9r76sl#icomoon") format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-i {
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-/* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.icon-bitcoin:before {
-  content: "\e900";
-  color: #f7931a;
-}
-.icon-blogger:before {
-  content: "\e901";
-  color: #ff5722;
-}
-.icon-diaspora:before {
-  content: "\e902";
-}
-.icon-digg:before {
-  content: "\e903";
-}
-.icon-facebook:before {
-  content: "\e904";
-  color: #1877f2;
-}
-.icon-gmail:before {
-  content: "\e905";
-  color: #d14836;
-}
-.icon-html5:before {
-  content: "\e906";
-  color: #e34f26;
-}
-.icon-messenger:before {
-  content: "\e907";
-  color: #00b2ff;
-}
-.icon-paypal:before {
-  content: "\e908";
-  color: #00457c;
-}
-.icon-reverbnation:before {
-  content: "\e909";
-  color: #e43526;
-}
-.icon-soundcloud:before {
-  content: "\e90a";
-  color: #f30;
-}
-.icon-twitter:before {
-  content: "\e90b";
-  color: #1da1f2;
-}
-.icon-whatsapp:before {
-  content: "\e90c";
-  color: #25d366;
-}
-.icon-youtube:before {
-  content: "\e90d";
-  color: #f00;
-}
-.icon-mobile:before {
-  content: "\e000";
-}
-.icon-laptop:before {
-  content: "\e001";
-}
-.icon-tablet:before {
-  content: "\e003";
-}
-.icon-phone:before {
-  content: "\e004";
-}
-.icon-search:before {
-  content: "\e007";
-}
-.icon-browser:before {
-  content: "\e00c";
-}
-.icon-calendar:before {
-  content: "\e00d";
-}
-.icon-picture:before {
-  content: "\e00f";
-}
-.icon-pictures:before {
-  content: "\e010";
-}
-.icon-video:before {
-  content: "\e011";
-}
-.icon-camera:before {
-  content: "\e012";
-}
-.icon-printer:before {
-  content: "\e013";
-}
-.icon-edit:before {
-  content: "\e01c";
-}
-.icon-ribbon:before {
-  content: "\e01e";
-}
-.icon-lock:before {
-  content: "\e020";
-}
-.icon-megaphone:before {
-  content: "\e021";
-}
-.icon-trophy:before {
-  content: "\e023";
-}
-.icon-map:before {
-  content: "\e025";
-}
-.icon-envelope:before {
-  content: "\e028";
-}
-.icon-gears:before {
-  content: "\e02b";
-}
-.icon-key:before {
-  content: "\e02c";
-}
-.icon-paperclip:before {
-  content: "\e02d";
-}
-.icon-attachment:before {
-  content: "\e02e";
-}
-.icon-pricetags:before {
-  content: "\e02f";
-}
-.icon-magnifying-glass:before {
-  content: "\e037";
-}
-.icon-caution:before {
-  content: "\e03d";
-}
-.icon-recycle:before {
-  content: "\e03e";
-}
-.icon-profile-male:before {
-  content: "\e040";
-}
-.icon-profile-female:before {
-  content: "\e041";
-}
-.icon-wine:before {
-  content: "\e043";
-}
-.icon-map-pin:before {
-  content: "\e047";
-}
-.icon-chat:before {
-  content: "\e049";
-}
-.icon-heart:before {
-  content: "\e04a";
-}
-.icon-clock:before {
-  content: "\e055";
-}
-.icon-quote:before {
-  content: "\e057";
-}
-.icon-alarmclock:before {
-  content: "\e059";
-}
-.icon-refresh:before {
-  content: "\e05a";
-}
-.icon-happy:before {
-  content: "\e05b";
-}
-.icon-sad:before {
-  content: "\e05c";
-}
-.icon-facebook1:before {
-  content: "\e05d";
-}
-.icon-twitter1:before {
-  content: "\e05e";
-}
-.icon-rss:before {
-  content: "\e060";
-}
-.icon-linkedin:before {
-  content: "\e062";
-}
-.icon-dribbble:before {
-  content: "\e063";
-}
-.icon-warning:before {
-  content: "\e90e";
-}
-.icon-locked:before {
-  content: "\e90f";
-}
-.icon-inbox:before {
-  content: "\e910";
-}
-.icon-comment:before {
-  content: "\e911";
-}
-.icon-envelope1:before {
-  content: "\e912";
-}
-.icon-cart:before {
-  content: "\e913";
-}
-.icon-user:before {
-  content: "\e914";
-}
-.icon-cog:before {
-  content: "\e915";
-}
-.icon-music:before {
-  content: "\e916";
-}
-.icon-pencil:before {
-  content: "\e917";
-}
-.icon-switch:before {
-  content: "\e918";
-}
-.icon-star:before {
-  content: "\e919";
-}
-.icon-key1:before {
-  content: "\e91a";
-}
-.icon-file:before {
-  content: "\e91b";
-}
-.icon-plus:before {
-  content: "\e91c";
-}
-.icon-minus:before {
-  content: "\e91d";
-}
-.icon-picture1:before {
-  content: "\e91e";
-}
-.icon-camera1:before {
-  content: "\e91f";
-}
-.icon-search1:before {
-  content: "\e920";
-}
-.icon-feed:before {
-  content: "\e921";
-}
-.icon-blocked:before {
-  content: "\e922";
-}
-.icon-play:before {
-  content: "\e923";
-}
-.icon-pause:before {
-  content: "\e924";
-}
-.icon-film:before {
-  content: "\e925";
-}
-.icon-home:before {
-  content: "\e926";
-}
-.icon-earth:before {
-  content: "\e927";
-}
-.icon-location:before {
-  content: "\e928";
-}
-.icon-info:before {
-  content: "\e929";
-}
-.icon-heart1:before {
-  content: "\e92a";
-}
-.icon-wrench:before {
-  content: "\e92b";
-}
-.icon-calendar1:before {
-  content: "\e92c";
-}
-.icon-monitor:before {
-  content: "\e92d";
-}
-.icon-mobile1:before {
-  content: "\e92e";
-}
-.icon-tag:before {
-  content: "\e92f";
-}
-.icon-phone1:before {
-  content: "\e930";
-}
-.icon-star1:before {
-  content: "\e931";
-}
-.icon-thumbsup:before {
-  content: "\e932";
-}
-.icon-thumbsdown:before {
-  content: "\e933";
-}
-.icon-checkmark:before {
-  content: "\e934";
-}
-.icon-cancel:before {
-  content: "\e935";
-}
-.icon-gift:before {
-  content: "\e936";
-}
-.icon-cone:before {
-  content: "\e937";
-}
-.icon-coffee:before {
-  content: "\e938";
-}
-.icon-flag:before {
-  content: "\e939";
-}
-.icon-trashcan:before {
-  content: "\e93a";
-}
-.icon-volume:before {
-  content: "\e93b";
-}
-.icon-volume1:before {
-  content: "\e93c";
-}
-.icon-forward:before {
-  content: "\e93d";
-}
-.icon-paperclip1:before {
-  content: "\e93e";
-}
-.icon-floppy:before {
-  content: "\e93f";
-}
-.icon-trophy1:before {
-  content: "\e940";
-}
-.icon-stop:before {
-  content: "\e941";
-}
-.icon-smiley:before {
-  content: "\e942";
-}
-.icon-shit:before {
-  content: "\e943";
-}
-.icon-bookmark:before {
-  content: "\e944";
-}
-.icon-creditcard:before {
-  content: "\e945";
-}
+  content: ""; }
+
 * {
   box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-}
+  transition: all 0.2s ease-in-out; }
+
 html {
-  scroll-behavior: smooth;
-}
-body,
-background-color color_fondo {
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #efeefe;
   color: #444;
   font-size: 130%;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 150%;
-}
+  text-align: center; }
+
+a {
+  color: #A66AE2;
+  text-decoration: none; }
+  a:hover {
+    color: #00CE1B; }
+
 em {
   font-weight: 300;
-  font-style: italic;
-}
+  font-style: italic; }
+
 strong {
   font-style: italic;
-  font-weight: bold;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Poppins', sans-serif;
-}
-blockquote,
-pre,
-code,
-kbd,
-samp,
-sub,
-sup,
-small {
-  font-family: 'Poppins', sans-serif;
-  font-weight: bolder;
-}
-.encabezado__barra {
-  background: #040507;
-  display: -ms-flexbox;
-  display: vendor-value(box );
-  display: vendor-value(flex);
-}
-.encabezado__menu-b {
-  color: #f2075d;
-  display: block;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  line-height: 150%;
-  text-align: center;
-  text-decoration: none;
-}
-.encabezado__menu-b:hover {
-  color: #444;
-}
-.encabezado__logo-imagen {
-  display: none;
-  width: 100%;
-}
-.encabezado__logo-titulo {
-  color: #f2075d;
-  margin: 0;
-  font-size: 1.5rem;
-  line-height: 200%;
-  padding: 0.5rem 1rem;
-  text-transform: uppercase;
-}
-.encabezado__navegacion {
-  background: #040507;
-}
-.encabezado__navegacion-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.encabezado__navegacion-enlace {
-  border-top: 1px dotted rgba(68,68,68,0.2);
-  color: #d70cf2;
-  display: block;
-  font-family: 'Poppins', sans-serif;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.encabezado__navegacion-enlace:hover {
-  background: #efeefe;
-  color: #444;
-}
-.encabezado__navegacion-enlace-activo {
-  color: #f2e41b;
-}
-.encabezado__navegacion-enlace-activo:hover {
-  color: #f2e41b;
-}
-.abierto {
-  height: auto;
-  opacity: 1;
-  visibility: visible;
-}
-.cerrado {
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-.home__contenido {
-  background-size: cover;
-  height: calc(100vh - 4rem);
-  position: relative;
-}
-.home__contenido-boton {
-  margin-top: 2rem;
-}
-.home__contenido-titular,
-.home__contenido-subtitular {
-  color: #fff;
-  margin: 1rem auto;
-}
-.home__division {
-  display: -ms-flexbox;
-  display: vendor-value(box );
-  display: vendor-value(flex);
-  height: calc(100vh - 4rem);
-  text-align: center;
-  position: relative;
-}
-.home-filtro {
-  background: url("../img/1.jpg") 50% 50% no-repeat;
-  filter: sepia(75%);
-  height: calc(100vh - 4rem);
-  left: 0;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.home-filtro:after {
-  background-color: rgba(34,65,25,0.5);
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
+  font-weight: bold; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif; }
+
+blockquote, pre, code, kbd, samp, sub, sup, small {
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder; }
+
+/* Encabezados */
+.header {
+  background: red; }
+  .header__boton {
+    background: green;
+    width: 2rem; }
+    .header__boton__menu {
+      display: block;
+      font-size: 2rem; }
+  .header__logo {
+    margin: 0;
+    overflow: hidden;
+    width: 200px; }
+    .header__logo__enlace__imagen {
+      width: 100%;
+      display: block; }
+
 /*# sourceMappingURL=style.css.map */

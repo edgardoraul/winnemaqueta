@@ -1,0 +1,43 @@
+/********************************** Fuentes ***********************************/
+// ruta
+$carpeta: "../fonts/"
+$nombre_fuente_1: "Vollkorn"
+$nombre_fuente_2: "BloggerSans"
+$variante_estilo: '', 'Italic'
+$variante_peso: 100, 200, 300, 400, 500, 600, 700, 800, 900
+$variante_grosor: '-Light', '', '-Regular', '-Medium', '-Black', 'Semi', '-Bold', 'Bolder', 'ExtraBold'
+/** 
+	$archivoFuente: 'Vollkorn-Black',
+	'Vollkorn-BlackItalic',
+	'Vollkorn-Regular',
+	'Vollkorn-Italic',
+	'Vollkorn-Medium',
+	'Vollkorn-MediumItalic',
+	'Vollkorn-Bold',
+	'Vollkorn-BoldItalic',
+	'Vollkorn-SemiBold',
+	'Vollkorn-SemiBoldItalic',
+	'Vollkorn-Black',
+	'Vollkorn-BlackItalic',
+	'Vollkorn-ExtraBold',
+	'Vollkorn-ExtraBoldItalic',
+	'BloggerSans-Light',
+	'BloggerSans-LightItalic',
+	'BloggerSans',
+	'BloggerSans-Medium',
+	'BloggerSans-MediumItalic',
+	'BloggerSans-Bold',
+	'BloggerSans-BoldItalic'
+ **/
+for $valor in $archivoFuente
+	@font-face
+		font-family $valor
+		font-size normal
+		font-weight normal
+		src url($carpeta + $valor + '.eot')
+		src url($carpeta + $valor + '.eot') format('embedded-opentype'),
+			url($carpeta + $valor + '.ttf') format('truetype'),
+			url($carpeta + $valor + '.svg') format('svg'),
+			url($carpeta + $valor + '.woff') format('woff'),
+			url($carpeta + $valor + '.woff2') format('woff2')
+

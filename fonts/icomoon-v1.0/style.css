@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?8s84u8');
-  src:  url('fonts/icomoon.eot?8s84u8#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?8s84u8') format('truetype'),
-    url('fonts/icomoon.woff?8s84u8') format('woff'),
-    url('fonts/icomoon.svg?8s84u8#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?7ajrfd');
+  src:  url('fonts/icomoon.eot?7ajrfd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7ajrfd') format('truetype'),
+    url('fonts/icomoon.woff?7ajrfd') format('woff'),
+    url('fonts/icomoon.svg?7ajrfd#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,33 @@ i {
 
 .icon-bullhorn:before {
   content: "\e946";
+}
+.icon-price-tag:before {
+  content: "\e94b";
+}
+.icon-price-tags:before {
+  content: "\e94c";
+}
+.icon-barcode:before {
+  content: "\e94d";
+}
+.icon-qrcode:before {
+  content: "\e94e";
+}
+.icon-coin-dollar:before {
+  content: "\e94f";
+}
+.icon-coin-euro:before {
+  content: "\e950";
+}
+.icon-coin-pound:before {
+  content: "\e951";
+}
+.icon-coin-yen:before {
+  content: "\e952";
+}
+.icon-credit-card:before {
+  content: "\e953";
 }
 .icon-phone2:before {
   content: "\e947";
@@ -58,6 +85,9 @@ i {
 .icon-user1:before {
   content: "\e971";
 }
+.icon-users:before {
+  content: "\e972";
+}
 .icon-user-plus:before {
   content: "\e973";
 }
@@ -75,6 +105,9 @@ i {
 }
 .icon-spinner3:before {
   content: "\e97c";
+}
+.icon-spinner6:before {
+  content: "\e97f";
 }
 .icon-spinner9:before {
   content: "\e982";
