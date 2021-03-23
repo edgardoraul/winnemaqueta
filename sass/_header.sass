@@ -1,13 +1,20 @@
 /* Encabezados */
 .header
-	background: red
+	align-content: space-between
+	align-items: center
+	background: $color_blanco
+	display: flex
+	flex-direction: row
+	flex-wrap: nowrap
+	justify-content: space-between
+	padding: 0.5rem 1rem
 
 	// El botón del menú principal
 	&__boton
-		background: green
-		width: 2rem
+		color: $color_titulo
 
 		&__menu
+			color: $color_negro
 			display: block
 			font-size: 2rem
 		
@@ -16,7 +23,7 @@
 	&__logo
 		margin: 0
 		overflow: hidden
-		width: 200px
+		width: 250px
 
 		&__enlace
 			&__imagen

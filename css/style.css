@@ -989,19 +989,71 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
 
 /* Encabezados */
 .header {
-  background: red; }
+  align-content: space-between;
+  align-items: center;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0.5rem 1rem; }
   .header__boton {
-    background: green;
-    width: 2rem; }
+    color: #A66AE2; }
     .header__boton__menu {
+      color: #040507;
       display: block;
       font-size: 2rem; }
   .header__logo {
     margin: 0;
     overflow: hidden;
-    width: 200px; }
+    width: 250px; }
     .header__logo__enlace__imagen {
       width: 100%;
       display: block; }
+
+.navegacion {
+  display: none; }
+
+.boton {
+  background: color_titulo;
+  border: none;
+  border-radius: 4rem;
+  color: #fff;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .boton:hover {
+    background: #00CE1B;
+    cursor: pointer; }
+  .boton--grande {
+    font-size: 1.5rem; }
+  .boton--advertencia {
+    background: #F2E41B;
+    color: #efeefe; }
+    .boton--advertencia:hover {
+      background: #F2E41B;
+      color: #fff;
+      text-shadow: 0px 0px 1px #000; }
+  .boton--deshabilitado {
+    background: #444;
+    color: #fff; }
+    .boton--deshabilitado:hover {
+      background: #444;
+      color: #fff;
+      cursor: not-allowed; }
+  .boton-correcto {
+    background: #A66AE2; }
+
+.gotop {
+  background: #444;
+  bottom: 0.5rem;
+  display: inline-block;
+  opacity: 0.5;
+  position: fixed;
+  right: 0.5rem; }
+  .gotop:hover {
+    opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */
