@@ -19,7 +19,7 @@
 	white-space: -webkit-pre-wrap
 
 // reutilizables
-.clearboth
+.clearboth,
 .separador
 	clear: both
 
@@ -28,6 +28,81 @@
 	display: inline-block
 
 // Triángulos en CSS
-@mixin triangulo()
-
-    
+@mixin triangle($triangle-width: 10px, $triangle-height: 10px, $triangle-color: #ff0000, $posx: 50%, $orientation: bottom, $set: outset, $pseudo: "after")
+	position: relative
+	&:#{$pseudo}
+		content: ""
+		position: absolute
+		visibility: visible
+	@if $set == inset
+		@if $orientation == right
+			right: 0
+			top: $posx
+			//margin-top: -($w / 2)
+			margin-top: -$triangle-width
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-height solid $triangle-color
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)
+		@else if $orientation == left
+			left: 0
+			top: $posx
+			margin-top: -$triangle-width
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-height solid $triangle-color
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)
+		@else if $orientation == top
+			top: 0
+			left: $posx
+			margin-left: -$triangle-width
+			border-top: $triangle-height solid $triangle-color
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)
+		@else
+			bottom: 0
+			left: $posx
+			margin-left: -$triangle-width
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-height solid $triangle-color
+	@else
+		@if $orientation == right
+			right: 0
+			top: $posx
+			//margin-top: -($w / 2)
+			margin-top: -$triangle-width
+			margin-right: -($triangle-height * 2)
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-height solid $triangle-color
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)
+		@else if $orientation == left
+			left: 0
+			top: $posx
+			margin-top: -$triangle-width
+			margin-left: -($triangle-height * 2)
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-height solid $triangle-color
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)
+		@else if $orientation == top
+			top: 0
+			left: $posx
+			margin-left: -$triangle-width
+			margin-top: -($triangle-height * 2)
+			border-top: $triangle-width solid rgba($triangle-color, 0)
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-height solid $triangle-color
+		@else
+			bottom: 0
+			left: $posx
+			margin-left: -$triangle-width
+			margin-bottom: -($triangle-height * 2)
+			border-top: $triangle-height solid $triangle-color
+			border-left: $triangle-width solid rgba($triangle-color, 0)
+			border-right: $triangle-width solid rgba($triangle-color, 0)
+			border-bottom: $triangle-width solid rgba($triangle-color, 0)

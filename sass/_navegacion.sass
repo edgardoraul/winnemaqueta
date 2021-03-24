@@ -1,7 +1,27 @@
 // Navegación
 .navegacion
-	display: none
+	background: $color_negro
+	padding: 0.5rem
+	margin-top: 3rem
 
-	@media all and ( min-width: $desktop )
-		display: block
-		
+	&__lista
+		list-style: none
+		padding: 0
+		margin: 0
+		text-align: left
+
+		&__item
+			&__enlace
+				border: 1px dotted red
+				color: $color_advertencia
+				display: block
+				font-family: $fuente_titulo
+				font-weight: bolder
+				padding: 0.5rem
+				text-transform: uppercase
+				.icomoon
+					float: right
+
+.sublista
+	&__item
+		padding-left: 1rem
