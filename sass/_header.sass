@@ -14,12 +14,19 @@
 		color: $color_titulo
 
 		&__menu
-			color: $color_negro
+			color: $color_titulo
 			display: block
-			font-size: 2rem
+			font-size: 1.5rem
+			@media all and ( min-width: $mobile )
+				font-size: 2rem
+		
+		@media screen and ( min-width: $desktop )
+			display: none
+			
+				
 		
 
-	// El logotipo
+	// El logotipo con imagen
 	&__logo
 		margin: 0
 		overflow: hidden
@@ -29,5 +36,30 @@
 			&__imagen
 				width: 100%
 				display: block
+	
+	// El logotipo con texto
+	&__logoTexto
+		font-family: $fuente_subtitulo
+		font-weight: lighter
+		margin: 0 auto
+		font-size: 1.25rem
+		
+		@media all and ( min-width: $mobile )
+			font-size: 1.5rem
+		
+		@media all and ( min-width: $tablet )
+			font-size: 2rem
+
+
+		&__enlace
+			color: $color_titulo
+			text-decoration: none
+
+			&--texto
+				color: $color_negro
+
+		&:hover
+			color: $color_texto
+
 
 	

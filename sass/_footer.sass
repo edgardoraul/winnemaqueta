@@ -1,0 +1,38 @@
+// Todo el pie de página
+.footer
+	background: $color_titulo
+	color: $color_blanco
+	padding: 1rem 1rem 6rem 1rem
+	text-align: left
+
+	// Los botones de Acción
+	&__botonera
+		background: $color_advertencia
+		bottom: 0
+		box-shadow: -1px 0px 3px $color_negro
+		display: flex
+		justify-content: space-between
+		left: 0
+		position: fixed
+		letter-spacing: -1px
+		width: 100%
+		z-index: 1
+
+		&__boton
+			color: $color_negro
+			display: inline-block
+			font-family: $fuente_titulo
+			font-size: 0.75rem
+			font-weight: bolder
+			padding: 0.5rem 1rem
+			text-transform: uppercase
+
+			@media all and ( min-width: 480px)
+				font-size: 1rem
+
+			&:hover, &:focus, &:active
+				color: $color_advertencia
+				background: $color_negro
+
+
+			

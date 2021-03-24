@@ -307,6 +307,10 @@ template {
 .separador {
   clear: both; }
 
+.separador {
+  padding: 0 0.5rem;
+  display: inline-block; }
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon-v1.0/fonts/icomoon.eot?7ajrfd");
@@ -951,6 +955,38 @@ i {
 .icon-dribbble:before {
   content: ""; }
 
+.boton {
+  background: color_titulo;
+  border: none;
+  border-radius: 4rem;
+  color: #E8E3DB;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .boton:hover {
+    background: #908B8E;
+    cursor: pointer; }
+  .boton--grande {
+    font-size: 1.5rem; }
+  .boton--advertencia {
+    background: #F2E41B;
+    color: #efeefe; }
+    .boton--advertencia:hover {
+      background: #F2E41B;
+      color: #E8E3DB;
+      text-shadow: 0px 0px 1px #000; }
+  .boton--deshabilitado {
+    background: #464544;
+    color: #E8E3DB; }
+    .boton--deshabilitado:hover {
+      background: #464544;
+      color: #E8E3DB;
+      cursor: not-allowed; }
+  .boton-correcto {
+    background: #A83E4C; }
+
 * {
   box-sizing: border-box;
   transition: all 0.2s ease-in-out; }
@@ -960,17 +996,17 @@ html {
 
 body {
   background-color: #efeefe;
-  color: #444;
+  color: #464544;
   font-size: 130%;
-  font-family: "Poppins", sans-serif;
+  font-family: "BauPro-Regular", sans-serif;
   line-height: 150%;
   text-align: center; }
 
 a {
-  color: #A66AE2;
+  color: #A83E4C;
   text-decoration: none; }
   a:hover {
-    color: #00CE1B; }
+    color: #908B8E; }
 
 em {
   font-weight: 300;
@@ -991,18 +1027,24 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
 .header {
   align-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #E8E3DB;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
   .header__boton {
-    color: #A66AE2; }
+    color: #A83E4C; }
     .header__boton__menu {
-      color: #040507;
+      color: #A83E4C;
       display: block;
-      font-size: 2rem; }
+      font-size: 1.5rem; }
+      @media all and (min-width: 480px) {
+        .header__boton__menu {
+          font-size: 2rem; } }
+    @media screen and (min-width: 970px) {
+      .header__boton {
+        display: none; } }
   .header__logo {
     margin: 0;
     overflow: hidden;
@@ -1010,50 +1052,60 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
     .header__logo__enlace__imagen {
       width: 100%;
       display: block; }
+  .header__logoTexto {
+    font-family: "Roboto", sans-serif;
+    font-weight: lighter;
+    margin: 0 auto;
+    font-size: 1.25rem; }
+    @media all and (min-width: 480px) {
+      .header__logoTexto {
+        font-size: 1.5rem; } }
+    @media all and (min-width: 720px) {
+      .header__logoTexto {
+        font-size: 2rem; } }
+    .header__logoTexto__enlace {
+      color: #A83E4C;
+      text-decoration: none; }
+      .header__logoTexto__enlace--texto {
+        color: #040507; }
+    .header__logoTexto:hover {
+      color: #464544; }
 
 .navegacion {
   display: none; }
+  @media all and (min-width: 970px) {
+    .navegacion {
+      display: block; } }
 
-.boton {
-  background: color_titulo;
-  border: none;
-  border-radius: 4rem;
-  color: #fff;
-  display: inline-block;
-  font-family: "Roboto", sans-serif;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  text-transform: uppercase; }
-  .boton:hover {
-    background: #00CE1B;
-    cursor: pointer; }
-  .boton--grande {
-    font-size: 1.5rem; }
-  .boton--advertencia {
+.footer {
+  background: #A83E4C;
+  color: #E8E3DB;
+  padding: 1rem 1rem 6rem 1rem;
+  text-align: left; }
+  .footer__botonera {
     background: #F2E41B;
-    color: #efeefe; }
-    .boton--advertencia:hover {
-      background: #F2E41B;
-      color: #fff;
-      text-shadow: 0px 0px 1px #000; }
-  .boton--deshabilitado {
-    background: #444;
-    color: #fff; }
-    .boton--deshabilitado:hover {
-      background: #444;
-      color: #fff;
-      cursor: not-allowed; }
-  .boton-correcto {
-    background: #A66AE2; }
-
-.gotop {
-  background: #444;
-  bottom: 0.5rem;
-  display: inline-block;
-  opacity: 0.5;
-  position: fixed;
-  right: 0.5rem; }
-  .gotop:hover {
-    opacity: 1; }
+    bottom: 0;
+    box-shadow: -1px 0px 3px #040507;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    letter-spacing: -1px;
+    width: 100%;
+    z-index: 1; }
+    .footer__botonera__boton {
+      color: #040507;
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.75rem;
+      font-weight: bolder;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase; }
+      @media all and (min-width: 480px) {
+        .footer__botonera__boton {
+          font-size: 1rem; } }
+      .footer__botonera__boton:hover, .footer__botonera__boton:focus, .footer__botonera__boton:active {
+        color: #F2E41B;
+        background: #040507; }
 
 /*# sourceMappingURL=style.css.map */
