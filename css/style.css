@@ -991,33 +991,38 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
   font-weight: bolder; }
 
 .boton {
+  outline: none;
   background: #A83E4C;
   border: none;
   border-radius: 4rem;
   color: #E8E3DB;
   display: inline-block;
   font-family: "Roboto", sans-serif;
-  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 0.5rem 1rem;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase; }
   .boton:hover {
     background: #908B8E;
     cursor: pointer; }
   .boton--grande {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    padding: 1rem 2rem; }
+  .boton--chico {
+    font-size: 0.75rem;
+    padding: 0.25rem 1rem; }
   .boton--advertencia {
     background: #F2E41B;
-    color: #efeefe; }
+    color: #040507; }
     .boton--advertencia:hover {
-      background: #F2E41B;
-      color: #E8E3DB;
-      text-shadow: 0px 0px 1px #000; }
+      background: #040507;
+      color: #F2E41B; }
   .boton--deshabilitado {
-    background: #464544;
-    color: #E8E3DB; }
+    background: #908B8E;
+    color: #CFC5B6; }
     .boton--deshabilitado:hover {
-      background: #464544;
-      color: #E8E3DB;
       cursor: not-allowed; }
   .boton--correcto {
     background: #A83E4C; }
@@ -1033,8 +1038,6 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
   justify-content: space-between;
   left: 0;
   padding: 0.5rem 1rem;
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 2; }
   .header__boton {
@@ -1060,7 +1063,8 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
     font-family: "Roboto", sans-serif;
     font-weight: lighter;
     margin: 0 auto;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    letter-spacing: -2px; }
     @media all and (min-width: 480px) {
       .header__logoTexto {
         font-size: 1.5rem; } }
@@ -1077,27 +1081,68 @@ blockquote, pre, code, kbd, samp, sub, sup, small {
 
 .navegacion {
   background: #040507;
-  margin-top: 3rem;
-  color: #F2E41B; }
+  color: #F2E41B;
+  flex-grow: 4;
+  flex-shrink: 4; }
   .navegacion__lista {
     list-style: none;
     margin: 0;
     text-align: left;
-    display: none; }
-    .navegacion__lista__item {
-      list-style: none;
-      border-top: 1px dotted red; }
-      .navegacion__lista__item__enlace {
-        color: #F2E41B;
-        font-family: "Roboto", sans-serif;
-        font-weight: bolder;
-        padding: 0.5rem;
-        text-transform: uppercase;
-        letter-spacing: -1px;
-        word-spacing: 0.2rem; }
+    width: 100%; }
+    .navegacion__lista__item__enlace {
+      color: #F2E41B;
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.9rem;
+      font-weight: bolder;
+      padding: 0.5rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      word-spacing: 0.2rem; }
 
 .sublista {
-  display: none; }
+  border: 1px solid green; }
+
+.main__seccion {
+  background: #FE9776 url("../img/13.jpg") top left no-repeat;
+  background-size: auto 150%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100vh;
+  padding: 4rem 1rem; }
+  @media all and (min-width: 720px) {
+    .main__seccion {
+      background-position: right bottom;
+      align-items: flex-end;
+      justify-content: space-around; } }
+  .main__seccion__article {
+    align-items: stretch;
+    color: #040507;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 90%;
+    text-align: left; }
+    @media all and (min-width: 720px) {
+      .main__seccion__article {
+        max-width: 480px; } }
+    .main__seccion__article--accion .boton {
+      width: 100%; }
+    @media all and (min-width: 720px) {
+      .main__seccion__article--accion .boton {
+        width: auto; } }
+    .main__seccion__article--contenido {
+      margin-bottom: 2rem; }
+    .main__seccion__article__header {
+      font-family: "Roboto", sans-serif; }
+      .main__seccion__article__header--titulo {
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 100%;
+        letter-spacing: -0.25rem; }
 
 .footer {
   background: #A83E4C;

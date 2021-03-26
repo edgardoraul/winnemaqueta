@@ -1,0 +1,52 @@
+// Las secciones de la portada principal
+.main
+	&__seccion
+		background: $color_fondo_2 url("../img/13.jpg") top left no-repeat
+		background-size: auto 150%
+		align-items: center
+		display: flex
+		flex-direction: column
+		flex-wrap: nowrap
+		justify-content: center
+		height: 100vh
+		padding: 4rem 1rem
+
+		@media all and ( min-width: $tablet )
+			background-position: right bottom
+			align-items: flex-end
+			justify-content: space-around
+
+
+		&__article
+			align-items: stretch
+			color: $color_negro
+			display: flex
+			flex-direction: column
+			flex-wrap: nowrap
+			max-width: 90%
+			text-align: left
+
+			@media all and ( min-width: $tablet )
+				max-width: $mobile
+				
+
+			&--accion
+				.boton
+					width: 100%
+
+				@media all and ( min-width: $tablet )
+					.boton
+						width: auto
+
+
+			&--contenido
+				margin-bottom: 2rem
+		
+			&__header
+				font-family: $fuente_titulo
+
+				&--titulo
+					font-size: 3rem
+					font-weight: normal
+					line-height: 100%
+					letter-spacing: -0.25rem
