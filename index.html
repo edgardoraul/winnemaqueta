@@ -7,7 +7,7 @@
 	<link rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.7' type='text/css' media='all' />
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/style.css.map" />
+	<link rel="application/json" href="css/style.css.map" />
 </head>
 <body>
 	<!-- El header y la barra de navegación -->
@@ -36,7 +36,7 @@
 			<!-- Bloque Oculto de la navegación -->
 			<nav>
 				<div class="navegacion">
-					<ul class="navegacion__lista">
+					<ul id="header_nav" class="navegacion__lista">
 						<li class="navegacion__lista__item navegacion__lista__item--activo">
 							<a class="navegacion__lista__item__enlace" href="#">Home <i class="icomoon icon-home"></i></a>
 						</li>
@@ -44,19 +44,19 @@
 							<a class="navegacion__lista__item__enlace" href="#">Wines<i class="separador"></i><i class="icomoon icon-wine"></i></a>
 						</li>
 						<li class="navegacion__lista__item">
-							<a class="navegacion__lista__item__enlace" href="#">Wineries<i class="separador"></i><i class="icomoon icon-arrow-down2"></i></a>
+							<a class="navegacion__lista__item__enlace" href="#">Wineries<i class="separador"></i><i class="icomoon icon-plus1"></i></a>
 		
 							<!-- Submenú -->
 							<ul class="navegacion__lista sublista">
-								<li class="navegacion__lista__item sublista__item">
+								<li class="navegacion__lista__item">
 									<a href="#" class="navegacion__lista__item__enlace">Winery listing</a>
 								</li>
 								<li class="navegacion__lista__item">
-									<a href="#" class="navegacion__lista__item__enlace">List your winery <i class="icomoon icon-arrow-down2"></i></a>
+									<a href="#" class="navegacion__lista__item__enlace">List your winery <i class="icomoon icon-plus1"></i></a>
 		
 									<!-- Sub Submenú -->
 									<ul class="navegacion__lista sublista">
-										<li class="navegacion__lista__item sublista__item">
+										<li class="navegacion__lista__item">
 											<a href="#" class="navegacion__lista__item__enlace">Overview</a>
 										</li>
 										<li class="navegacion__lista__item">
@@ -73,20 +73,20 @@
 							</ul>
 						</li>
 						<li class="navegacion__lista__item navegacion__lista__item--activo">
-							<a class="navegacion__lista__item__enlace" href="#">Who we are <i class="icomoon icon-arrow-down2"></i></a>
+							<a class="navegacion__lista__item__enlace" href="#">Who we are <i class="icomoon icon-plus1"></i></a>
 		
 							<!-- Submenú -->
 							<ul class="navegacion__lista sublista">
-								<li class="navegacion__lista__item sublista__item">
+								<li class="navegacion__lista__item">
 									<a href="#" class="navegacion__lista__item__enlace">About Us</a>
 								</li>
-								<li class="navegacion__lista__item sublista__item">
+								<li class="navegacion__lista__item">
 									<a href="#" class="navegacion__lista__item__enlace">Contact Us</a>
 								</li>
-								<li class="navegacion__lista__item sublista__item">
+								<li class="navegacion__lista__item">
 									<a href="#" class="navegacion__lista__item__enlace">FAQ</a>
 								</li>
-								<li class="navegacion__lista__item sublista__item">
+								<li class="navegacion__lista__item">
 									<a href="#" class="navegacion__lista__item__enlace">Privacy Policy</a>
 								</li>
 								<li class="navegacion__lista__item sublista__item">
@@ -123,6 +123,7 @@
 
 
 	<!-- Contenido principal de la web -->
+	<hr>
 	<main>
 		<div class="main">
 			<section class="main__seccion" id="1" name="1">
@@ -137,6 +138,7 @@
 					</div>
 				</article>
 			</section>
+			<hr>
 			<section class="main__seccion" id="2" name="2">
 				<article class="main__seccion__article">
 					<header class="main__seccion__article__header">
@@ -150,6 +152,7 @@
 					</div>
 				</article>
 			</section>
+			<hr>
 			<section class="main__seccion" id="3" name="3">
 				<article class="main__seccion__article">
 					<header class="main__seccion__article__header">
@@ -163,6 +166,7 @@
 					</div>
 				</article>
 			</section>
+			<hr>
 			<section class="main__seccion" id="4" name="4">
 				<article class="main__seccion__article">
 					<header class="main__seccion__article__header">
@@ -186,6 +190,7 @@
 			<div class="footer__menu">
 
 				<!-- Parte del logo -->
+				
 				<div class="footer__menu__logo">
 
 					<!-- logotipo -->
@@ -224,7 +229,9 @@
 						<p>Realizado por <a href="//webmoderna.com.ar" target="_blank" title="WebModerna">WebModerna</a></p>
 					</div>
 
+
 					<!-- redes sociales -->
+					<hr>
 					<div class="footer__contenido__sociales">
 						<a href="#" class="footer__contenido__sociales--enlace"><i class="icomoon icon-facebook"> </i></a>
 						<a href="#" class="footer__contenido__sociales--enlace"><i class="icomoon icon-twitter"> </i></a>
@@ -248,5 +255,6 @@
 			</div>
 		</div>
 	</footer>
+	<script src="js/scripts.js"></script>
 </body>
 </html>

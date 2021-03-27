@@ -9,10 +9,12 @@ html
 body
 	background-color: $color_fondo
 	color: $color_texto
-	font-size: 130%
+	font-size: 140%
 	font-family: $fuente_letra
-	line-height: 150%
+	letter-spacing: 1%
+	line-height: 170%
 	text-align: center
+	word-spacing: 1px
 
 	// hola
 a
@@ -27,9 +29,15 @@ strong
 	font-style: italic
 	font-weight: bold
 
-h1, h2, h3, h4, h5, h6
+h1, h2
 	font-family: $fuente_titulo
+
+h3, h4, h5, h6
+	font-family: $fuente_subtitulo
 
 blockquote, pre, code, kbd, samp, sub, sup, small
 	font-family: $fuente_subtitulo
 	font-weight: bolder
+
+img
+	width: 100%
