@@ -1,18 +1,16 @@
 /* Encabezados */
 .header
 	align-content: space-between
-	align-items: top
+	align-items: center
 	background: $color_blanco
 	display: flex
 	flex-direction: row
 	flex-wrap: nowrap
 	justify-content: space-between
 	left: 0
-	// position: fixed
-	// top: 0
-	width: 100%
+	padding: 0.5rem 1rem
+	position: relative
 	z-index: 2
-
 
 
 	// El botón del menú principal
@@ -29,7 +27,12 @@
 		@media screen and ( min-width: $desktop )
 			display: none
 			
-				
+	// El contenedor que tendrá la navegación
+	&__nav
+		align-self: flex-end
+		flex: 1 0 auto
+		order: 0
+		flex-wrap: wrap
 		
 
 
@@ -37,8 +40,6 @@
 	// El logotipo con imagen
 	&__logo
 		margin: 0
-		overflow: hidden
-		width: 250px
 
 		&__enlace
 			&__imagen
@@ -54,6 +55,7 @@
 		margin: 0 auto
 		font-size: 1.25rem
 		letter-spacing: -2px
+		width: 33%
 		
 		@media all and ( min-width: $mobile )
 			font-size: 1.5rem

@@ -34,17 +34,17 @@
 			</h1>
 
 			<!-- Bloque Oculto de la navegación -->
-			<nav>
+			<nav class="header__nav">
 				<div class="navegacion">
 					<ul id="header_nav" class="navegacion__lista">
 						<li class="navegacion__lista__item navegacion__lista__item--activo">
 							<a class="navegacion__lista__item__enlace" href="#">Home <i class="icomoon icon-home"></i></a>
 						</li>
 						<li class="navegacion__lista__item">
-							<a class="navegacion__lista__item__enlace" href="#">Wines<i class="separador"></i><i class="icomoon icon-wine"></i></a>
+							<a class="navegacion__lista__item__enlace" href="#">Wines<i class="icomoon icon-wine"></i></a>
 						</li>
 						<li class="navegacion__lista__item">
-							<a class="navegacion__lista__item__enlace" href="#">Wineries<i class="separador"></i><i class="icomoon icon-plus1"></i></a>
+							<a class="navegacion__lista__item__enlace" href="#">Wineries<i class="icomoon icon-plus"></i></a>
 		
 							<!-- Submenú -->
 							<ul class="navegacion__lista sublista">
@@ -52,7 +52,7 @@
 									<a href="#" class="navegacion__lista__item__enlace">Winery listing</a>
 								</li>
 								<li class="navegacion__lista__item">
-									<a href="#" class="navegacion__lista__item__enlace">List your winery <i class="icomoon icon-plus1"></i></a>
+									<a href="#" class="navegacion__lista__item__enlace">List your winery <i class="icomoon icon-plus"></i></a>
 		
 									<!-- Sub Submenú -->
 									<ul class="navegacion__lista sublista">
@@ -73,7 +73,7 @@
 							</ul>
 						</li>
 						<li class="navegacion__lista__item navegacion__lista__item--activo">
-							<a class="navegacion__lista__item__enlace" href="#">Who we are <i class="icomoon icon-plus1"></i></a>
+							<a class="navegacion__lista__item__enlace" href="#">Who we are <i class="icomoon icon-plus"></i></a>
 		
 							<!-- Submenú -->
 							<ul class="navegacion__lista sublista">
@@ -110,20 +110,19 @@
 			<!-- Bloque botones de acción -->
 			<div class="header__boton">
 				<a href="#" class="header__boton__enlace boton boton--chico boton--advertencia">Get Start <i class="icomoon icon-arrow-down2"></i></a>
-				<a href="#" class="header__boton__enlace header__boton__enlace--ingreso">
+				<!-- <a href="#" class="header__boton__enlace header__boton__enlace--ingreso">
 					<i class="icomoon icon-enter"></i>
 				</a>
 				<a href="#" class="header__boton__enlace header__boton__enlace--registro"></a>
 				<a href="#" class="header__boton__enlace--salir">
 					<i class="icomoon icon-switch"></i>
-				</a>
+				</a> -->
 			</div>
 		</div>
 	</header>
 
 
 	<!-- Contenido principal de la web -->
-	<hr>
 	<main>
 		<div class="main">
 			<section class="main__seccion" id="1" name="1">
@@ -148,7 +147,7 @@
 					</header>
 					<div class="main__seccion__article--contenido"> Suscipit quod iure laboriosam maiores nemo similique illum aperiam omnis? Reprehenderit sint repudiandae accusamus ipsum ducimus aut voluptates velit fugit doloribus. Libero!</div>
 					<div class="main__seccion__article--accion">
-						<a href="#3" class="boton">Get Journeys <i class="separador"></i><i class="icomoon icon-forward"></i></a>
+						<a href="#3" class="boton">Get Journeys <i class="icomoon icon-forward"></i></a>
 					</div>
 				</article>
 			</section>
@@ -162,7 +161,7 @@
 					</header>
 					<div class="main__seccion__article--contenido"> Suscipit quod iure laboriosam maiores nemo similique illum aperiam omnis? Reprehenderit sint repudiandae accusamus ipsum ducimus aut voluptates velit fugit doloribus. Libero!</div>
 					<div class="main__seccion__article--accion">
-						<a href="#4" class="boton">Get Journeys <i class="separador"></i><i class="icomoon icon-forward"></i></a>
+						<a href="#4" class="boton">Get Journeys <i class="icomoon icon-forward"></i></a>
 					</div>
 				</article>
 			</section>
@@ -174,9 +173,13 @@
 							Lorem ipsum dolor sit amet consectetur adipisicing elit
 						</h2>
 					</header>
-					<div class="main__seccion__article--contenido"> Suscipit quod iure laboriosam maiores nemo similique illum aperiam omnis? Reprehenderit sint repudiandae accusamus ipsum ducimus aut voluptates velit fugit doloribus. Libero!</div>
+					<div class="main__seccion__article--contenido"> 
+						<blockquote>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto.
+						</blockquote>
+					</div>
 					<div class="main__seccion__article--accion">
-						<a href="#3" class="boton boton--deshabilitado">Get Journeys <i class="separador"></i><i class="icomoon icon-forward"></i></a>
+						<a href="#3" class="boton boton--deshabilitado">Get Journeys <i class="icomoon icon-forward"></i></a>
 					</div>
 				</article>
 			</section>
@@ -245,7 +248,7 @@
 				<div class="footer__botonera">
 					<a href="#" class="footer__botonera__boton footer__botonera__boton--accion">
 						Continue building my wine's box
-						<i class="separador"></i>
+						
 						<i class="icomoon icon-cart"></i>
 					</a>
 					<a href="#" class="footer__botonera__boton">

@@ -21,13 +21,31 @@ a
 	text-decoration: none
 	transition: all 0.2s ease-in-out
 
+blockquote, pre, code, kbd, samp, sub, sup, small
+	font-family: $fuente_subtitulo
+	font-weight: bolder
+
+blockquote
+	font-style: italic
+	padding-left: 1rem
+	position: relative
+	border-right: 0.5rem solid $color_negro
+
+	&::before
+		color: $color_negro
+		content: "\e057"
+		font-family: "icomoon"
+		font-style: normal
+		font-weight: bolder
+		font-size: 2rem
+		left: -2rem
+		position: absolute
+		top: 0
+
 em
 	font-weight: 300
 	font-style: italic
 
-strong
-	font-style: italic
-	font-weight: bold
 
 h1, h2
 	font-family: $fuente_titulo
@@ -35,9 +53,11 @@ h1, h2
 h3, h4, h5, h6
 	font-family: $fuente_subtitulo
 
-blockquote, pre, code, kbd, samp, sub, sup, small
-	font-family: $fuente_subtitulo
-	font-weight: bolder
-
 img
 	width: 100%
+
+
+
+strong
+	font-style: italic
+	font-weight: bold
