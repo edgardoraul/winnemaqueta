@@ -1,3 +1,5 @@
+// Visión desde un teléfono
+
 // Navegación
 .navegacion
 	background: $color_fondo_2
@@ -8,6 +10,18 @@
 	top: 4rem
 	width: 100%
 
+	// Se muestra en modo Escritorio
+	@media all and ( min-width: $desktop )
+		align-self: flex-start
+		align-items: start
+		background: none
+		display: flex
+		flex-flow: row
+		justify-content: space-between
+		position: static
+		width: auto
+
+
 	&__lista
 		list-style: none
 		margin: 0
@@ -15,12 +29,27 @@
 		opacity: 0
 		padding-left: 0.75rem
 		text-align: left
+		// transition: all 0.3s ease-in-out
 		visibility: hidden
 		z-index: -1
+
+		// Se muestra en modo Escritorio
+		@media all and ( min-width: $desktop )
+			display: flex
+			flex-flow: row
+			height: auto
+			opacity: 1
+			padding: 0
+			visibility: visible
+			width: auto
+			z-index: 1
 
 		&__item
 
 			&__enlace
+				// Variable definia
+				$medida: 1rem
+
 				align-items: center
 				color: $color_negro
 				display: flex
@@ -30,14 +59,23 @@
 				font-size: 1rem
 				font-weight: bolder
 				justify-content: space-between
-				padding: 0.75rem 1rem
+				padding: 0.5rem ($medida - 0.25)
 				position: relative
 				vertical-align: bottom
 				text-transform: uppercase
 
+				// Se muestra en modo Escritorio
+				@media all and ( min-width: $desktop )
+					font-size: 0.75rem
+					padding: 0.25rem 0.5rem
+
+
 				&:hover
 					&:before
-						width: calc(100% - 1rem)
+						width: calc(100% - #{$medida / 2})
+
+						@media all and ( min-width: $desktop )
+							width: calc(100% - #{$medida / 2})
 
 				&:before
 					background: rgba($color_negro, 0.3)
@@ -46,20 +84,40 @@
 					height: 10%
 					position: absolute
 					right: 0
+					transition: all 0.2s ease-in-out
+					width: 0
 				
+				// Comportamiento de íconos
+				i
+					&::before
+						display: inline-block
+						margin-left: 0.5rem
+
+			// Los items activos de los menúes
 			&--activo > &__enlace
 				&:before
 					display: none
 
 
 
+		// Clases para manejar la apertura o cierre
 		&--abierto
+			animation-name: fadeInDown
+			animation-delay: 0
+			animation-duration: 0.3s
+			animation-timing-function: ease-in-out
+			animation-fill-mode: both
 			height: 100%
 			opacity: 1			
 			visibility: visible
 			z-index: 1
 
 		&--cerrado
+			animation-name: fadeOutUp
+			animation-delay: 0
+			animation-duration: 0.3s
+			animation-timing-function: ease-in-out
+			animation-fill-mode: both
 			height: 0
 			opacity: 0
 			visibility: visible
@@ -67,19 +125,47 @@
 
 
 .sublista
+	display: block
 	opacity: 0
 	height: 0
 	visibility: hidden
 	z-index: -1
+	
+	// Modo escritorio
+	@media all and ( min-width: $desktop )
+		display: none
+		
 
+	// Clases para manejar la apertura o cierre
 	&--abierto
+		animation-name: fadeInDown
+		animation-delay: 0
+		animation-duration: 0.3s
+		animation-timing-function: ease-in-out
+		animation-fill-mode: both
 		opacity: 1
 		height: 100%
 		visibility: visible
 		z-index: 1
 	
 	&--cerrado
+		animation-name: fadeOutUp
+		animation-delay: 0
+		animation-duration: 0.3s
+		animation-timing-function: ease-in-out
+		animation-fill-mode: both
 		height: 0
 		opacity: 0
 		visibility: visible
 		z-index: -1
+
+
+// Modo escritorio
+@media all and ( min-width: $desktop )
+	.sublista
+		padding-left: 0.75rem
+		&--cerrado
+			display: none
+		
+		&--abierto
+			display: block !important

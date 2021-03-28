@@ -12,6 +12,13 @@
 	position: relative
 	z-index: 2
 
+	// Modo escritorio
+	@media all and ( min-width: $desktop )
+		align-items: flex-start
+		justify-content: stretch
+		position: static
+		
+
 
 	// El botón del menú principal
 	&__boton
@@ -21,19 +28,24 @@
 			color: $color_titulo
 			display: block
 			font-size: 1.5rem
+
 			@media all and ( min-width: $mobile )
 				font-size: 2rem
-		
-		@media screen and ( min-width: $desktop )
-			display: none
+
+			// Ocultando en modo Escritorio
+			@media screen and ( min-width: $desktop )
+				display: none
 			
 	// El contenedor que tendrá la navegación
 	&__nav
 		align-self: flex-end
-		flex: 1 0 auto
+		flex: 0 0 auto
 		order: 0
-		flex-wrap: wrap
-		
+
+		@media screen and ( min-width: $desktop )
+			flex: basis
+			align-self: auto
+
 
 
 
@@ -53,14 +65,15 @@
 		font-family: $fuente_subtitulo
 		font-weight: lighter
 		margin: 0 auto
+		flex: 1 0 auto
 		font-size: 1.25rem
 		letter-spacing: -2px
-		width: 33%
 		
 		@media all and ( min-width: $mobile )
 			font-size: 1.5rem
 		
-		@media all and ( min-width: $tablet )
+		@media all and ( min-width: $desktop )
+			flex: 0 0 auto
 			font-size: 2rem
 
 

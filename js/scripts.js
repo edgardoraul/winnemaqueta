@@ -22,20 +22,20 @@ function cargarScripts()
 
 		if( listadoMenu.classList.contains("navegacion__lista--abierto") )
 		{
-			listadoMenu.classList.remove("navegacion__lista--abierto");
-			listadoMenu.classList.add("navegacion__lista--cerrado");
+			listadoMenu.classList.remove("navegacion__lista--abierto", "fadeInDown");
+			listadoMenu.classList.add("navegacion__lista--cerrado", "fadeOutUp");
 		}
 		
 		else if( listadoMenu.classList.contains("navegacion__lista--cerrado") )
 		{
-			listadoMenu.classList.add("navegacion__lista--abierto");
-			listadoMenu.classList.remove("navegacion__lista--cerrado");
+			listadoMenu.classList.add("navegacion__lista--abierto", "fadeInDown");
+			listadoMenu.classList.remove("navegacion__lista--cerrado", "fadeOutUp");
 		}
 
 		else
 		{
-			listadoMenu.classList.add("navegacion__lista--abierto");
-			listadoMenu.classList.remove("navegacion__lista--cerrado");
+			listadoMenu.classList.add("navegacion__lista--abierto", "fadeInDown");
+			listadoMenu.classList.remove("navegacion__lista--cerrado", "fadeOutUp");
 		}
 	}
 
