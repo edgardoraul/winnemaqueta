@@ -3,8 +3,6 @@
 // Navegación
 .navegacion
 	background: $color_fondo_2
-	flex-flow: column
-	flex-grow: 0
 	left: 0
 	position: absolute
 	top: 4rem
@@ -12,11 +10,9 @@
 
 	// Se muestra en modo Escritorio
 	@media all and ( min-width: $desktop )
-		align-self: flex-start
 		align-items: start
 		background: none
 		display: flex
-		flex-flow: row
 		justify-content: space-between
 		position: static
 		width: auto
@@ -29,7 +25,6 @@
 		opacity: 0
 		padding-left: 0.75rem
 		text-align: left
-		// transition: all 0.3s ease-in-out
 		visibility: hidden
 		z-index: -1
 
@@ -90,7 +85,7 @@
 					width: 0
 				
 				// Comportamiento de íconos
-				i
+				i, span, .icomoon
 					&::before
 						display: inline-block
 						margin-left: 0.5rem
@@ -101,70 +96,32 @@
 					display: none
 
 
-
-		// Clases para manejar la apertura o cierre
+		// Apertura o cierre
 		&--abierto
-			animation-name: fadeInDown
-			animation-delay: 0
-			animation-duration: 0.3s
-			animation-timing-function: ease-in-out
-			animation-fill-mode: both
-			height: 100%
-			opacity: 1			
-			visibility: visible
-			z-index: 1
+			@include abierto()
 
 		&--cerrado
-			animation-name: fadeOutUp
-			animation-delay: 0
-			animation-duration: 0.3s
-			animation-timing-function: ease-in-out
-			animation-fill-mode: both
-			height: 0
-			opacity: 0
-			visibility: visible
-			z-index: -1
+			@include cerrado()
 
 
+
+// Los submenúes
 .sublista
 	display: block
-	height: 0
-	opacity: 0
-	visibility: hidden
-	z-index: -1
+	@include cerrado()
+
+	// Apertura o cierre
+	&--abierto
+		@include abierto()
 	
+	&--cerrado
+		@include cerrado()
+
+
 	// Modo escritorio
 	@media all and ( min-width: $desktop )
 		background: $color_blanco
 		display: none
-		
-
-	// Clases para manejar la apertura o cierre
-	&--abierto
-		animation-name: fadeInDown
-		animation-delay: 0
-		animation-duration: 0.3s
-		animation-timing-function: ease-in-out
-		animation-fill-mode: both
-		opacity: 1
-		height: auto
-		visibility: visible
-		z-index: 1
-	
-	&--cerrado
-		animation-name: fadeOutUp
-		animation-delay: 0
-		animation-duration: 0.3s
-		animation-timing-function: ease-in-out
-		animation-fill-mode: both
-		height: 0
-		opacity: 0
-		visibility: visible
-		z-index: -1
-
-// Modo escritorio
-@media all and ( min-width: $desktop )
-	.sublista
 		left: 0
 		padding-left: 0.75rem
 		position: absolute

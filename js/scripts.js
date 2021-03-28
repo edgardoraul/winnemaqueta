@@ -39,6 +39,26 @@ function cargarScripts()
 		}
 	}
 
+	// Escuchando el evento de redimensionar la pantalla
+	window.addEventListener("resize", mostrarOcultar);
+
+	// Función que muestra y oculta el menú principal dependiendo del ancho de pantall
+	function mostrarOcultar(ev)
+	{
+		const ancho = window.innerWidth;
+		if( ancho >= 1000 && listadoMenu.classList.contains("navegacion__lista--cerrado") )
+		{
+			listadoMenu.classList.add("navegacion__lista--abierto");
+			listadoMenu.classList.remove("navegacion__lista--cerrado");
+		}
+		else if ( ancho < 1000 && listadoMenu.classList.contains("navegacion__lista--abierto") )
+		{
+			listadoMenu.classList.remove("navegacion__lista--abierto");
+			listadoMenu.classList.add("navegacion__lista--cerrado");
+		}
+		console.log(ancho);
+	}
+
 
 	/* Los submenúes secundario del menú principal ************/
 
