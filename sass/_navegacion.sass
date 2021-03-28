@@ -45,6 +45,8 @@
 			z-index: 1
 
 		&__item
+			display: block
+			position: relative
 
 			&__enlace
 				// Variable definia
@@ -126,13 +128,14 @@
 
 .sublista
 	display: block
-	opacity: 0
 	height: 0
+	opacity: 0
 	visibility: hidden
 	z-index: -1
 	
 	// Modo escritorio
 	@media all and ( min-width: $desktop )
+		background: $color_blanco
 		display: none
 		
 
@@ -144,7 +147,7 @@
 		animation-timing-function: ease-in-out
 		animation-fill-mode: both
 		opacity: 1
-		height: 100%
+		height: auto
 		visibility: visible
 		z-index: 1
 	
@@ -159,13 +162,16 @@
 		visibility: visible
 		z-index: -1
 
-
 // Modo escritorio
 @media all and ( min-width: $desktop )
 	.sublista
+		left: 0
 		padding-left: 0.75rem
+		position: absolute
+		width: 15rem
+
 		&--cerrado
 			display: none
 		
 		&--abierto
-			display: block !important
+			display: block
