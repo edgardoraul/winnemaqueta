@@ -22,44 +22,39 @@ function cargarScripts()
 
 		if( listadoMenu.classList.contains("navegacion__lista--abierto") )
 		{
-			listadoMenu.classList.remove("navegacion__lista--abierto", "fadeInDown");
-			listadoMenu.classList.add("navegacion__lista--cerrado", "fadeOutUp");
+			listadoMenu.classList.remove("navegacion__lista--abierto");
+			listadoMenu.classList.add("navegacion__lista--cerrado");
 		}
 		
 		else if( listadoMenu.classList.contains("navegacion__lista--cerrado") )
 		{
-			listadoMenu.classList.add("navegacion__lista--abierto", "fadeInDown");
-			listadoMenu.classList.remove("navegacion__lista--cerrado", "fadeOutUp");
+			listadoMenu.classList.add("navegacion__lista--abierto");
+			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
 
 		else
-		{
-			listadoMenu.classList.add("navegacion__lista--abierto", "fadeInDown");
-			listadoMenu.classList.remove("navegacion__lista--cerrado", "fadeOutUp");
-		}
-	}
-
-	// Escuchando el evento de redimensionar la pantalla
-	window.addEventListener("change", mostrarOcultar);
-
-	// Función que muestra y oculta el menú principal dependiendo del ancho de pantall
-	function mostrarOcultar(ev)
-	{
-		const ancho = window.innerWidth;
-		if( ancho >= 1000 && listadoMenu.classList.contains("navegacion__lista--cerrado") )
 		{
 			listadoMenu.classList.add("navegacion__lista--abierto");
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
-		else if ( ancho < 1000 && listadoMenu.classList.contains("navegacion__lista--abierto") )
+	}
+
+	// Escuchando el evento de redimensionar la pantalla
+	window.addEventListener("resize", mostrarOcultar, false);
+	
+	// Función que muestra y oculta el menú principal dependiendo del ancho de pantall
+	function mostrarOcultar(ev)
+	{
+		const ancho = window.innerWidth;
+		if( ancho >= 1000 )
 		{
-			listadoMenu.classList.remove("navegacion__lista--abierto");
-			listadoMenu.classList.add("navegacion__lista--cerrado");
+			listadoMenu.classList.add("navegacion__lista--abierto");
+			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
-		else
+		else if ( ancho < 1000 )
 		{
-			listadoMenu.classList.remove("navegacion__lista--abierto");
 			listadoMenu.classList.add("navegacion__lista--cerrado");
+			listadoMenu.classList.remove("navegacion__lista--abierto");
 		}
 		console.log(ancho);
 	}
