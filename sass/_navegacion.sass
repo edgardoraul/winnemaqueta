@@ -44,7 +44,7 @@
 			position: relative
 
 			&__enlace
-				// Variable definia
+				// Variable definida
 				$medida: 1rem
 
 				align-items: center
@@ -86,7 +86,7 @@
 				
 				// Comportamiento de íconos
 				i, span, .icomoon
-					&::before
+					&:before
 						display: inline-block
 						margin-left: 0.5rem
 
@@ -132,3 +132,9 @@
 		
 		&--abierto
 			display: block
+
+
+// Funcionalidad de hover y mostrar los submenúes
+.navegacion__lista__item:hover > .sublista
+	display: block
+	@include abierto()

@@ -40,7 +40,7 @@ function cargarScripts()
 	}
 
 	// Escuchando el evento de redimensionar la pantalla
-	window.addEventListener("resize", mostrarOcultar);
+	window.addEventListener("change", mostrarOcultar);
 
 	// Función que muestra y oculta el menú principal dependiendo del ancho de pantall
 	function mostrarOcultar(ev)
@@ -52,6 +52,11 @@ function cargarScripts()
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
 		else if ( ancho < 1000 && listadoMenu.classList.contains("navegacion__lista--abierto") )
+		{
+			listadoMenu.classList.remove("navegacion__lista--abierto");
+			listadoMenu.classList.add("navegacion__lista--cerrado");
+		}
+		else
 		{
 			listadoMenu.classList.remove("navegacion__lista--abierto");
 			listadoMenu.classList.add("navegacion__lista--cerrado");
@@ -74,7 +79,9 @@ function cargarScripts()
 	// Se le asigna la propiedad de poder abrir y cerrar a cada enlace que funcionará como botón de submenú.
 	for (let i = 0; i < listadoSubMenuBoton.length; i++ )
 	{
-		listadoSubMenuBoton[i].addEventListener("click", (ev) => {
+		listadoSubMenuBoton[i].addEventListener("click", abrirSubMenu);
+		function abrirSubMenu(ev)
+		{
 			ev.preventDefault();
 
 			if( listadoSubMenuBoton[i].nextElementSibling.classList.contains("sublista--abierto") )
@@ -112,6 +119,6 @@ function cargarScripts()
 					listadoSubMenuBoton[i].childNodes[0].nextElementSibling.classList.remove("icon-plus");
 				}
 			}
-		});
+		}
 	}
 }

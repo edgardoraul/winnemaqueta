@@ -8806,7 +8806,7 @@ strong {
 
 .boton {
   outline: none;
-  background: #A83E4C;
+  background: #040507;
   border: none;
   border-radius: 4rem;
   color: #E8E3DB;
@@ -8819,7 +8819,8 @@ strong {
   text-decoration: none;
   text-transform: uppercase; }
   .boton:hover {
-    background: #908B8E;
+    background: #F2E41B;
+    color: #040507;
     cursor: pointer; }
   .boton--grande {
     font-size: 1.5rem;
@@ -8837,6 +8838,8 @@ strong {
     background: #908B8E;
     color: #CFC5B6; }
     .boton--deshabilitado:hover {
+      background: #908B8E;
+      color: #CFC5B6;
       cursor: not-allowed; }
   .boton--correcto {
     background: #A83E4C; }
@@ -8954,7 +8957,7 @@ strong {
           right: 0;
           transition: all 0.2s ease-in-out;
           width: 0; }
-        .navegacion__lista__item__enlace i::before, .navegacion__lista__item__enlace span::before, .navegacion__lista__item__enlace .icomoon::before {
+        .navegacion__lista__item__enlace i:before, .navegacion__lista__item__enlace span:before, .navegacion__lista__item__enlace .icomoon:before {
           display: inline-block;
           margin-left: 0.5rem; }
       .navegacion__lista__item--activo > .navegacion__lista__item__enlace:before {
@@ -9084,6 +9087,48 @@ strong {
       .sublista--abierto {
         display: block; } }
 
+.navegacion__lista__item:hover > .sublista {
+  display: block;
+  height: auto;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  -o-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  opacity: 1;
+  visibility: visible;
+  z-index: 2; }
+
 .main__seccion {
   background: #FE9776 url("../img/13.jpg") top left no-repeat;
   align-items: center;
@@ -9122,7 +9167,7 @@ strong {
       .main__seccion__article__header--titulo {
         font-size: 3rem;
         font-weight: normal;
-        line-height: 150%;
+        line-height: 100%;
         letter-spacing: -0.25rem; }
 
 .footer {
