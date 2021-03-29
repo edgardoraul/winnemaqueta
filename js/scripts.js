@@ -42,7 +42,7 @@ function cargarScripts()
 	// Escuchando el evento de redimensionar la pantalla
 	window.addEventListener("resize", mostrarOcultar, false);
 	
-	// Función que muestra y oculta el menú principal dependiendo del ancho de pantall
+	// Función muestra y oculta el menú principal dependiendo del ancho de pantall
 	function mostrarOcultar(ev)
 	{
 		const ancho = window.innerWidth;
