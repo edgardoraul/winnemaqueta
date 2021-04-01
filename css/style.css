@@ -9232,7 +9232,7 @@ strong {
       flex-flow: row wrap; } }
   @media all and (mmin-width: 720px) {
     .footer__contenido__texto, .footer__contenido__texto--copyright, .footer__contenido__titulo, .footer__contenido__sociales {
-      flex: 1 1 50%; } }
+      flex: 1 1 40%; } }
   .footer__contenido__titulo {
     color: #F2E41B;
     font-size: 4rem;
@@ -9255,8 +9255,9 @@ strong {
       left: -2rem;
       position: absolute;
       top: 0; }
+  .footer__contenido__texto--copyright {
+    flex: 0 1 70%; }
   .footer__contenido__sociales--enlace {
-    padding: 0.75rem;
     display: inline-flex; }
     .footer__contenido__sociales--enlace:hover {
       transform: scale(1.2); }
