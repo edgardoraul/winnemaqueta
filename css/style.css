@@ -8764,6 +8764,7 @@ body {
   word-spacing: 1px; }
 
 a {
+  color: #A83E4C;
   text-decoration: none;
   transition: all 0.2s ease-in-out; }
 
@@ -8863,7 +8864,7 @@ strong {
       color: #A83E4C;
       display: block;
       font-size: 1.5rem; }
-    @media all and (min-width: 480px) {
+    @media all and (min-width: 500px) {
       .header__boton__menu {
         font-size: 2rem; } }
     @media screen and (min-width: 1000px) {
@@ -8875,7 +8876,7 @@ strong {
     font-size: 1.25rem;
     letter-spacing: -2px;
     margin: 0; }
-    @media all and (min-width: 480px) {
+    @media all and (min-width: 500px) {
       .header__logoTexto {
         font-size: 1.5rem; } }
     @media all and (min-width: 1000px) {
@@ -9154,7 +9155,7 @@ strong {
     text-align: left; }
     @media all and (min-width: 720px) {
       .main__seccion__article {
-        max-width: 480px; } }
+        max-width: 500px; } }
     .main__seccion__article--accion .boton {
       width: 100%; }
     @media all and (min-width: 720px) {
@@ -9180,7 +9181,7 @@ strong {
     flex-direction: row;
     flex-flow: wrap;
     justify-content: center; }
-    @media all and (min-width: 480px) {
+    @media all and (min-width: 500px) {
       .footer__menu__logo {
         justify-content: space-between; } }
     .footer__menu__logo--secundario {
@@ -9195,8 +9196,9 @@ strong {
       flex: 0 1 auto;
       list-style: none;
       padding: 0;
-      overflow: hidden; }
-      @media all and (min-width: 480px) {
+      overflow: hidden;
+      flex-basis: 100%; }
+      @media all and (min-width: 500px) {
         .footer__menu__logo__lista {
           flex-basis: 50%; } }
       @media all and (min-width: 720px) {
@@ -9205,7 +9207,6 @@ strong {
           flex-flow: row nowrap;
           flex-basis: auto; } }
       .footer__menu__logo__lista__item__enlace {
-        background: #8C7B6C;
         color: #E8E3DB;
         display: block;
         font-family: "Roboto";
@@ -9213,9 +9214,52 @@ strong {
         text-transform: uppercase; }
         @media all and (min-width: 720px) {
           .footer__menu__logo__lista__item__enlace {
+            background: #8C7B6C;
             font-size: 0.75rem; } }
         .footer__menu__logo__lista__item__enlace:hover {
           background: #908B8E; }
+
+.footer__contenido {
+  align-content: flex-start;
+  align-items: baseline;
+  color: #908B8E;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  min-height: 100vh; }
+  @media all and (min-width: 720px) {
+    .footer__contenido {
+      flex-flow: row wrap; } }
+  @media all and (mmin-width: 720px) {
+    .footer__contenido__texto, .footer__contenido__texto--copyright, .footer__contenido__titulo, .footer__contenido__sociales {
+      flex: 1 1 50%; } }
+  .footer__contenido__titulo {
+    color: #F2E41B;
+    font-size: 4rem;
+    line-height: 150%; }
+  .footer__contenido__texto {
+    flex-basis: auto;
+    font-family: "Poppins";
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 150%;
+    padding-left: 1rem;
+    position: relative;
+    margin-left: 2rem; }
+    .footer__contenido__texto::before {
+      content: "";
+      font-family: "icomoon";
+      font-style: normal;
+      font-weight: bolder;
+      font-size: 2rem;
+      left: -2rem;
+      position: absolute;
+      top: 0; }
+  .footer__contenido__sociales--enlace {
+    padding: 0.75rem;
+    display: inline-flex; }
+    .footer__contenido__sociales--enlace:hover {
+      transform: scale(1.2); }
 
 .footer {
   background: #464544;
@@ -9255,10 +9299,10 @@ strong {
         background: #040507; }
       .footer__botonera__boton:focus {
         outline: 1px dotted #040507; }
-      @media all and (max-width: 480px) {
+      @media all and (max-width: 500px) {
         .footer__botonera__boton--accion {
           display: none; } }
-    @media all and (max-width: 480px) {
+    @media all and (max-width: 500px) {
       .footer__botonera {
         display: inline-block;
         left: auto;

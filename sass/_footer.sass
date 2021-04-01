@@ -35,6 +35,7 @@
 				list-style: none
 				padding: 0
 				overflow: hidden
+				flex-basis: 100%
 				@media all and ( min-width: $mobile )
 					flex-basis: 50%
 
@@ -46,18 +47,77 @@
 				// Los enlaces
 				&__item
 					&__enlace
-						background: $color_subtitulo2
 						color: $color_blanco
 						display: block
 						font-family: $fuente_subtitulo
 						padding: 0.5rem 1rem
 						text-transform: uppercase
+						
 						@media all and ( min-width: $tablet )
+							background: $color_subtitulo2
 							font-size: 0.75rem
 
 						&:hover
 							background: $color_subtitulo
 
+
+// Contenido secundario del footer
+.footer
+	&__contenido
+		align-content: flex-start
+		align-items: baseline
+		color: $color_subtitulo
+		display: flex
+		justify-content: space-between
+		flex-flow: column wrap
+		min-height: 100vh
+
+		@media all and ( min-width: $tablet )
+			flex-flow: row wrap
+		
+		&__texto,
+		&__texto--copyright,
+		&__titulo,
+		&__sociales
+
+			@media all and ( mmin-width: $tablet )
+				flex: 1 1 50%
+		&__titulo
+			color: $color_advertencia
+			font-size: 4rem
+			line-height: 150%
+
+		&__texto
+			flex-basis: auto
+			font-family: $fuente_titulo
+			font-style: italic
+			font-size: 2rem
+			line-height: 150%
+			padding-left: 1rem
+			position: relative
+			margin-left: 2rem
+
+			&::before
+				// color: $color_negro
+				content: "\e057"
+				font-family: "icomoon"
+				font-style: normal
+				font-weight: bolder
+				font-size: 2rem
+				left: -2rem
+				position: absolute
+				top: 0
+		
+		&__sociales
+			&--enlace
+				padding: 0.75rem
+				display: inline-flex
+				&:hover
+					transform: scale(1.2)
+
+
+
+			
 
 
 // Todo el pie de página
