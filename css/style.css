@@ -9170,8 +9170,55 @@ strong {
         line-height: 100%;
         letter-spacing: -0.25rem; }
 
+.footer__menu {
+  display: flex;
+  flex-direction: column; }
+  .footer__menu__logo {
+    align-items: center;
+    align-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center; }
+    @media all and (min-width: 480px) {
+      .footer__menu__logo {
+        justify-content: space-between; } }
+    .footer__menu__logo--secundario {
+      background: #E8E3DB;
+      border-radius: 4rem;
+      padding: 0.5rem 2rem;
+      flex-basis: auto;
+      flex: 0 0 auto; }
+    .footer__menu__logo__lista {
+      display: flex;
+      flex-flow: column nowrap;
+      flex: 0 1 auto;
+      list-style: none;
+      padding: 0;
+      overflow: hidden; }
+      @media all and (min-width: 480px) {
+        .footer__menu__logo__lista {
+          flex-basis: 50%; } }
+      @media all and (min-width: 720px) {
+        .footer__menu__logo__lista {
+          border-radius: 4rem;
+          flex-flow: row nowrap;
+          flex-basis: auto; } }
+      .footer__menu__logo__lista__item__enlace {
+        background: #8C7B6C;
+        color: #E8E3DB;
+        display: block;
+        font-family: "Roboto";
+        padding: 0.5rem 1rem;
+        text-transform: uppercase; }
+        @media all and (min-width: 720px) {
+          .footer__menu__logo__lista__item__enlace {
+            font-size: 0.75rem; } }
+        .footer__menu__logo__lista__item__enlace:hover {
+          background: #908B8E; }
+
 .footer {
-  background: #A83E4C;
+  background: #464544;
   color: #E8E3DB;
   padding: 1rem 1rem 6rem 1rem;
   text-align: left;

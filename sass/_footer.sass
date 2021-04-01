@@ -1,6 +1,68 @@
+// Secciones del footer
+.footer
+	// Sección que contiene el logo, menúes y demás cosas
+	&__menu
+		display: flex
+		flex-direction: column
+	
+
+		// Secciones del logo y un menú secundario
+		&__logo
+
+			align-items: center
+			align-content: space-between
+			display: flex
+			flex-direction: row
+			flex-flow: wrap
+			justify-content: center
+			@media all and ( min-width: $mobile )
+				justify-content: space-between
+			
+
+			// El logo propiamente dicho
+			&--secundario
+				background: $color_blanco
+				border-radius: 4rem
+				padding: 0.5rem 2rem
+				flex-basis: auto
+				flex: 0 0 auto
+			
+			// El submenú secundario
+			&__lista
+				display: flex
+				flex-flow: column nowrap
+				flex: 0 1 auto
+				list-style: none
+				padding: 0
+				overflow: hidden
+				@media all and ( min-width: $mobile )
+					flex-basis: 50%
+
+				@media all and ( min-width: $tablet )
+					border-radius: 4rem
+					flex-flow: row nowrap
+					flex-basis: auto
+				
+				// Los enlaces
+				&__item
+					&__enlace
+						background: $color_subtitulo2
+						color: $color_blanco
+						display: block
+						font-family: $fuente_subtitulo
+						padding: 0.5rem 1rem
+						text-transform: uppercase
+						@media all and ( min-width: $tablet )
+							font-size: 0.75rem
+
+						&:hover
+							background: $color_subtitulo
+
+
+
 // Todo el pie de página
 .footer
-	background: $color_titulo
+	background: $color_texto
 	color: $color_blanco
 	padding: 1rem 1rem 6rem 1rem
 	text-align: left
