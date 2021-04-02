@@ -66,7 +66,7 @@
 	&__contenido
 		align-content: flex-start
 		align-items: baseline
-		color: $color_subtitulo
+		color: $color_blanco
 		display: flex
 		justify-content: space-between
 		flex-flow: column wrap
@@ -82,10 +82,16 @@
 
 			@media all and ( mmin-width: $tablet )
 				flex: 1 1 40%
+
 		&__titulo
 			color: $color_advertencia
 			font-size: 4rem
-			line-height: 150%
+			font-family: $fuente_letra
+			font-weight: 300
+			letter-spacing: -5pt
+			line-height: 170%
+			@media all and ( min-width: $tablet )
+				max-width: 70%
 
 		&__texto
 			flex-basis: auto

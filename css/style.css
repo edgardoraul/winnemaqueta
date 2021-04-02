@@ -8754,7 +8754,7 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: #efeefe;
+  background: none;
   color: #464544;
   font-size: 140%;
   font-family: "Roboto Slab";
@@ -8844,6 +8844,12 @@ strong {
       cursor: not-allowed; }
   .boton--correcto {
     background: #A83E4C; }
+  .boton--blanconegro {
+    color: #040507;
+    background: #E8E3DB; }
+    .boton--blanconegro:hover {
+      background: #040507;
+      color: #E8E3DB; }
 
 /* Encabezados */
 .header {
@@ -9130,46 +9136,105 @@ strong {
     opacity: 1;
     visibility: visible;
     z-index: 2; } }
-.main__seccion {
-  background: #FE9776 url("../img/13.jpg") top left no-repeat;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 4rem 1rem; }
-  @media all and (min-width: 720px) {
-    .main__seccion {
-      background-position: right bottom;
-      background-size: cover;
-      align-items: flex-end;
-      justify-content: space-around; } }
-  .main__seccion__article {
-    align-items: stretch;
-    color: #040507;
+/** Hay varios tipos de secciones:
+ *
+ * .main__seccion: utilizada generalmente una vez en la portada principal o la que haga de las veces y/o similares.
+ *
+ * .main__seccion2: tiene un título, contenido e imagen lateral. Es intercambiable, las pares van de un lado e impares del otro. 
+ *
+ *
+ *
+ */
+.main {
+  /** .main__seccion2 */ }
+  .main__seccion {
+    background: #FE9776 url("../img/13.jpg") top left no-repeat;
+    align-items: center;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    max-width: 90%;
-    text-align: left; }
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 1rem; }
     @media all and (min-width: 720px) {
-      .main__seccion__article {
-        max-width: 500px; } }
-    .main__seccion__article--accion .boton {
-      width: 100%; }
-    @media all and (min-width: 720px) {
+      .main__seccion {
+        background-position: right bottom;
+        background-size: cover;
+        align-items: flex-end;
+        justify-content: space-around; } }
+    .main__seccion__article {
+      align-items: stretch;
+      color: #040507;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      max-width: 90%; }
+      @media all and (min-width: 720px) {
+        .main__seccion__article {
+          max-width: 500px; } }
       .main__seccion__article--accion .boton {
-        width: auto; } }
-    .main__seccion__article--contenido {
-      margin-bottom: 2rem; }
-    .main__seccion__article__header {
-      font-family: "Poppins"; }
-      .main__seccion__article__header--titulo {
+        width: 100%; }
+      @media all and (min-width: 720px) {
+        .main__seccion__article--accion .boton {
+          width: auto; } }
+      .main__seccion__article--contenido {
+        margin-bottom: 2rem; }
+      .main__seccion__article__header {
+        font-family: "Poppins"; }
+        .main__seccion__article__header--titulo {
+          font-size: 3rem;
+          font-weight: normal;
+          line-height: 100%;
+          letter-spacing: -0.25rem; }
+
+.main {
+  text-align: left; }
+  .main__seccion2__articulo {
+    align-content: stretch;
+    align-items: center;
+    display: flex;
+    flex-flox: column wrap;
+    justify-content: space-between;
+    min-height: 100vh; }
+    @media all and (min-width: 720px) {
+      .main__seccion2__articulo {
+        flex-flow: row nowrap; } }
+    .main__seccion2__articulo__figure {
+      flex: 2 1 auto;
+      margin: 0;
+      padding: 0; }
+      .main__seccion2__articulo__figure__imagen {
+        object-fit: cover;
+        display: block;
+        height: 100vh; }
+    .main__seccion2__articulo__header {
+      flex: 1 1 50%;
+      margin: 1rem;
+      position: relative;
+      left: 5rem; }
+      @media all and (min-width: 720px) {
+        .main__seccion2__articulo__header {
+          left: 10rem; } }
+      .main__seccion2__articulo__header__titulo {
+        color: #040507;
         font-size: 3rem;
-        font-weight: normal;
-        line-height: 100%;
-        letter-spacing: -0.25rem; }
+        line-height: 120%;
+        letter-spacing: -5px;
+        margin: 0;
+        text-transform: uppercase; }
+        @media all and (min-width: 720px) {
+          .main__seccion2__articulo__header__titulo {
+            font-size: 4rem;
+            line-height: 150%; } }
+
+.main__seccion2:nth-child(odd) .main__seccion2__articulo__figure {
+  order: 1; }
+.main__seccion2:nth-child(odd) .main__seccion2__articulo__header {
+  order: 2;
+  left: -5rem; }
+  @media all and (min-width: 720px) {
+    .main__seccion2:nth-child(odd) .main__seccion2__articulo__header {
+      left: -10rem; } }
 
 .footer__menu {
   display: flex;
@@ -9222,7 +9287,7 @@ strong {
 .footer__contenido {
   align-content: flex-start;
   align-items: baseline;
-  color: #908B8E;
+  color: #E8E3DB;
   display: flex;
   justify-content: space-between;
   flex-flow: column wrap;
@@ -9236,7 +9301,13 @@ strong {
   .footer__contenido__titulo {
     color: #F2E41B;
     font-size: 4rem;
-    line-height: 150%; }
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    letter-spacing: -5pt;
+    line-height: 170%; }
+    @media all and (min-width: 720px) {
+      .footer__contenido__titulo {
+        max-width: 70%; } }
   .footer__contenido__texto {
     flex-basis: auto;
     font-family: "Poppins";

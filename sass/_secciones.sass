@@ -1,3 +1,14 @@
+/** Hay varios tipos de secciones:
+	
+	.main__seccion: utilizada generalmente una vez en la portada principal o la que haga de las veces y/o similares.
+	
+	.main__seccion2: tiene un título, contenido e imagen lateral. Es intercambiable, las pares van de un lado e impares del otro. 
+	
+	
+	
+	**/
+	
+	
 // Las secciones de la portada principal
 .main
 	&__seccion
@@ -24,7 +35,6 @@
 			flex-direction: column
 			flex-wrap: nowrap
 			max-width: 90%
-			text-align: left
 
 			@media all and ( min-width: $tablet )
 				max-width: $mobile
@@ -50,3 +60,66 @@
 					font-weight: normal
 					line-height: 100%
 					letter-spacing: -0.25rem
+
+
+
+	/** .main__seccion2 **/
+
+.main
+	text-align: left
+
+	&__seccion2
+		&__articulo
+			align-content: stretch
+			align-items: center
+			display: flex
+			flex-flox: column wrap
+			justify-content: space-between
+			min-height: 100vh
+			@media all and ( min-width: $tablet )
+				flex-flow: row nowrap
+				
+		
+			&__figure
+				flex: 2 1 auto
+				margin: 0
+				padding: 0
+
+				&__imagen
+					object-fit: cover
+					display: block
+					// width: 100%
+					// min-width: 200px
+					height: 100vh
+			
+			&__header
+				flex: 1 1 50%
+				margin: 1rem
+				position: relative
+				left: 5rem
+				@media all and ( min-width: $tablet )
+					left: 10rem
+
+				&__titulo
+					color: $color_negro
+					font-size: 3rem
+					line-height: 120%
+					letter-spacing: -5px
+					margin: 0
+					text-transform: uppercase
+					@media all and ( min-width: $tablet )
+						font-size: 4rem
+						line-height: 150%
+						
+
+.main__seccion2:nth-child(odd) 
+	.main__seccion2__articulo
+		&__figure
+			order: 1
+
+		&__header
+			order: 2
+			left: -5rem
+			@media all and ( min-width: $tablet )
+				left: -10rem
+			
