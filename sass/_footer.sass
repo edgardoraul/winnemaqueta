@@ -8,10 +8,11 @@
 	text-align: left
 	@media all and ( min-width: $tablet )
 		background-attachment: fixed
-		background-image: url("../img/24.png")
+		background-image: url("../img/18.jpg")
 		background-position: top right
 		background-repeat: no-repeat 
-		background-size: 20% auto
+		// background-size: 20% auto
+		background-size: cover
 
 
 	// Sección que contiene el logo, menúes y demás cosas
@@ -124,6 +125,9 @@
 				left: -2rem
 				position: absolute
 				top: 0
+			&::first-letter
+				font-size: 4rem
+				vertical-align: bottom
 
 		&__texto--copyright
 			flex: 0 1 70%

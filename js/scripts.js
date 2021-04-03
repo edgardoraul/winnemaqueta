@@ -66,19 +66,26 @@ function cargarScripts()
 	function esconder_mostrar(ev)
 	{
 		const coordY = window.pageYOffset;
+		const ancho = window.innerWidth;
 		console.log(coordY)
 		
-		if( coordY > 600 )
+		if( coordY > 600 && ancho < 500 )
 		{
 			botonGoTop.classList.add( "fadeInUp" );
 			botonGoTop.classList.remove( "fadeOutDown" );
 			console.log("mostrado");
 		}
-		else
+		else if( coordY <= 600 && ancho < 500 )
 		{
 			botonGoTop.classList.remove( "fadeInUp" );
 			botonGoTop.classList.add( "fadeOutDown" );
 			console.log("Escondido");
+		}
+		else
+		{
+			botonGoTop.classList.add( "fadeInUp" );
+			botonGoTop.classList.remove( "fadeOutDown" );
+			console.log("mostrado");
 		}
 		
 	}

@@ -73,7 +73,10 @@
 	text-align: left
 
 	&__seccion2
+		background-color: $color_fondo4
+		color: $color_fondo3
 		scroll-snap-align: start
+
 		&__articulo
 			align-content: stretch
 			align-items: center
@@ -105,13 +108,17 @@
 					left: 10rem
 
 				&__titulo
-					color: $color_negro
-					font-size: 3rem
+					// color: $color_negro
+					font-size: 3.5rem
 					line-height: 120%
 					letter-spacing: -5px
 					margin: 0
 					text-transform: uppercase
-					text-shadow: 1px 1px 1px $color_blanco, 1px 1px 1px $color_titulo, 1px 1px 1px $color_negro
+					text-shadow: 2px 4px 0px $color_negro, 4px 8px 0px $color_subtitulo, 6px 12px 0px $color_titulo
+
+					&::first-letter
+						font-size: 8rem
+
 					@media all and ( min-width: $tablet )
 						font-size: 4rem
 						line-height: 150%

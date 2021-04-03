@@ -8795,7 +8795,7 @@ body {
   color: #464544;
   font-size: 140%;
   font-family: "Roboto Slab";
-  letter-spacing: 1%;
+  letter-spacing: -1px;
   line-height: 170%;
   text-align: center;
   word-spacing: 1px; }
@@ -8824,6 +8824,10 @@ blockquote {
     left: -2rem;
     position: absolute;
     top: 0; }
+  blockquote::first-letter {
+    font-size: 4rem;
+    float: left;
+    vertical-align: bottom; }
 
 em {
   font-weight: 300;
@@ -9139,6 +9143,8 @@ strong {
 .main {
   text-align: left; }
   .main__seccion2 {
+    background-color: #E8E3C7;
+    color: #B85B3F;
     scroll-snap-align: start; }
     .main__seccion2__articulo {
       align-content: stretch;
@@ -9168,13 +9174,14 @@ strong {
           .main__seccion2__articulo__header {
             left: 10rem; } }
         .main__seccion2__articulo__header__titulo {
-          color: #040507;
-          font-size: 3rem;
+          font-size: 3.5rem;
           line-height: 120%;
           letter-spacing: -5px;
           margin: 0;
           text-transform: uppercase;
-          text-shadow: 1px 1px 1px #E8E3DB, 1px 1px 1px #A83E4C, 1px 1px 1px #040507; }
+          text-shadow: 2px 4px 0px #040507, 4px 8px 0px #908B8E, 6px 12px 0px #A83E4C; }
+          .main__seccion2__articulo__header__titulo::first-letter {
+            font-size: 8rem; }
           @media all and (min-width: 720px) {
             .main__seccion2__articulo__header__titulo {
               font-size: 4rem;
@@ -9198,10 +9205,10 @@ strong {
   @media all and (min-width: 720px) {
     .footer {
       background-attachment: fixed;
-      background-image: url("../img/24.png");
+      background-image: url("../img/18.jpg");
       background-position: top right;
       background-repeat: no-repeat;
-      background-size: 20% auto; } }
+      background-size: cover; } }
   .footer__menu {
     display: flex;
     flex-direction: column; }
@@ -9292,6 +9299,9 @@ strong {
       left: -2rem;
       position: absolute;
       top: 0; }
+    .footer__contenido__texto::first-letter {
+      font-size: 4rem;
+      vertical-align: bottom; }
   .footer__contenido__texto--copyright {
     flex: 0 1 70%; }
   .footer__contenido__sociales--enlace {

@@ -11,7 +11,7 @@ body
 	color: $color_texto
 	font-size: 140%
 	font-family: $fuente_letra
-	letter-spacing: 1%
+	letter-spacing: -1px
 	line-height: 170%
 	text-align: center
 	word-spacing: 1px
@@ -42,6 +42,11 @@ blockquote
 		left: -2rem
 		position: absolute
 		top: 0
+
+	&::first-letter
+		font-size: 4rem
+		float: left
+		vertical-align: bottom
 
 em
 	font-weight: 300
