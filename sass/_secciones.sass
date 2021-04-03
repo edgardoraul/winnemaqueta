@@ -11,7 +11,11 @@
 	
 // Las secciones de la portada principal
 .main
+	// DA una animacion de bloque en bloque
+	scroll-snap-type: y mandatory
+
 	&__seccion
+		scroll-snap-align: start
 		background: $color_fondo_2 url("../img/13.jpg") top left no-repeat
 		align-items: center
 		display: flex
@@ -69,6 +73,7 @@
 	text-align: left
 
 	&__seccion2
+		scroll-snap-align: start
 		&__articulo
 			align-content: stretch
 			align-items: center
@@ -87,16 +92,15 @@
 
 				&__imagen
 					object-fit: cover
+					object-position: center center
 					display: block
-					// width: 100%
-					// min-width: 200px
 					height: 100vh
 			
 			&__header
 				flex: 1 1 50%
 				margin: 1rem
-				position: relative
 				left: 5rem
+				position: relative
 				@media all and ( min-width: $tablet )
 					left: 10rem
 
@@ -107,6 +111,7 @@
 					letter-spacing: -5px
 					margin: 0
 					text-transform: uppercase
+					text-shadow: 1px 1px 1px $color_blanco, 1px 1px 1px $color_titulo, 1px 1px 1px $color_negro
 					@media all and ( min-width: $tablet )
 						font-size: 4rem
 						line-height: 150%

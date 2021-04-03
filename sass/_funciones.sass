@@ -1,15 +1,8 @@
 @mixin box-shadow_lindo()
 	box-shadow: 0px 1px 1px 0px rgba(#fff, 0.5) inset, 0px -15px 15px 0px rgba(#000, 0.25) inset
-	-o-box-shadow: 0px 1px 1px 0px rgba(#fff, 0.5) inset, 0px -15px 15px 0px rgba(#000, 0.25) inset
-	-ms-box-shadow: 0px 1px 1px 0px rgba(#fff, 0.5) inset, 0px -15px 15px 0px rgba(#000, 0.25) inset
-	-moz-box-shadow: 0px 1px 1px 0px rgba(#fff, 0.5) inset, 0px -15px 15px 0px rgba(#000, 0.25) inset
 
 @mixin text-shadow_lindo()
 	text-shadow: 0px -1px 0px rgba(#000, 0.5)
-	-o-text-shadow: 0px -1px 0px rgba(#000, 0.5)
-	-ms-text-shadow: 0px -1px 0px rgba(#000, 0.5)
-	-moz-text-shadow: 0px -1px 0px rgba(#000, 0.5)
-	-webkit-text-shadow: 0px -1px 0px rgba(#000, 0.5)
 
 @mixin espacio_blanco()
 	white-space: pre-wrap
@@ -107,35 +100,4 @@
 			border-right: $triangle-width solid rgba($triangle-color, 0)
 			border-bottom: $triangle-width solid rgba($triangle-color, 0)
 
-// Animaciones
-@mixin animacionEstandar()
-	animation-delay: 0
-	animation-duration: 0.1s
-	animation-timing-function: ease-in-out
-	animation-fill-mode: both
-	
-@mixin fadeOutUp()
-	animation-name: fadeOutUp
-	@include animacionEstandar()
-	
 
-// Animaciones
-@mixin fadeUnDown()
-	animation-name: fadeInDown
-	@include animacionEstandar()
-
-// Menú abierto
-@mixin abierto()
-	height: auto
-	@include fadeInDown()
-	opacity: 1
-	visibility: visible
-	z-index: 2
-
-// Menú Cerrado
-@mixin cerrado()
-	height: 0
-	@include fadeOutUp()
-	opacity: 0
-	visibility: hidden
-	z-index: -1

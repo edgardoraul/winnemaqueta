@@ -59,6 +59,30 @@ function cargarScripts()
 		console.log(ancho);
 	}
 
+	/* El "ir arriba" **************************************/
+	// Escuchando el evento del scrolling
+	const botonGoTop = document.querySelector("#gotop");
+	window.addEventListener("scroll", esconder_mostrar);
+	function esconder_mostrar(ev)
+	{
+		const coordY = window.pageYOffset;
+		console.log(coordY)
+		
+		if( coordY > 600 )
+		{
+			botonGoTop.classList.add( "fadeInUp" );
+			botonGoTop.classList.remove( "fadeOutDown" );
+			console.log("mostrado");
+		}
+		else
+		{
+			botonGoTop.classList.remove( "fadeInUp" );
+			botonGoTop.classList.add( "fadeOutDown" );
+			console.log("Escondido");
+		}
+		
+	}
+
 
 	/* Los submenúes secundario del menú principal ************/
 

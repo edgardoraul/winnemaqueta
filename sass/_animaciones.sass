@@ -1,0 +1,62 @@
+// Animaciones Mixins
+@mixin animacionEstandar()
+	animation-delay: 0
+	animation-duration: 0.1s
+	animation-timing-function: ease-in-out
+	animation-fill-mode: both
+	
+@mixin fadeOutUp()
+	animation-name: fadeOutUp
+	@include animacionEstandar()
+.fadeOutUp
+	@include fadeOutUp()
+	
+
+@mixin fadeOutDown()
+	animation-name: fadeOutDown
+	@include animacionEstandar()
+.fadeOutDown
+	@include fadeOutDown()
+		
+
+@mixin fadeInDown()
+	animation-name: fadeInDown
+	@include animacionEstandar()
+.fadeInDown
+	@include fadeInDown()
+	
+
+@mixin fadeInUp()
+	animation-name: fadeInUp
+	@include animacionEstandar()
+.fadeInUp
+	@include fadeInUp()
+
+
+
+// Menú abierto
+@mixin abierto()
+	height: auto
+	@include fadeInDown()
+	opacity: 1
+	visibility: visible
+	z-index: 2
+
+// Menú Cerrado
+@mixin cerrado()
+	height: 0
+	@include fadeOutUp()
+	opacity: 0
+	visibility: hidden
+	z-index: -1
+
+// Animaciones a ser definidas con clases
+/** .fadeIn
+	animation-name: fadeIn
+	@include animacionEstandar()
+	opacity: 0.5
+
+	.fadeOut
+		animation-name: fadeOut
+		@include animacionEstandar() 
+	**/

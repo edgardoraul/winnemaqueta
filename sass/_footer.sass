@@ -1,5 +1,19 @@
 // Secciones del footer
 .footer
+	// Fondos de pantalla y color
+	background-color: $color_texto
+	color: $color_blanco
+	padding: 1rem 1rem 6rem 1rem
+	position: relative
+	text-align: left
+	@media all and ( min-width: $tablet )
+		background-attachment: fixed
+		background-image: url("../img/24.png")
+		background-position: top right
+		background-repeat: no-repeat 
+		background-size: 20% auto
+
+
 	// Sección que contiene el logo, menúes y demás cosas
 	&__menu
 		display: flex
@@ -23,9 +37,9 @@
 			&--secundario
 				background: $color_blanco
 				border-radius: 4rem
-				padding: 0.5rem 2rem
-				flex-basis: auto
 				flex: 0 0 auto
+				flex-basis: auto
+				padding: 0.5rem 2rem
 			
 			// El submenú secundario
 			&__lista
@@ -41,8 +55,8 @@
 
 				@media all and ( min-width: $tablet )
 					border-radius: 4rem
-					flex-flow: row nowrap
 					flex-basis: auto
+					flex-flow: row nowrap
 				
 				// Los enlaces
 				&__item
@@ -71,7 +85,6 @@
 		justify-content: space-between
 		flex-flow: column wrap
 		min-height: 100vh
-
 		@media all and ( min-width: $tablet )
 			flex-flow: row wrap
 		
@@ -79,7 +92,6 @@
 		&__texto--copyright,
 		&__titulo,
 		&__sociales
-
 			@media all and ( mmin-width: $tablet )
 				flex: 1 1 40%
 
@@ -104,7 +116,6 @@
 			margin-left: 2rem
 
 			&::before
-				// color: $color_negro
 				content: "\e057"
 				font-family: "icomoon"
 				font-style: normal
@@ -119,8 +130,8 @@
 
 		&__sociales
 			&--enlace
-				// padding: 0.75rem
 				display: inline-flex
+
 				&:hover
 					transform: scale(1.2)
 
@@ -131,12 +142,6 @@
 
 // Todo el pie de página
 .footer
-	background: $color_texto
-	color: $color_blanco
-	padding: 1rem 1rem 6rem 1rem
-	text-align: left
-	position: relative
-
 	// Los botones de Acción
 	&__botonera
 		align-content: space-between
@@ -183,7 +188,7 @@
 			display: inline-block
 			left: auto
 			right: 0
-			opacity: 0.5
+			background-color: rgba($color_advertencia, 0.5)
 			width: auto
 
 			&:hover
