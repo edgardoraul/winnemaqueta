@@ -203,25 +203,29 @@
 			position: relative
 			top: 50vh
 
-	// Color intercambiable los números de orden
+	/** Color intercambiable los números de orden **/
+	// Los impares
 	&__seccion3:nth-child(even) &__seccion3
 		&__articulo
 			&__media
 				&__orden
 					filter: saturate(30)
 	
+	// Los pares
 	&__seccion3:nth-child(odd) &__seccion3
 		&__articulo
 			&__media
 				&__orden
 					filter: invert(50)
 
+	// El primero
 	&__seccion3:first-child &__seccion3
 		&__articulo
 			&__media
 				&__orden
 					filter: brightness(40%)
 	
+	// El último
 	&__seccion3:last-child &__seccion3
 		&__articulo
 			&__media
