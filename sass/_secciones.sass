@@ -4,7 +4,7 @@
 	
 	.main__seccion2: tiene un título, contenido e imagen lateral. Es intercambiable, las pares van de un lado e impares del otro. 
 	
-	
+	.main__seccion3: tiene un número de orden, imagen, titular y algo de contenido. El primero item irá diferente.
 	
 	**/
 	
@@ -76,12 +76,13 @@
 		background-color: $color_fondo4
 		color: $color_fondo3
 		scroll-snap-align: start
+		min-height: 100vh
 
 		&__articulo
 			align-content: stretch
 			align-items: center
 			display: flex
-			flex-flox: column wrap
+			flex-flox: row wrap
 			justify-content: space-between
 			min-height: 100vh
 			@media all and ( min-width: $tablet )
@@ -94,18 +95,18 @@
 				padding: 0
 
 				&__imagen
-					object-fit: cover
-					object-position: center center
 					display: block
 					height: 100vh
+					object-fit: cover
+					object-position: center center
 			
 			&__header
 				flex: 1 1 50%
-				margin: 1rem
-				left: 5rem
+				left: $rem * 5
+				margin: $rem
 				position: relative
 				@media all and ( min-width: $tablet )
-					left: 10rem
+					left: $rem * 10
 
 				&__titulo
 					// color: $color_negro
@@ -118,6 +119,7 @@
 
 					&::first-letter
 						font-size: 8rem
+						vertical-align: bottom
 
 					@media all and ( min-width: $tablet )
 						font-size: 4rem
@@ -130,8 +132,73 @@
 			order: 1
 
 		&__header
-			order: 2
 			left: -5rem
+			order: 2
 			@media all and ( min-width: $tablet )
 				left: -10rem
 			
+
+/** Secciones modo 3: muestran el orden a seguir para el cliente **/
+// Contenedor de las secciones de los pasos
+.pasos
+	align-items: flex-start
+	align-content: center
+	display: flex
+	flex-flow: column wrap
+	justify-content: flex-start
+	padding: $rem
+	margin: auto
+
+	@media all and ( min-width: $tablet )
+		align-items: stretch
+		flex-flow: row wrap
+		justify-content: space-between
+		max-width: $tablet + 100
+
+.main
+	&__seccion3
+		max-width: $mobile / 3 * 2
+		position: relative
+		margin-top: 2 * $rem
+
+		@media all and ( min-width: $tablet )
+			flex: 1 1 50%
+
+
+		&__articulo
+			&__media
+				align-content: flex-end
+				align-items: baseline
+				display: flex
+				flex-flow: row nowrap
+				justify-content: space-between
+
+				&__orden
+					color: $color_titulo
+					font-size: $rem * 8
+					font-weight: bolder
+					line-height: 100%
+					margin-right: $rem * 2
+
+
+			&__header
+				&__titulo
+					font-family: $fuente_titulo
+					letter-spacing: -2px
+					font-size: $rem * 1.5
+				
+			&__contenido
+				font-size: $rem
+				line-height: 150%
+				max-width: $mobile / 3 * 2
+
+	// Sacando el margen superior al primer elemento
+	&__seccion3:first-child
+		margin-top: 0
+	
+	
+	&__seccion3:nth-child(even)
+		@media all and ( min-width: $tablet )
+			position: relative
+			top: 50vh
+		

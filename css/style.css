@@ -9093,7 +9093,7 @@ strong {
  *
  * .main__seccion2: tiene un título, contenido e imagen lateral. Es intercambiable, las pares van de un lado e impares del otro. 
  *
- *
+ * .main__seccion3: tiene un número de orden, imagen, titular y algo de contenido. El primero item irá diferente.
  *
  */
 .main {
@@ -9145,12 +9145,13 @@ strong {
   .main__seccion2 {
     background-color: #E8E3C7;
     color: #B85B3F;
-    scroll-snap-align: start; }
+    scroll-snap-align: start;
+    min-height: 100vh; }
     .main__seccion2__articulo {
       align-content: stretch;
       align-items: center;
       display: flex;
-      flex-flox: column wrap;
+      flex-flox: row wrap;
       justify-content: space-between;
       min-height: 100vh; }
       @media all and (min-width: 720px) {
@@ -9161,18 +9162,18 @@ strong {
         margin: 0;
         padding: 0; }
         .main__seccion2__articulo__figure__imagen {
-          object-fit: cover;
-          object-position: center center;
           display: block;
-          height: 100vh; }
+          height: 100vh;
+          object-fit: cover;
+          object-position: center center; }
       .main__seccion2__articulo__header {
         flex: 1 1 50%;
-        margin: 1rem;
-        left: 5rem;
+        left: 100px;
+        margin: 20px;
         position: relative; }
         @media all and (min-width: 720px) {
           .main__seccion2__articulo__header {
-            left: 10rem; } }
+            left: 200px; } }
         .main__seccion2__articulo__header__titulo {
           font-size: 3.5rem;
           line-height: 120%;
@@ -9181,7 +9182,8 @@ strong {
           text-transform: uppercase;
           text-shadow: 2px 4px 0px #040507, 4px 8px 0px #908B8E, 6px 12px 0px #A83E4C; }
           .main__seccion2__articulo__header__titulo::first-letter {
-            font-size: 8rem; }
+            font-size: 8rem;
+            vertical-align: bottom; }
           @media all and (min-width: 720px) {
             .main__seccion2__articulo__header__titulo {
               font-size: 4rem;
@@ -9190,11 +9192,61 @@ strong {
 .main__seccion2:nth-child(odd) .main__seccion2__articulo__figure {
   order: 1; }
 .main__seccion2:nth-child(odd) .main__seccion2__articulo__header {
-  order: 2;
-  left: -5rem; }
+  left: -5rem;
+  order: 2; }
   @media all and (min-width: 720px) {
     .main__seccion2:nth-child(odd) .main__seccion2__articulo__header {
       left: -10rem; } }
+
+/** Secciones modo 3: muestran el orden a seguir para el cliente */
+.pasos {
+  align-items: flex-start;
+  align-content: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: auto; }
+  @media all and (min-width: 720px) {
+    .pasos {
+      align-items: stretch;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: 820px; } }
+
+.main__seccion3 {
+  max-width: 333.3333333333px;
+  position: relative;
+  margin-top: 40px; }
+  @media all and (min-width: 720px) {
+    .main__seccion3 {
+      flex: 1 1 50%; } }
+  .main__seccion3__articulo__media {
+    align-content: flex-end;
+    align-items: baseline;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .main__seccion3__articulo__media__orden {
+      color: #A83E4C;
+      font-size: 160px;
+      font-weight: bolder;
+      line-height: 100%;
+      margin-right: 40px; }
+  .main__seccion3__articulo__header__titulo {
+    font-family: "Poppins";
+    letter-spacing: -2px;
+    font-size: 30px; }
+  .main__seccion3__articulo__contenido {
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 333.3333333333px; }
+.main__seccion3:first-child {
+  margin-top: 0; }
+@media all and (min-width: 720px) {
+  .main__seccion3:nth-child(even) {
+    position: relative;
+    top: 50vh; } }
 
 .footer {
   background-color: #464544;

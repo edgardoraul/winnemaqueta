@@ -51,43 +51,38 @@ function cargarScripts()
 			listadoMenu.classList.add("navegacion__lista--abierto");
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
-		else if ( ancho < 1000 )
+		else if ( ancho < 1000 && ancho > 500)
 		{
 			listadoMenu.classList.add("navegacion__lista--cerrado");
 			listadoMenu.classList.remove("navegacion__lista--abierto");
 		}
-		console.log(ancho);
 	}
 
 	/* El "ir arriba" **************************************/
 	// Escuchando el evento del scrolling
 	const botonGoTop = document.querySelector("#gotop");
 	window.addEventListener("scroll", esconder_mostrar);
+	window.addEventListener("load", esconder_mostrar);
 	function esconder_mostrar(ev)
 	{
 		const coordY = window.pageYOffset;
 		const ancho = window.innerWidth;
-		console.log(coordY)
 		
-		if( coordY > 600 && ancho < 500 )
+		if( coordY >= 600 && ancho < 500 )
 		{
 			botonGoTop.classList.add( "fadeInUp" );
 			botonGoTop.classList.remove( "fadeOutDown" );
-			console.log("mostrado");
 		}
-		else if( coordY <= 600 && ancho < 500 )
+		else if( coordY < 600 && ancho < 500 )
 		{
 			botonGoTop.classList.remove( "fadeInUp" );
 			botonGoTop.classList.add( "fadeOutDown" );
-			console.log("Escondido");
 		}
 		else
 		{
 			botonGoTop.classList.add( "fadeInUp" );
 			botonGoTop.classList.remove( "fadeOutDown" );
-			console.log("mostrado");
-		}
-		
+		}		
 	}
 
 
