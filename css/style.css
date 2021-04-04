@@ -9247,20 +9247,22 @@ strong {
   .main__seccion3:nth-child(even) {
     position: relative;
     top: 50vh; } }
+.main__seccion3:nth-child(even) .main__seccion3__articulo__media__orden {
+  filter: saturate(30); }
+.main__seccion3:nth-child(odd) .main__seccion3__articulo__media__orden {
+  filter: invert(50); }
+.main__seccion3:first-child .main__seccion3__articulo__media__orden {
+  filter: brightness(40%); }
+.main__seccion3:last-child .main__seccion3__articulo__media__orden {
+  filter: hue-rotate(100deg); }
 
 .footer {
   background-color: #464544;
+  background: rgba(184, 91, 63, 0.5);
   color: #E8E3DB;
   padding: 1rem 1rem 6rem 1rem;
   position: relative;
   text-align: left; }
-  @media all and (min-width: 720px) {
-    .footer {
-      background-attachment: fixed;
-      background-image: url("../img/18.jpg");
-      background-position: top right;
-      background-repeat: no-repeat;
-      background-size: cover; } }
   .footer__menu {
     display: flex;
     flex-direction: column; }
@@ -9297,17 +9299,18 @@ strong {
             flex-basis: auto;
             flex-flow: row nowrap; } }
         .footer__menu__logo__lista__item__enlace {
-          color: #E8E3DB;
+          color: #040507;
           display: block;
           font-family: "Roboto";
           padding: 0.5rem 1rem;
           text-transform: uppercase; }
           @media all and (min-width: 720px) {
             .footer__menu__logo__lista__item__enlace {
-              background: #8C7B6C;
+              background: #E8E3DB;
               font-size: 0.75rem; } }
           .footer__menu__logo__lista__item__enlace:hover {
-            background: #908B8E; }
+            background: #040507;
+            color: #E8E3DB; }
 
 .footer__contenido {
   align-content: flex-start;
@@ -9405,5 +9408,20 @@ strong {
       width: auto; }
       .footer__botonera:hover {
         opacity: 1; } }
+
+.footer::after {
+  background-attachment: fixed;
+  background-image: url("../img/18.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1; }
 
 /*# sourceMappingURL=style.css.map */

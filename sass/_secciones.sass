@@ -195,10 +195,35 @@
 	// Sacando el margen superior al primer elemento
 	&__seccion3:first-child
 		margin-top: 0
+
 	
-	
+	// Haciendo más abajo en forma intercalada
 	&__seccion3:nth-child(even)
 		@media all and ( min-width: $tablet )
 			position: relative
 			top: 50vh
-		
+
+	// Color intercambiable los números de orden
+	&__seccion3:nth-child(even) &__seccion3
+		&__articulo
+			&__media
+				&__orden
+					filter: saturate(30)
+	
+	&__seccion3:nth-child(odd) &__seccion3
+		&__articulo
+			&__media
+				&__orden
+					filter: invert(50)
+
+	&__seccion3:first-child &__seccion3
+		&__articulo
+			&__media
+				&__orden
+					filter: brightness(40%)
+	
+	&__seccion3:last-child &__seccion3
+		&__articulo
+			&__media
+				&__orden
+					filter: hue-rotate(100deg)
