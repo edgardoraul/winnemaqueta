@@ -42,7 +42,7 @@ function cargarScripts()
 	// Escuchando el evento de redimensionar la pantalla
 	window.addEventListener("resize", mostrarOcultar, false);
 	
-	// Función muestra y oculta el menú principal dependiendo del ancho de pantall
+	// Función muestra y oculta el menú principal dependiendo del ancho de pantalla
 	function mostrarOcultar(ev)
 	{
 		const ancho = window.innerWidth;
@@ -51,7 +51,7 @@ function cargarScripts()
 			listadoMenu.classList.add("navegacion__lista--abierto");
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
 		}
-		else if ( ancho < 1000 && ancho > 500)
+		else if ( ancho < 1000 && ancho > 720)
 		{
 			listadoMenu.classList.add("navegacion__lista--cerrado");
 			listadoMenu.classList.remove("navegacion__lista--abierto");
@@ -85,6 +85,26 @@ function cargarScripts()
 		}		
 	}
 
+	
+	/* Escuchando el evento scrollTop para poder mostrar el menú principal */
+/* 	window.addEventListener("scroll", mostrarMenu);
+	const menuPrincipal = document.querySelector(".header");
+	function mostrarMenu()
+	{
+		
+		if( )
+		{
+			menuPrincipal.classList.add("fadeInDown");
+			menuPrincipal.classList.add("fijado");
+			menuPrincipal.classList.remove("fadeOutUp");
+		}
+		else
+		{
+			menuPrincipal.classList.add("fadeOutUp");
+			menuPrincipal.classList.remove("fadeInDown");
+			menuPrincipal.classList.remove("fijado");
+		}
+	} */
 
 	/* Los submenúes secundario del menú principal ************/
 

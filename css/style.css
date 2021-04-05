@@ -9087,6 +9087,12 @@ strong {
     opacity: 1;
     visibility: visible;
     z-index: 2; } }
+.fijado {
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
 /** Hay varios tipos de secciones:
  *
  * .main__seccion: utilizada generalmente una vez en la portada principal o la que haga de las veces y/o similares.
