@@ -56,14 +56,17 @@
 				// Los enlaces
 				&__item
 					&__enlace
-						color: $color_negro
+						border-bottom: 2px dotted rgba($color_blanco, 0.2)
+						color: $color_blanco
 						display: block
 						font-family: $fuente_subtitulo
 						padding: 0.5rem 1rem
 						text-transform: uppercase
 						
 						@media all and ( min-width: $tablet )
+							border-bottom: none
 							background: $color_blanco
+							color: $color_negro
 							font-size: 0.75rem
 
 						&:hover

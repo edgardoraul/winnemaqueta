@@ -67,7 +67,11 @@
 
 
 
-	/** .main__seccion2 **/
+	/** .main__seccion2: Contienen cuadros que ocupan toda la pantalla.
+		Están divididos a la mitad e intercambiados a medida que son pares o impares respectivamente.
+		En una parte tienen color y en la otra mitad están con alguna imagen de fondo.
+		Además poseen un titular en el centro.
+		**/
 
 .main
 	text-align: left
@@ -75,68 +79,74 @@
 	&__seccion2
 		background-color: $color_fondo4
 		color: $color_fondo3
-		scroll-snap-align: start
 		min-height: 100vh
 
 		&__articulo
 			align-content: stretch
 			align-items: center
 			display: flex
-			flex-flox: row wrap
+			flex-flox: row nowrap
 			justify-content: space-between
-			min-height: 100vh
-			@media all and ( min-width: $tablet )
-				flex-flow: row nowrap
-				
-		
+
 			&__figure
-				flex: 2 1 auto
+				flex: 1 1 50%
 				margin: 0
 				padding: 0
+				position: relative
+				&:after
+					background: rgba($color_blanco, 0.5)
+					content: ""
+					filter: sepia(50)
+					height: 100%
+					left: 0
+					position: absolute
+					top: 0
+					width: 100%
+					
 
 				&__imagen
 					display: block
 					height: 100vh
 					object-fit: cover
-					object-position: center center
+					object-position: 25% center
+	
 			
 			&__header
 				flex: 1 1 50%
-				left: $rem * 5
-				margin: $rem
+				left: calc( 33% - ( #{$rem} * 5 ) )
 				position: relative
-				@media all and ( min-width: $tablet )
-					left: $rem * 10
+				z-index: 1
 
 				&__titulo
-					// color: $color_negro
-					font-size: 3.5rem
-					line-height: 120%
+					font-size: $rem * 2.5
+					line-height: 150%
 					letter-spacing: -5px
 					margin: 0
 					text-transform: uppercase
 					text-shadow: 2px 4px 0px $color_negro, 4px 8px 0px $color_subtitulo, 6px 12px 0px $color_titulo
-
 					&::first-letter
-						font-size: 8rem
-						vertical-align: bottom
-
-					@media all and ( min-width: $tablet )
-						font-size: 4rem
-						line-height: 150%
+						font-size: $rem * 3
+					
+					@media all and ( min-width: $desktop )
+						font-size: $rem * 4
+						&::first-letter
+							font-size: $rem * 5
 						
 
-.main__seccion2:nth-child(odd) 
+.main__seccion2:nth-child(odd)
 	.main__seccion2__articulo
 		&__figure
 			order: 1
 
 		&__header
-			left: -5rem
+			left: calc( -33% + ( #{$rem} * 5 ) )
 			order: 2
-			@media all and ( min-width: $tablet )
-				left: -10rem
-			
+
+
+
+
+
+
 
 /** Secciones modo 3: muestran el orden a seguir para el cliente **/
 // Contenedor de las secciones de los pasos
