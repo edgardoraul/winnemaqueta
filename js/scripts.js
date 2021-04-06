@@ -86,37 +86,18 @@ function cargarScripts()
 	}
 
 	
-	/* Escuchando el evento scrollTop para poder mostrar el menú principal */
-/* 	window.addEventListener("scroll", mostrarMenu);
-	const menuPrincipal = document.querySelector(".header");
-	function mostrarMenu()
-	{
-		
-		if( )
-		{
-			menuPrincipal.classList.add("fadeInDown");
-			menuPrincipal.classList.add("fijado");
-			menuPrincipal.classList.remove("fadeOutUp");
-		}
-		else
-		{
-			menuPrincipal.classList.add("fadeOutUp");
-			menuPrincipal.classList.remove("fadeInDown");
-			menuPrincipal.classList.remove("fijado");
-		}
-	} */
-
+	
 	/* Los submenúes secundario del menú principal ************/
-
+	
 	// Variable de los listados de sub menúes. Es un arreglo
 	const listadoSubMenu = document.querySelectorAll(".navegacion__lista__item__enlace + .sublista");
-
+	
 	// Creando botones clickeables para abrir los submenúes. Es un arreglo.
 	const listadoSubMenuBoton = [];
 	listadoSubMenu.forEach( (ev) => {
 		listadoSubMenuBoton.push( ev.previousElementSibling);
 	});
-
+	
 	// Se le asigna la propiedad de poder abrir y cerrar a cada enlace que funcionará como botón de submenú.
 	for (let i = 0; i < listadoSubMenuBoton.length; i++ )
 	{
@@ -124,7 +105,7 @@ function cargarScripts()
 		function abrirSubMenu(ev)
 		{
 			ev.preventDefault();
-
+			
 			if( listadoSubMenuBoton[i].nextElementSibling.classList.contains("sublista--abierto") )
 			{
 				listadoSubMenuBoton[i].nextElementSibling.classList.remove("sublista--abierto");
@@ -161,5 +142,41 @@ function cargarScripts()
 				}
 			}
 		}
+	}
+
+
+	/* Escuchando el evento scrollTop para poder mostrar el menú principal */
+	window.addEventListener("scroll", mostrarMenu);
+	let lastScrollTop = 0;
+	const menuPrincipal = document.querySelector("#header");
+	const listadoMenuPrincipal = document.querySelector("#header_nav");
+	function mostrarMenu()
+	{
+		let st = window.pageYOffset || document.documentElement.scrollTop;
+		if( st > lastScrollTop && !listadoMenuPrincipal.classList.contains("navegacion__lista--abierto") )
+		{
+			menuPrincipal.classList.add("fadeOutUp");
+			menuPrincipal.classList.remove("fadeInDown");
+			menuPrincipal.classList.remove("fijado");
+			listadoMenuPrincipal.classList.remove("scrollingY");
+		}
+		else if ( st <= lastScrollTop && listadoMenuPrincipal.classList.contains("navegacion__lista--abierto") )
+		{
+			menuPrincipal.classList.add("fadeInDown");
+			menuPrincipal.classList.add("fijado");
+			listadoMenuPrincipal.classList.add("scrollingY");
+			menuPrincipal.classList.remove("fadeOutUp");
+		}
+		else if( listadoMenuPrincipal.classList.contains("navegacion__lista--cerrado") )
+		{
+			listadoMenuPrincipal.classList.remove("scrollingY");
+		}
+		else
+		{
+			menuPrincipal.classList.add("fadeInDown");
+			menuPrincipal.classList.add("fijado");
+			menuPrincipal.classList.remove("fadeOutUp");
+		}
+		lastScrollTop = st;
 	}
 }
