@@ -24,18 +24,24 @@ function cargarScripts()
 		{
 			listadoMenu.classList.remove("navegacion__lista--abierto");
 			listadoMenu.classList.add("navegacion__lista--cerrado");
+			botonMenu.children[0].classList.add("icon-menu");
+			botonMenu.children[0].classList.remove("icon-cross");
 		}
 		
 		else if( listadoMenu.classList.contains("navegacion__lista--cerrado") )
 		{
 			listadoMenu.classList.add("navegacion__lista--abierto");
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
+			botonMenu.children[0].classList.remove("icon-menu");
+			botonMenu.children[0].classList.add("icon-cross");
 		}
 
 		else
 		{
 			listadoMenu.classList.add("navegacion__lista--abierto");
 			listadoMenu.classList.remove("navegacion__lista--cerrado");
+			botonMenu.children[0].classList.remove("icon-menu");
+			botonMenu.children[0].classList.add("icon-cross");
 		}
 	}
 
