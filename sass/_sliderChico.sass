@@ -1,0 +1,27 @@
+/** ES un modelo reutilizable de slider chico **/
+.sliderChico	
+	&__contenedor
+		background: $color_fondo3
+		display: flex
+		flex-flow: row nowrap
+		// overflow: hidden
+
+		&__titulo
+			color: $color_blanco
+			flex: 1 1 auto
+			font-family: $fuente_subtitulo
+			font-size: $rem * 2
+			font-weight: 900
+			line-height: 150%
+			margin: 0
+			padding: $rem * 2
+			@media all and ( min-width: $tablet )
+				font-size: $rem * 3
+
+// .slider
+// 	&__item
+// 		left: 0
+// 		position: absolute
+// 		top: 0
+// 		width: 100%
+// 		height: auto

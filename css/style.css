@@ -8123,6 +8123,34 @@ template {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
+
+.slideOutLeft {
+  animation-name: slideOutLeft;
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
+
+.slideOutRight {
+  animation-name: slideOutRight;
+  animation-delay: 0;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
+
 /** .fadeIn
  * animation-name: fadeIn
  * @include animacionEstandar()
@@ -9299,6 +9327,7 @@ strong {
   .main__seccion3:last-child .main__seccion3__articulo__media__orden {
     filter: hue-rotate(100deg); }
 
+/** Las secciones de tipo N° 4 */
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);
@@ -9471,5 +9500,21 @@ strong {
   z-index: -1; }
 
 /** ES un modelo reutilizable de slider chico */
+.sliderChico__contenedor {
+  background: #B85B3F;
+  display: flex;
+  flex-flow: row nowrap; }
+  .sliderChico__contenedor__titulo {
+    color: #E8E3DB;
+    flex: 1 1 auto;
+    font-family: "Roboto";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 150%;
+    margin: 0;
+    padding: 40px; }
+    @media all and (min-width: 720px) {
+      .sliderChico__contenedor__titulo {
+        font-size: 60px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -32,6 +32,36 @@
 .fadeInUp
 	@include fadeInUp()
 
+// Animaciones tipo slide
+@mixin slideInLeft()
+	animation-name: slideInLeft
+	@include animacionEstandar()
+.slideInLeft
+	@include slideInLeft()
+
+@mixin slideInRight()
+	animation-name: slideInRight
+	@include animacionEstandar()
+.slideInRight
+	@include slideInRight()
+
+
+@mixin slideOutLeft()
+	animation-name: slideOutLeft
+	@include animacionEstandar()
+.slideOutLeft
+	@include slideOutLeft()
+
+
+@mixin slideOutRight()
+	animation-name: slideOutRight
+	@include animacionEstandar()
+.slideOutRight
+	@include slideOutRight()
+	
+	
+	
+
 
 
 // Menú abierto
