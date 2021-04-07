@@ -9503,10 +9503,11 @@ strong {
 .sliderChico__contenedor {
   background: #B85B3F;
   display: flex;
-  flex-flow: row nowrap; }
+  flex-flow: row nowrap;
+  overflow: hidden; }
   .sliderChico__contenedor__titulo {
     color: #E8E3DB;
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     font-family: "Roboto";
     font-size: 40px;
     font-weight: 900;

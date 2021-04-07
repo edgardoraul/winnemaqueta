@@ -257,7 +257,7 @@ function cargarScripts()
 		{
 			slidersItems[i].classList.add(animacionEntrada);
 			slidersItems[i].classList.remove(animacionSalida);
-			slidersItems[i].style.order = 1;
+			slidersItems[i].style.order = slidersItems.length - 1;
 		}
 	}
 	cargadorSlider();
