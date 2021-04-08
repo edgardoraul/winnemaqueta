@@ -195,10 +195,25 @@ function cargarScripts()
 	function cargadorSlider()
 	{
 		console.log("cargado");
+
+		// Contenedor de los items
+		const slider = document.querySelector(".slider");
+		console.log(slider)
+
 		// El arreglo con cada uno de los sliders.
 		const slidersItems = document.querySelectorAll(".slider__item");
-		// const slidersIframes = document.getElementsByTagName("iframe");
 
+		/* // El ancho del contenedor de los items
+		let anchoContenedor = slidersItems[0].parentElement.clientWidth;
+
+		// Cambia el tamaño cada vez que se redimensiona la pantalla
+		window.addEventListener("resize", () => {
+			anchoContenedor = slidersItems[0].parentElement.clientWidth;
+			console.log(anchoContenedor);
+		});
+		
+		// const slidersIframes = document.getElementsByTagName("iframe");
+ */
 		// Animación de entrada y salida
 		let animacionEntrada, animacionSalida;
 		
@@ -206,19 +221,20 @@ function cargarScripts()
 		for( let i = 0; i < slidersItems.length; i++ )
 		{
 			// slidersItems[i].style.zIndex = slidersItems.length - i;
-
+			
 			// Controlando si tiene una animación o no
-			if( slidersItems[i].classList.contains("animacion__carrousel") )
+			if( slider.classList.contains("animacion__carrousel") )
 			{
-				slidersItems[i].style.order = i + 1;
 				animacionEntrada = "slideInRight";
 				animacionSalida = "slideOutLeft";
+				slidersItems[i].classList.add(animacionSalida);
 			}
 			else if( slidersItems[i].classList.contains("animacion__fade") )
 			{
 				animacionEntrada = "fadeIn";
 				animacionSalida = "fadeOut";
 			}
+			console.log(slidersItems[i]);
 		}
 
 		/* // Agrandando los iframes
@@ -244,20 +260,18 @@ function cargarScripts()
 		}
 		temporizadorInfinito();
 
-		// Desplazamiento hacia la izquierda y desaparece
+		 // Desplazamiento hacia la izquierda y desaparece
 		function izq()
 		{
 			slidersItems[i].classList.add(animacionSalida);
 			slidersItems[i].classList.remove(animacionEntrada);
-			slidersItems[i].style.order = i;
 		}
-
+		
 		// Desplazamiento desde la derecha y se queda en el centro 
 		function der()
 		{
 			slidersItems[i].classList.add(animacionEntrada);
 			slidersItems[i].classList.remove(animacionSalida);
-			slidersItems[i].style.order = slidersItems.length - i + 1;
 		}
 	}
 	cargadorSlider();

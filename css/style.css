@@ -8097,57 +8097,63 @@ template {
     transform-origin: center bottom; } }
 .fadeOutUp {
   animation-name: fadeOutUp;
+  opacity: 0;
+  visibility: hidden;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .fadeOutDown {
   animation-name: fadeOutDown;
+  opacity: 0;
+  visibility: hidden;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .fadeInDown {
   animation-name: fadeInDown;
+  opacity: 1;
+  visibility: visible;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .fadeInUp {
   animation-name: fadeInUp;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .slideInLeft {
   animation-name: slideInLeft;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .slideInRight {
   animation-name: slideInRight;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .slideOutLeft {
   animation-name: slideOutLeft;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
 .slideOutRight {
   animation-name: slideOutRight;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 1s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
@@ -9068,8 +9074,10 @@ strong {
     .navegacion__lista--abierto {
       height: auto;
       animation-name: fadeInDown;
+      opacity: 1;
+      visibility: visible;
       animation-delay: 0;
-      animation-duration: 0.1s;
+      animation-duration: 0.2s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: both;
       opacity: 1;
@@ -9078,8 +9086,10 @@ strong {
     .navegacion__lista--cerrado {
       height: 0;
       animation-name: fadeOutUp;
+      opacity: 0;
+      visibility: hidden;
       animation-delay: 0;
-      animation-duration: 0.1s;
+      animation-duration: 0.2s;
       animation-timing-function: ease-in-out;
       animation-fill-mode: both;
       opacity: 0;
@@ -9090,8 +9100,10 @@ strong {
   display: block;
   height: 0;
   animation-name: fadeOutUp;
+  opacity: 0;
+  visibility: hidden;
   animation-delay: 0;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
   opacity: 0;
@@ -9100,8 +9112,10 @@ strong {
   .sublista--abierto {
     height: auto;
     animation-name: fadeInDown;
+    opacity: 1;
+    visibility: visible;
     animation-delay: 0;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     opacity: 1;
@@ -9110,8 +9124,10 @@ strong {
   .sublista--cerrado {
     height: 0;
     animation-name: fadeOutUp;
+    opacity: 0;
+    visibility: hidden;
     animation-delay: 0;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     opacity: 0;
@@ -9135,8 +9151,10 @@ strong {
     display: block;
     height: auto;
     animation-name: fadeInDown;
+    opacity: 1;
+    visibility: visible;
     animation-delay: 0;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     opacity: 1;
@@ -9152,6 +9170,21 @@ strong {
   height: auto;
   min-height: auto;
   overflow-y: auto; }
+
+/** Barra navegacion: atrás adelante */
+.navegacionAtrasAdelante {
+  align-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  overflow: hidden; }
+  .navegacionAtrasAdelante__enlace {
+    flex: 0 0 15%; }
+    .navegacionAtrasAdelante__enlace--atras:hover {
+      transform: translateX(-20px); }
+    .navegacionAtrasAdelante__enlace--adelante:hover {
+      transform: translateX(20px); }
 
 /** Hay varios tipos de secciones:
  *
@@ -9328,6 +9361,21 @@ strong {
     filter: hue-rotate(100deg); }
 
 /** Las secciones de tipo N° 4 */
+.main__seccion4 {
+  background: #B85B3F; }
+  .main__seccion4__articulo__titulo {
+    background: #B85B3F;
+    color: #E8E3DB;
+    font-family: "Roboto";
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 150%;
+    margin: 0;
+    padding: 40px; }
+    @media all and (min-width: 720px) {
+      .main__seccion4__articulo__titulo {
+        font-size: 60px; } }
+
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);
@@ -9500,22 +9548,14 @@ strong {
   z-index: -1; }
 
 /** ES un modelo reutilizable de slider chico */
-.sliderChico__contenedor {
-  background: #B85B3F;
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: hidden; }
-  .sliderChico__contenedor__titulo {
-    color: #E8E3DB;
-    flex: 1 1 100%;
-    font-family: "Roboto";
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 150%;
-    margin: 0;
-    padding: 40px; }
-    @media all and (min-width: 720px) {
-      .sliderChico__contenedor__titulo {
-        font-size: 60px; } }
+.slider__contenedor {
+  min-height: 50vh;
+  overflow: hidden;
+  position: relative; }
+.slider__item {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

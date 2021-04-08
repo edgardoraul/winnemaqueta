@@ -1,12 +1,20 @@
 // Animaciones Mixins
 @mixin animacionEstandar()
 	animation-delay: 0
-	animation-duration: 0.1s
+	animation-duration: 0.2s
+	animation-timing-function: ease-in-out
+	animation-fill-mode: both
+
+@mixin animacionLenta()
+	animation-delay: 0
+	animation-duration: 1s
 	animation-timing-function: ease-in-out
 	animation-fill-mode: both
 	
 @mixin fadeOutUp()
 	animation-name: fadeOutUp
+	opacity: 0
+	visibility: hidden
 	@include animacionEstandar()
 .fadeOutUp
 	@include fadeOutUp()
@@ -14,6 +22,8 @@
 
 @mixin fadeOutDown()
 	animation-name: fadeOutDown
+	opacity: 0
+	visibility: hidden
 	@include animacionEstandar()
 .fadeOutDown
 	@include fadeOutDown()
@@ -21,6 +31,8 @@
 
 @mixin fadeInDown()
 	animation-name: fadeInDown
+	opacity: 1
+	visibility: visible
 	@include animacionEstandar()
 .fadeInDown
 	@include fadeInDown()
@@ -35,27 +47,27 @@
 // Animaciones tipo slide
 @mixin slideInLeft()
 	animation-name: slideInLeft
-	@include animacionEstandar()
+	@include animacionLenta()
 .slideInLeft
 	@include slideInLeft()
 
 @mixin slideInRight()
 	animation-name: slideInRight
-	@include animacionEstandar()
+	@include animacionLenta()
 .slideInRight
 	@include slideInRight()
 
 
 @mixin slideOutLeft()
 	animation-name: slideOutLeft
-	@include animacionEstandar()
+	@include animacionLenta()
 .slideOutLeft
 	@include slideOutLeft()
 
 
 @mixin slideOutRight()
 	animation-name: slideOutRight
-	@include animacionEstandar()
+	@include animacionLenta()
 .slideOutRight
 	@include slideOutRight()
 	

@@ -154,6 +154,22 @@
 	height: auto
 	min-height: auto
 	overflow-y: auto
-	// top: auto !important
-	// *
-	// 	overflow-y: scroll
+
+/** Barra navegacion: atrás adelante **/
+.navegacionAtrasAdelante
+	align-content: space-around
+	align-items: center
+	display: flex
+	flex-flow: row nowrap
+	justify-content: center
+	overflow: hidden
+
+	&__enlace
+		flex: 0 0 15%
+
+		&--atras
+			&:hover
+				transform: translateX(-$rem)
+		&--adelante
+			&:hover
+				transform: translateX($rem)
