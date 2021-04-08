@@ -164,18 +164,12 @@ function cargarScripts()
 			menuPrincipal.classList.add("fadeOutUp");
 			menuPrincipal.classList.remove("fadeInDown");
 			menuPrincipal.classList.remove("fijado");
-			listadoMenuPrincipal.classList.remove("scrollingY");
 		}
 		else if ( st <= lastScrollTop && listadoMenuPrincipal.classList.contains("navegacion__lista--abierto") )
 		{
 			menuPrincipal.classList.add("fadeInDown");
 			menuPrincipal.classList.add("fijado");
-			listadoMenuPrincipal.classList.add("scrollingY");
 			menuPrincipal.classList.remove("fadeOutUp");
-		}
-		else if( listadoMenuPrincipal.classList.contains("navegacion__lista--cerrado") )
-		{
-			listadoMenuPrincipal.classList.remove("scrollingY");
 		}
 		else
 		{
@@ -187,33 +181,33 @@ function cargarScripts()
 	}
 
 
-
-
 	/* Las funciones para manipular los sliders */
 	// window.addEventListener("DOMContentLoaded", cargador);
 
 	function cargadorSlider()
 	{
-		console.log("cargado");
-
 		// Contenedor de los items
-		const slider = document.querySelector(".slider");
-		console.log(slider)
+		const slider = document.querySelector( ".slider" );
 
 		// El arreglo con cada uno de los sliders.
 		const slidersItems = document.querySelectorAll(".slider__item");
 
-		/* // El ancho del contenedor de los items
-		let anchoContenedor = slidersItems[0].parentElement.clientWidth;
+		// El ancho del contenedor de los items
+		let altoItem = slidersItems[0].clientHeight;
+		slider.style.minHeight = altoItem + "px";
 
 		// Cambia el tamaño cada vez que se redimensiona la pantalla
 		window.addEventListener("resize", () => {
-			anchoContenedor = slidersItems[0].parentElement.clientWidth;
-			console.log(anchoContenedor);
+			altoItem = slidersItems[i].clientHeight;
+			slider.style.minHeight = altoItem + "px";
 		});
 		
+		slider.style.minHeight = altoItem + "px";
+
+		/* 
 		// const slidersIframes = document.getElementsByTagName("iframe");
- */
+		*/
+
 		// Animación de entrada y salida
 		let animacionEntrada, animacionSalida;
 		
@@ -234,7 +228,7 @@ function cargarScripts()
 				animacionEntrada = "fadeIn";
 				animacionSalida = "fadeOut";
 			}
-			console.log(slidersItems[i]);
+			console.log( slidersItems[i] );
 		}
 
 		/* // Agrandando los iframes
@@ -250,28 +244,28 @@ function cargarScripts()
 		let i = 0;
 		function temporizadorInfinito()
 		{
-			setTimeout(temporizadorInfinito, 5000);
+			setTimeout( temporizadorInfinito, 5000 );
 			izq();
 
 			// Control del contador
 			i = ( i + 1 ) % slidersItems.length;
 			der();
-			console.log(slidersItems[i]);
+			console.log( slidersItems[i] );
 		}
 		temporizadorInfinito();
 
 		 // Desplazamiento hacia la izquierda y desaparece
 		function izq()
 		{
-			slidersItems[i].classList.add(animacionSalida);
-			slidersItems[i].classList.remove(animacionEntrada);
+			slidersItems[i].classList.add( animacionSalida );
+			slidersItems[i].classList.remove( animacionEntrada );
 		}
 		
 		// Desplazamiento desde la derecha y se queda en el centro 
 		function der()
 		{
-			slidersItems[i].classList.add(animacionEntrada);
-			slidersItems[i].classList.remove(animacionSalida);
+			slidersItems[i].classList.add( animacionEntrada );
+			slidersItems[i].classList.remove( animacionSalida );
 		}
 	}
 	cargadorSlider();

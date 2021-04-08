@@ -9549,9 +9549,9 @@ strong {
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {
-  min-height: 50vh;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  height: 100%; }
 .slider__item {
   left: 0;
   position: absolute;
