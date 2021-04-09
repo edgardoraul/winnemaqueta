@@ -1,11 +1,12 @@
 /* Encabezados */
 .header
+	align-items: center
 	background: $color_blanco
 	display: flex
 	justify-content: space-between
-	align-items: center
 	left: 0
-	padding: 0.5rem 1rem
+	height: $rem * 3
+	padding: ($rem * 0.3) ($rem * 0.75)
 	position: relative
 	z-index: 2
 
@@ -21,15 +22,14 @@
 		color: $color_titulo
 
 		&__menu
-
 			&--enlace
 				color: $color_negro
 				display: block
-				font-size: 1.5rem
+				font-size: $rem * 1.25
 			
 
 			@media all and ( min-width: $mobile )
-				font-size: 2rem
+				font-size: $rem * 1.5
 
 			// Ocultando en modo Escritorio
 			@media screen and ( min-width: $desktop )
@@ -41,16 +41,16 @@
 	&__logoTexto
 		font-family: $fuente_subtitulo
 		font-weight: lighter
-		font-size: 1.25rem
+		font-size: $rem
 		letter-spacing: -2px
 		margin: 0
 
 		
 		@media all and ( min-width: $mobile )
-			font-size: 1.5rem
+			font-size: $rem *  1.25
 		
 		@media all and ( min-width: $desktop )
-			font-size: 2rem
+			font-size: $rem * 1.5
 
 
 		&__enlace

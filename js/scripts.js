@@ -156,6 +156,7 @@ function cargarScripts()
 	let lastScrollTop = 0;
 	const menuPrincipal = document.querySelector("#header");
 	const listadoMenuPrincipal = document.querySelector("#header_nav");
+	const wrapper = document.querySelector(".wrapper");
 	function mostrarMenu()
 	{
 		let st = window.pageYOffset || document.documentElement.scrollTop;
@@ -164,17 +165,20 @@ function cargarScripts()
 			menuPrincipal.classList.add("fadeOutUp");
 			menuPrincipal.classList.remove("fadeInDown");
 			menuPrincipal.classList.remove("fijado");
+			wrapper.classList.remove("wrapper--fixedMenu");
 		}
 		else if ( st <= lastScrollTop && listadoMenuPrincipal.classList.contains("navegacion__lista--abierto") )
 		{
 			menuPrincipal.classList.add("fadeInDown");
 			menuPrincipal.classList.add("fijado");
+			wrapper.classList.add("wrapper--fixedMenu");
 			menuPrincipal.classList.remove("fadeOutUp");
 		}
 		else
 		{
 			menuPrincipal.classList.add("fadeInDown");
 			menuPrincipal.classList.add("fijado");
+			wrapper.classList.remove("wrapper--fixedMenu");
 			menuPrincipal.classList.remove("fadeOutUp");
 		}
 		lastScrollTop = st;
@@ -228,7 +232,7 @@ function cargarScripts()
 				animacionEntrada = "fadeIn";
 				animacionSalida = "fadeOut";
 			}
-			console.log( slidersItems[i] );
+			// console.log( slidersItems[i] );
 		}
 
 		/* // Agrandando los iframes
@@ -250,7 +254,7 @@ function cargarScripts()
 			// Control del contador
 			i = ( i + 1 ) % slidersItems.length;
 			der();
-			console.log( slidersItems[i] );
+			// console.log( slidersItems[i] );
 		}
 		temporizadorInfinito();
 

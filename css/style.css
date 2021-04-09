@@ -8095,6 +8095,16 @@ template {
     -ms-transform-origin: center bottom;
     -o-transform-origin: center bottom;
     transform-origin: center bottom; } }
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
 .fadeOutUp {
   animation-name: fadeOutUp;
   opacity: 0;
@@ -8911,13 +8921,13 @@ strong {
   outline: none;
   background: #040507;
   border: none;
-  border-radius: 4rem;
+  border-radius: 80px;
   color: #E8E3DB;
   display: inline-block;
   font-family: "Poppins";
-  font-size: 1rem;
+  font-size: 20px;
   font-weight: 300;
-  padding: 0.5rem 2rem;
+  padding: 6.6666666667px 40px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase; }
@@ -8926,11 +8936,11 @@ strong {
     color: #040507;
     cursor: pointer; }
   .boton--grande {
-    font-size: 1.5rem;
-    padding: 1rem 3rem; }
+    font-size: 30px;
+    padding: 20px 40px; }
   .boton--chico {
-    font-size: 0.75rem;
-    padding: 0.25rem 1.5rem; }
+    font-size: 12px;
+    padding: 4px 25px; }
   .boton--advertencia {
     background: #F2E41B;
     color: #040507; }
@@ -8955,12 +8965,13 @@ strong {
 
 /* Encabezados */
 .header {
+  align-items: center;
   background: #E8E3DB;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   left: 0;
-  padding: 0.5rem 1rem;
+  height: 60px;
+  padding: 6px 15px;
   position: relative;
   z-index: 2; }
   @media all and (min-width: 1000px) {
@@ -8971,25 +8982,25 @@ strong {
     .header__boton__menu--enlace {
       color: #040507;
       display: block;
-      font-size: 1.5rem; }
+      font-size: 25px; }
     @media all and (min-width: 500px) {
       .header__boton__menu {
-        font-size: 2rem; } }
+        font-size: 30px; } }
     @media screen and (min-width: 1000px) {
       .header__boton__menu {
         display: none; } }
   .header__logoTexto {
     font-family: "Roboto";
     font-weight: lighter;
-    font-size: 1.25rem;
+    font-size: 20px;
     letter-spacing: -2px;
     margin: 0; }
     @media all and (min-width: 500px) {
       .header__logoTexto {
-        font-size: 1.5rem; } }
+        font-size: 25px; } }
     @media all and (min-width: 1000px) {
       .header__logoTexto {
-        font-size: 2rem; } }
+        font-size: 30px; } }
     .header__logoTexto__enlace {
       color: #A83E4C;
       text-decoration: none; }
@@ -9002,7 +9013,7 @@ strong {
   background: #FE9776;
   left: 0;
   position: absolute;
-  top: 4rem;
+  top: 60px;
   width: 100%; }
   @media all and (min-width: 1000px) {
     .navegacion {
@@ -9017,7 +9028,7 @@ strong {
     margin: 0;
     height: 0;
     opacity: 0;
-    padding-left: 0.75rem;
+    padding-left: 15px;
     text-align: left;
     visibility: hidden;
     z-index: -1; }
@@ -9041,22 +9052,22 @@ strong {
         flex-direction: row;
         flex-wrap: nowrap;
         font-family: "Poppins";
-        font-size: 1rem;
+        font-size: 14px;
         font-weight: bolder;
         justify-content: space-between;
-        padding: 0.5rem 1rem 0.5rem 0.75rem;
+        padding: 6.6666666667px 20px 6.6666666667px 19.75px;
         position: relative;
         vertical-align: bottom;
         text-transform: uppercase; }
         @media all and (min-width: 1000px) {
           .navegacion__lista__item__enlace {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem; } }
+            font-size: 13px;
+            padding: 5px 10px; } }
         .navegacion__lista__item__enlace:hover:before {
-          width: calc(100% - 0.5rem); }
+          width: calc(100% - 18px); }
           @media all and (min-width: 1000px) {
             .navegacion__lista__item__enlace:hover:before {
-              width: calc(100% - 0.5rem); } }
+              width: calc(100% - 10px); } }
         .navegacion__lista__item__enlace:before {
           background: rgba(4, 5, 7, 0.3);
           bottom: 10%;
@@ -9068,7 +9079,7 @@ strong {
           width: 0; }
         .navegacion__lista__item__enlace i:before, .navegacion__lista__item__enlace span:before, .navegacion__lista__item__enlace .icomoon:before {
           display: inline-block;
-          margin-left: 0.5rem; }
+          margin-left: 10px; }
       .navegacion__lista__item--activo > .navegacion__lista__item__enlace:before {
         display: none; }
     .navegacion__lista--abierto {
@@ -9138,9 +9149,9 @@ strong {
       background: #E8E3DB;
       display: none;
       left: 0;
-      padding-left: 0.75rem;
+      padding-left: 15px;
       position: absolute;
-      width: 15rem; }
+      width: 300px; }
       .sublista--cerrado {
         display: none; }
       .sublista--abierto {
@@ -9170,6 +9181,9 @@ strong {
   height: auto;
   min-height: auto;
   overflow-y: auto; }
+
+.wrapper--fixedMenu {
+  margin-top: 60px; }
 
 /** Barra navegacion: atrás adelante */
 .navegacionAtrasAdelante {
@@ -9211,7 +9225,7 @@ strong {
     flex-wrap: nowrap;
     justify-content: center;
     min-height: 100vh;
-    padding: 4rem 1rem; }
+    padding: 80px 20px; }
     @media all and (min-width: 720px) {
       .main__seccion {
         background-position: right bottom;
@@ -9234,14 +9248,14 @@ strong {
         .main__seccion__article--accion .boton {
           width: auto; } }
       .main__seccion__article--contenido {
-        margin-bottom: 2rem; }
+        margin-bottom: 40px; }
       .main__seccion__article__header {
         font-family: "Poppins"; }
         .main__seccion__article__header--titulo {
-          font-size: 3rem;
+          font-size: 55px;
           font-weight: normal;
           line-height: 100%;
-          letter-spacing: -0.25rem; }
+          letter-spacing: -5px; }
 
 .main {
   text-align: left; }
@@ -9361,20 +9375,24 @@ strong {
     filter: hue-rotate(100deg); }
 
 /** Las secciones de tipo N° 4 */
-.main__seccion4 {
-  background: #B85B3F; }
-  .main__seccion4__articulo__titulo {
-    background: #B85B3F;
-    color: #E8E3DB;
-    font-family: "Roboto";
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 150%;
-    margin: 0;
-    padding: 40px; }
-    @media all and (min-width: 720px) {
-      .main__seccion4__articulo__titulo {
-        font-size: 60px; } }
+.main__seccion4__articulo__titulo {
+  color: #040507;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 150%;
+  margin: 0;
+  padding: 40px; }
+  @media all and (min-width: 720px) {
+    .main__seccion4__articulo__titulo {
+      font-size: 60px; } }
+.main__seccion4__articulo__contenido {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  overflow-x: scroll; }
+  .main__seccion4__articulo__contenido__logo {
+    flex: 0 0 150px; }
 
 .footer {
   background-color: #464544;

@@ -23,7 +23,7 @@
 		flex-wrap: nowrap
 		justify-content: center
 		min-height: 100vh
-		padding: 4rem 1rem
+		padding: ($rem * 4) $rem
 
 		@media all and ( min-width: $tablet )
 			background-position: right bottom
@@ -54,16 +54,16 @@
 
 
 			&--contenido
-				margin-bottom: 2rem
+				margin-bottom: $rem * 2
 		
 			&__header
 				font-family: $fuente_titulo
 
 				&--titulo
-					font-size: 3rem
+					font-size: $rem * 2.75
 					font-weight: normal
 					line-height: 100%
-					letter-spacing: -0.25rem
+					letter-spacing: -#{$rem * 0.25}
 
 
 
@@ -249,11 +249,10 @@
 	
 /** Las secciones de tipo N° 4 **/
 .main__seccion4
-	background: $color_fondo3
+	// background: $color_fondo5
 	&__articulo
 		&__titulo
-			background: $color_fondo3
-			color: $color_blanco
+			color: $color_negro
 			font-family: $fuente_subtitulo
 			font-size: $rem * 2
 			font-weight: 900
@@ -262,3 +261,12 @@
 			padding: $rem * 2
 			@media all and ( min-width: $tablet )
 				font-size: $rem * 3
+
+		&__contenido
+			display: flex
+			flex-flow: row nowrap
+			justify-content: space-around
+			overflow-x: scroll
+
+			&__logo
+				flex: 0 0 150px
