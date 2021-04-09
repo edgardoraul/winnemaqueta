@@ -249,18 +249,28 @@
 	
 /** Las secciones de tipo N° 4 **/
 .main__seccion4
+	text-align: left
 	// background: $color_fondo5
 	&__articulo
-		&__titulo
+		padding: ($rem / 2) $rem
+		&__cita
 			color: $color_negro
 			font-family: $fuente_subtitulo
-			font-size: $rem * 2
+			font-size: $rem * 1.5
 			font-weight: 900
 			line-height: 150%
 			margin: 0
 			padding: $rem * 2
 			@media all and ( min-width: $tablet )
-				font-size: $rem * 3
+				font-size: $rem * 2
+
+		&__header
+			&__titulo
+				color: $color_negro
+				font-family: $fuente_titulo
+				font-size: $rem * 0.75
+				font-weight: 700
+				text-transform: uppercase
 
 		&__contenido
 			display: flex
@@ -270,3 +280,19 @@
 
 			&__logo
 				flex: 0 0 150px
+
+	// Usando flexbox
+	&__articulo
+		align-content: center
+		align-items: center
+		display: flex
+		flex-flow: column nowrap
+		justify-content: space-between
+		@media all and ( min-width: $tablet )
+			flex-flow: row nowrap
+
+			&__header
+				flex: 1 1 auto
+
+			&__contenido
+				flex: 1 1 80%
