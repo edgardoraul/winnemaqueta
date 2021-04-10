@@ -10,3 +10,23 @@
 		position: absolute
 		top: 0
 		width: 100%
+
+/** Nuevo prototipo de Slider **/
+.contenedor
+	border: 1px solid green
+	position: relative
+	overflow: hidden
+	height: calc( 100% - #$rem * 2 )
+
+	&__ventana
+		align-content: flex-start
+		align-items: stretch
+		border: 1px solid pink
+		display: flex
+		flex-flow: row nowrap
+		justify-content: flex-start
+
+		&__items
+			border: 1px solid orange
+			height: 100%
+			flex: 0 0 300px

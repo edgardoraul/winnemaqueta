@@ -49,7 +49,7 @@ function cargarScripts()
 	window.addEventListener("resize", mostrarOcultar, false);
 	
 	// Función muestra y oculta el menú principal dependiendo del ancho de pantalla
-	function mostrarOcultar(ev)
+	function mostrarOcultar()
 	{
 		const ancho = window.innerWidth;
 		if( ancho >= 1000 )
@@ -60,6 +60,11 @@ function cargarScripts()
 		else if ( ancho < 1000 && ancho > 720)
 		{
 			listadoMenu.classList.add("navegacion__lista--cerrado");
+			listadoMenu.classList.remove("navegacion__lista--abierto");
+		}
+		else
+		{
+			listadoMenu.classList.remove("navegacion__lista--cerrado");
 			listadoMenu.classList.remove("navegacion__lista--abierto");
 		}
 	}

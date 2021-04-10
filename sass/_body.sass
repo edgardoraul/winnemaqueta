@@ -9,14 +9,13 @@ html
 body
 	background: none
 	color: $color_texto
-	font-size: 140%
+	font-size: $rem
 	font-family: $fuente_letra
 	letter-spacing: -1px
 	line-height: 170%
 	text-align: center
 	word-spacing: 1px
 
-	// hola
 a
 	color: $color_titulo
 	text-decoration: none
@@ -30,7 +29,7 @@ blockquote
 	font-style: italic
 	padding-left: 1rem
 	position: relative
-	border-right: 0.5rem solid $color_negro
+	border-right: ($rem * 0.5) solid $color_negro
 
 	&::before
 		color: $color_negro
@@ -38,8 +37,8 @@ blockquote
 		font-family: "icomoon"
 		font-style: normal
 		font-weight: bolder
-		font-size: 2rem
-		left: -2rem
+		font-size: $rem * 2
+		left: - $rem * 2
 		position: absolute
 		top: 0
 

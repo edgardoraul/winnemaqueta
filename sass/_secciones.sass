@@ -11,8 +11,7 @@
 	
 // Las secciones de la portada principal
 .main
-	// DA una animacion de bloque en bloque
-	scroll-snap-type: y mandatory
+	text-align: left
 
 	&__seccion
 		scroll-snap-align: start
@@ -74,8 +73,6 @@
 		**/
 
 .main
-	text-align: left
-
 	&__seccion2
 		background-color: $color_fondo4
 		color: $color_fondo3
@@ -250,9 +247,10 @@
 /** Las secciones de tipo N° 4 **/
 .main__seccion4
 	text-align: left
-	// background: $color_fondo5
+
 	&__articulo
 		padding: ($rem / 2) $rem
+
 		&__cita
 			color: $color_negro
 			font-family: $fuente_subtitulo
@@ -276,7 +274,6 @@
 			display: flex
 			flex-flow: row nowrap
 			justify-content: space-around
-			overflow-x: scroll
 
 			&__logo
 				flex: 0 0 150px
@@ -296,3 +293,15 @@
 
 			&__contenido
 				flex: 1 1 80%
+
+/** secciones N° 5: para las reviews **/
+.main
+	&__seccion5
+		border: 1px solid red
+		display: grid
+		@media all and ( min-width: $tablet )
+			grid-template-columns: ($mobile / 3 * 2) auto
+			grid-column-gap: $rem * 4
+
+		&__articulo
+			border: 1px solid blue

@@ -13,6 +13,21 @@
 	100%
 		transform: translateX(0)
 
+@keyframes cicloInfinito
+	0%
+		transform: translateX(-100%)
+	20%
+		transform: translate(-100%)
+	40%
+		transform: translate(0)
+	60%
+		transform: translate(0)
+	80%
+		transform: translateX(100%)
+	100%
+		transform: translate(100%)
+		
+
 		
 
 // Animaciones Mixins
@@ -87,6 +102,18 @@
 	@include animacionLenta()
 .slideOutRight
 	@include slideOutRight()
+	
+
+@mixin cicloInfinito()
+	animation-name: cicloInfinito
+	animation-delay: 0
+	animation-duration: 10s
+	animation-timing-function: linear
+	animation-fill-mode: both
+	animation-iteration-count: infinite
+	animation-direction: alternate
+.cicloInfinito
+	@include cicloInfinito()
 	
 	
 	
