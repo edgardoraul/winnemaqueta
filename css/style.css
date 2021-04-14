@@ -9245,13 +9245,12 @@ strong {
  * .main__seccion3: tiene un número de orden, imagen, titular y algo de contenido. El primero item irá diferente.
  *
  */
+/**
+ * Sección 1: La parte principal de la home.
+ *
+ */
 .main {
-  text-align: left;
-  /** .main__seccion2: Contienen cuadros que ocupan toda la pantalla.
-   * Están divididos a la mitad e intercambiados a medida que son pares o impares respectivamente.
-   * En una parte tienen color y en la otra mitad están con alguna imagen de fondo.
-   * Además poseen un titular en el centro.
-   */ }
+  text-align: left; }
   .main__seccion1__articulo {
     align-items: center;
     background: #FE9776 url("../img/13.jpg") top left no-repeat;
@@ -9268,7 +9267,6 @@ strong {
         background-size: cover;
         justify-content: space-around; } }
     .main__seccion1__articulo__contenedor {
-      border: 1px solid red;
       align-items: stretch;
       color: #040507;
       display: flex;
@@ -9293,6 +9291,13 @@ strong {
             line-height: 100%;
             letter-spacing: -5px; }
 
+/**
+ * Sección 2: Contienen cuadros que ocupan toda la pantalla.
+ * Están divididos a la mitad e intercambiados a medida que son pares o impares respectivamente.
+ * En una parte tienen color y en la otra mitad están con alguna imagen de fondo.
+ * Además poseen un titular en el centro.
+ *
+ */
 .main__seccion2 {
   background-color: #E8E3C7;
   color: #B85B3F;
@@ -9342,21 +9347,24 @@ strong {
             .main__seccion2__articulo__header__titulo::first-letter {
               font-size: 100px; } }
 
-.main__seccion2:nth-child(odd) .main__seccion2__articulo__figure {
+.main__seccion2__articulo:nth-child(odd) .main__seccion2__articulo__figure {
   order: 1; }
-.main__seccion2:nth-child(odd) .main__seccion2__articulo__header {
+.main__seccion2__articulo:nth-child(odd) .main__seccion2__articulo__header {
   left: calc( -33% + ( 20px * 5 ) );
   order: 2; }
 
-/** Secciones modo 3: muestran el orden a seguir para el cliente */
+/**
+ * Sección 3: Cuadros con números de orden, encabezado, imagen y texto.
+ *
+ */
 .pasos {
   align-items: flex-start;
   align-content: center;
   display: flex;
   flex-flow: column wrap;
   justify-content: flex-start;
-  padding: 20px;
-  margin: auto; }
+  margin: auto;
+  padding: 20px; }
   @media all and (min-width: 720px) {
     .pasos {
       align-items: stretch;
@@ -9367,12 +9375,12 @@ strong {
 .main {
   /** Color intercambiable los números de orden */ }
   .main__seccion3 {
+    margin-top: 40px;
     max-width: 333.3333333333px;
-    position: relative;
-    margin-top: 40px; }
+    position: relative; }
     @media all and (min-width: 720px) {
       .main__seccion3 {
-        flex: 1 1 50%; } }
+        flex: 0 0 45%; } }
     .main__seccion3__articulo__media {
       align-content: flex-end;
       align-items: baseline;
@@ -9387,8 +9395,8 @@ strong {
         margin-right: 40px; }
     .main__seccion3__articulo__header__titulo {
       font-family: "Poppins";
-      letter-spacing: -2px;
-      font-size: 30px; }
+      font-size: 30px;
+      letter-spacing: -2px; }
     .main__seccion3__articulo__contenido {
       font-size: 20px;
       line-height: 150%;
@@ -9408,49 +9416,58 @@ strong {
   .main__seccion3:last-child .main__seccion3__articulo__media__orden {
     filter: hue-rotate(100deg); }
 
-/** Las secciones de tipo N° 4 */
-.main__seccion4 {
-  text-align: left; }
-  .main__seccion4__articulo {
-    padding: 10px 20px; }
-    .main__seccion4__articulo__cita {
-      color: #040507;
-      font-family: "Roboto";
-      font-size: 30px;
-      font-weight: 900;
-      line-height: 150%;
-      margin: 0;
-      padding: 40px; }
-      @media all and (min-width: 720px) {
-        .main__seccion4__articulo__cita {
-          font-size: 40px; } }
-    .main__seccion4__articulo__header__titulo {
-      color: #040507;
-      font-family: "Poppins";
-      font-size: 15px;
-      font-weight: 700;
-      text-transform: uppercase; }
-    .main__seccion4__articulo__contenido {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-around; }
-      .main__seccion4__articulo__contenido__logo {
-        flex: 0 0 150px; }
-  .main__seccion4__articulo {
-    align-content: center;
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between; }
+/**
+ * Sección 4: Slider de contenido y slider de logos, marcas, etc.
+ */
+.main__seccion4__articulo {
+  padding: 10px 20px; }
+  .main__seccion4__articulo__cita {
+    color: #040507;
+    font-family: "Roboto";
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 150%;
+    margin: 0;
+    padding: 40px; }
     @media all and (min-width: 720px) {
-      .main__seccion4__articulo {
-        flex-flow: row nowrap; }
-        .main__seccion4__articulo__header {
-          flex: 1 1 auto; }
-        .main__seccion4__articulo__contenido {
-          flex: 1 1 80%; } }
+      .main__seccion4__articulo__cita {
+        font-size: 40px; } }
+  .main__seccion4__articulo__header__titulo {
+    color: #040507;
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .main__seccion4__articulo__contenido {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .main__seccion4__articulo__contenido::-webkit-scrollbar {
+      display: none; }
+    .main__seccion4__articulo__contenido__logo {
+      flex: 0 0 150px;
+      width: 150px; }
+.main__seccion4__articulo {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between; }
+  @media all and (min-width: 720px) {
+    .main__seccion4__articulo {
+      flex-flow: row nowrap; }
+      .main__seccion4__articulo__header {
+        flex: 1 1 auto; }
+      .main__seccion4__articulo__contenido {
+        flex: 1 1 80%; } }
 
-/** secciones N° 5: para las reviews */
+/**
+ * Sección 5: Los reviews.
+ */
 .main__seccion5 {
   border: 1px solid red;
   display: flex;
