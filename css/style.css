@@ -9471,7 +9471,7 @@ strong {
 .main__seccion5 {
   border: 1px solid red;
   display: flex;
-  flex-flow: col nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
   padding: 20px; }
   @media all and (min-width: 720px) {
@@ -9479,7 +9479,7 @@ strong {
       flex-flow: row nowrap; } }
   .main__seccion5__articulo {
     border: 1px solid blue;
-    flex: 0 0 auto; }
+    flex: 1 1 auto; }
     .main__seccion5__articulo:first-child {
       flex: 0 0 280px; }
 
@@ -9656,7 +9656,14 @@ strong {
 
 /** Reviews */
 .reviews {
-  padding: 20px; }
+  align-content: flex-start;
+  align-items: stretch;
+  display: flex;
+  padding: 20px;
+  flex-flow: row nowrap;
+  justify-content: stretch; }
+  .reviews__item {
+    flex: 0 0 280px; }
   .reviews__contenido {
     margin: 20px auto;
     overflow: hidden; }
