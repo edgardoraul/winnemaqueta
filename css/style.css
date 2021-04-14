@@ -8927,6 +8927,13 @@ strong {
   font-style: italic;
   font-weight: bold; }
 
+.alineacion--izquierda {
+  text-align: left; }
+.alineacion--centrada {
+  text-align: center; }
+.alineacion--derecha {
+  text-align: right; }
+
 .granTitular {
   margin: 60px auto; }
   .granTitular__header__titulo {
@@ -9245,10 +9252,9 @@ strong {
    * En una parte tienen color y en la otra mitad están con alguna imagen de fondo.
    * Además poseen un titular en el centro.
    */ }
-  .main__seccion {
-    scroll-snap-align: start;
-    background: #FE9776 url("../img/13.jpg") top left no-repeat;
+  .main__seccion1__articulo {
     align-items: center;
+    background: #FE9776 url("../img/13.jpg") top left no-repeat;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -9256,12 +9262,13 @@ strong {
     min-height: 100vh;
     padding: 80px 20px; }
     @media all and (min-width: 720px) {
-      .main__seccion {
+      .main__seccion1__articulo {
+        align-items: flex-end;
         background-position: right bottom;
         background-size: cover;
-        align-items: flex-end;
         justify-content: space-around; } }
-    .main__seccion__article {
+    .main__seccion1__articulo__contenedor {
+      border: 1px solid red;
       align-items: stretch;
       color: #040507;
       display: flex;
@@ -9269,22 +9276,22 @@ strong {
       flex-wrap: nowrap;
       max-width: 90%; }
       @media all and (min-width: 720px) {
-        .main__seccion__article {
+        .main__seccion1__articulo__contenedor {
           max-width: 500px; } }
-      .main__seccion__article--accion .boton {
-        width: 100%; }
-      @media all and (min-width: 720px) {
-        .main__seccion__article--accion .boton {
-          width: auto; } }
-      .main__seccion__article--contenido {
-        margin-bottom: 40px; }
-      .main__seccion__article__header {
-        font-family: "Poppins"; }
-        .main__seccion__article__header--titulo {
-          font-size: 55px;
-          font-weight: normal;
-          line-height: 100%;
-          letter-spacing: -5px; }
+      .main__seccion1__articulo__contenedor__accion {
+        margin-top: 40px; }
+        .main__seccion1__articulo__contenedor__accion .boton {
+          width: 100%; }
+        @media all and (min-width: 720px) {
+          .main__seccion1__articulo__contenedor__accion .boton {
+            width: auto; } }
+        .main__seccion1__articulo__contenedor__accion__header {
+          font-family: "Poppins"; }
+          .main__seccion1__articulo__contenedor__accion__header--titulo {
+            font-size: 55px;
+            font-weight: normal;
+            line-height: 100%;
+            letter-spacing: -5px; }
 
 .main__seccion2 {
   background-color: #E8E3C7;
@@ -9446,13 +9453,18 @@ strong {
 /** secciones N° 5: para las reviews */
 .main__seccion5 {
   border: 1px solid red;
-  display: grid; }
+  display: flex;
+  flex-flow: col nowrap;
+  justify-content: space-between;
+  padding: 20px; }
   @media all and (min-width: 720px) {
     .main__seccion5 {
-      grid-template-columns: 333.3333333333px auto;
-      grid-column-gap: 80px; } }
+      flex-flow: row nowrap; } }
   .main__seccion5__articulo {
-    border: 1px solid blue; }
+    border: 1px solid blue;
+    flex: 0 0 auto; }
+    .main__seccion5__articulo:first-child {
+      flex: 0 0 280px; }
 
 .footer {
   background-color: #464544;
@@ -9625,6 +9637,16 @@ strong {
   width: 100%;
   z-index: -1; }
 
+/** Reviews */
+.reviews {
+  padding: 20px; }
+  .reviews__contenido {
+    margin: 20px auto;
+    overflow: hidden; }
+    .reviews__contenido--autor {
+      font-style: italic;
+      font-size: 16px; }
+
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {
   overflow: hidden;
@@ -9637,21 +9659,23 @@ strong {
   width: 100%; }
 
 /** Nuevo prototipo de Slider */
-.contenedor {
-  border: 1px solid green;
-  position: relative;
-  overflow: hidden;
-  height: calc( 100% - #$rem * 2 ); }
-  .contenedor__ventana {
-    align-content: flex-start;
-    align-items: stretch;
-    border: 1px solid pink;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start; }
-    .contenedor__ventana__items {
-      border: 1px solid orange;
-      height: 100%;
-      flex: 0 0 300px; }
+/** .contenedor
+ * border: 1px solid green
+ * position: relative
+ * overflow: hidden
+ * height: calc( 100% - #$rem * 2 )
+ *
+ * &__ventana
+ * 	align-content: flex-start
+ * 	align-items: stretch
+ * 	border: 1px solid pink
+ * 	display: flex
+ * 	flex-flow: row nowrap
+ * 	justify-content: flex-start
+ *
+ * 	&__items
+ * 		border: 1px solid orange
+ * 		height: 100%
+ * 		flex: 0 0 300px */
 
 /*# sourceMappingURL=style.css.map */

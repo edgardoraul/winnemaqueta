@@ -72,8 +72,8 @@ function cargarScripts()
 	/* El "ir arriba" **************************************/
 	// Escuchando el evento del scrolling
 	const botonGoTop = document.querySelector("#gotop");
-	window.addEventListener("scroll", esconder_mostrar);
-	window.addEventListener("load", esconder_mostrar);
+	// window.addEventListener("scroll", esconder_mostrar);
+	// window.addEventListener("load", esconder_mostrar);
 	function esconder_mostrar(ev)
 	{
 		const coordY = window.pageYOffset;
@@ -157,7 +157,7 @@ function cargarScripts()
 
 
 	/* Escuchando el evento scrollTop para poder mostrar el menú principal */
-	window.addEventListener("scroll", mostrarMenu);
+	/* window.addEventListener("scroll", mostrarMenu);
 	let lastScrollTop = 0;
 	const menuPrincipal = document.querySelector("#header");
 	const listadoMenuPrincipal = document.querySelector("#header_nav");
@@ -188,7 +188,7 @@ function cargarScripts()
 		}
 		lastScrollTop = st;
 	}
-
+ */
 
 	/* Las funciones para manipular los sliders */
 	// window.addEventListener("DOMContentLoaded", cargador);
