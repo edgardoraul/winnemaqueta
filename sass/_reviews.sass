@@ -2,18 +2,24 @@
 /** Reviews **/
 .reviews
 	align-content: flex-start
-	align-items: stretch
+	align-items: flex-start
 	display: flex
-	padding: $rem
 	flex-flow: row nowrap
 	justify-content: stretch
+	overflow: hidden
+
+	&__header
+		&__rating
+			margin-top: 0
+			padding-top: 0
 
 	&__item
 		flex: 0 0 280px
+		padding: $rem
 
 	&__contenido
-		margin: $rem auto
-		overflow: hidden
+		margin: ($rem * 2) auto
+		font-size: $rem * 0.9
 
 		&--autor
 			font-style: italic

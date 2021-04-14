@@ -9469,7 +9469,8 @@ strong {
  * Sección 5: Los reviews.
  */
 .main__seccion5 {
-  border: 1px solid red;
+  background: #A83E4C;
+  color: #E8E3DB;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -9478,7 +9479,6 @@ strong {
     .main__seccion5 {
       flex-flow: row nowrap; } }
   .main__seccion5__articulo {
-    border: 1px solid blue;
     flex: 1 1 auto; }
     .main__seccion5__articulo:first-child {
       flex: 0 0 280px; }
@@ -9657,16 +9657,20 @@ strong {
 /** Reviews */
 .reviews {
   align-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   display: flex;
-  padding: 20px;
   flex-flow: row nowrap;
-  justify-content: stretch; }
+  justify-content: stretch;
+  overflow: hidden; }
+  .reviews__header__rating {
+    margin-top: 0;
+    padding-top: 0; }
   .reviews__item {
-    flex: 0 0 280px; }
+    flex: 0 0 280px;
+    padding: 20px; }
   .reviews__contenido {
-    margin: 20px auto;
-    overflow: hidden; }
+    margin: 40px auto;
+    font-size: 18px; }
     .reviews__contenido--autor {
       font-style: italic;
       font-size: 16px; }
