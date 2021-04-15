@@ -9679,7 +9679,6 @@ strong {
     margin-top: 0;
     padding-top: 0; }
   .reviews__item {
-    flex-flow: 0 0 280px;
     background: #fff;
     border-radius: 20px;
     padding: 20px;
@@ -9708,30 +9707,30 @@ strong {
   width: 100%; }
 
 /** Nuevo prototipo de Slider */
+.contenedor {
+  position: relative; }
+  .contenedor__ventana {
+    position: relative; }
+    .contenedor__ventana__item {
+      position: relative; }
+
 /**
- * border: 1px solid black
- * position: relative
+ * overflow-x: scroll
+ * @include overflow()
+ * display: flex
+ * flex-flow: row nowrap
  *
- * &__ventana
- * 	border: 1px solid pink
- * 	overflow-x: scroll
- * 	@include overflow()
- * 	display: flex
- * 	flex-flow: row nowrap
- *
- * 	&__items
- * 		border: 1px solid orange
- * 		flex-flow: 0 0 auto
+ * 	flex-flow: 0 0 auto
  *
  * overflow: hidden
  * height: calc( 100% - #$rem * 2 )
  *
- * 	align-content: flex-start
+ * align-content: flex-start
  *
- * 		flex: 0 0 100%
+ * 	flex: 0 0 100%
  *
  *
- * 		height: 100%
- * 		* */
+ * 	height: 100%
+ * 	* */
 
 /*# sourceMappingURL=style.css.map */

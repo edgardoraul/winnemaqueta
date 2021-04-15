@@ -12,24 +12,24 @@
 		width: 100%
 
 /** Nuevo prototipo de Slider **/
-// .contenedor
-/**
-	border: 1px solid black
+.contenedor
 	position: relative
 
 	&__ventana
-		border: 1px solid pink
+		position: relative
+
+		&__item
+			position: relative
+/**
 		overflow-x: scroll
 		@include overflow()
 		display: flex
 		flex-flow: row nowrap
 
-		&__items
-			border: 1px solid orange
 			flex-flow: 0 0 auto
 
-	overflow: hidden
-	height: calc( 100% - #$rem * 2 )
+		overflow: hidden
+		height: calc( 100% - #$rem * 2 )
 
 		align-content: flex-start
 

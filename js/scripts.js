@@ -278,4 +278,33 @@ function cargarScripts()
 		}
 	}
 	cargadorSlider();
+
+	// Un nuevo slider
+	const losItems = document.querySelectorAll(".contenedor__ventana__item");
+	const ventana = document.querySelector(".contenedor__ventana");
+	const anchoItem = losItems[0].clientWidth;
+	let anchoTotal = 0;
+	for(let i=0; i < losItems.length; i++)
+	{
+		anchoTotal = anchoTotal + losItems[i].clientWidth;
+	}
+	
+
+	console.log(anchoTotal);
+
+	function nuevoSlider()
+	{
+		let i = 0;
+		function temporizadorInfinito()
+		{
+			setTimeout( temporizadorInfinito, 500 );
+			console.log(losItems[i], anchoItem);
+
+			// Control del contador
+			i = ( i + 1 ) % losItems.length;
+			
+		}
+		temporizadorInfinito();
+	}
+	// nuevoSlider();
 }
