@@ -8951,7 +8951,7 @@ strong {
   background: #040507;
   border: none;
   border-radius: 80px;
-  color: #E8E3DB;
+  color: #fff;
   display: inline-block;
   font-family: "Poppins";
   font-size: 20px;
@@ -8987,22 +8987,22 @@ strong {
     background: #A83E4C; }
   .boton--blanconegro {
     color: #040507;
-    background: #E8E3DB; }
+    background: #fff; }
     .boton--blanconegro:hover {
       background: #040507;
-      color: #E8E3DB; }
+      color: #fff; }
   .boton--transparente {
     background: none;
     border: 1px solid #040507;
     color: #040507; }
     .boton--transparente:hover {
       background: #040507;
-      color: #E8E3DB; }
+      color: #fff; }
 
 /* Encabezados */
 .header {
   align-items: center;
-  background: #E8E3DB;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   left: 0;
@@ -9182,7 +9182,7 @@ strong {
     z-index: -1; }
   @media all and (min-width: 1000px) {
     .sublista {
-      background: #E8E3DB;
+      background: #fff;
       display: none;
       left: 0;
       padding-left: 15px;
@@ -9223,18 +9223,22 @@ strong {
 
 /** Barra navegacion: atrás adelante */
 .navegacionAtrasAdelante {
-  align-content: space-around;
+  align-content: space-evenly;
   align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  overflow: hidden; }
+  justify-content: flex-start;
+  text-align: center; }
   .navegacionAtrasAdelante__enlace {
-    flex: 0 0 15%; }
-    .navegacionAtrasAdelante__enlace--atras:hover {
-      transform: translateX(-20px); }
-    .navegacionAtrasAdelante__enlace--adelante:hover {
-      transform: translateX(20px); }
+    flex: 0 0 auto; }
+    .navegacionAtrasAdelante__enlace--atras {
+      margin-right: 10px; }
+      .navegacionAtrasAdelante__enlace--atras:hover {
+        transform: translateX(-10px); }
+    .navegacionAtrasAdelante__enlace--adelante {
+      margin-left: 10px; }
+      .navegacionAtrasAdelante__enlace--adelante:hover {
+        transform: translateX(10px); }
 
 /** Hay varios tipos de secciones:
  *
@@ -9314,7 +9318,7 @@ strong {
       padding: 0;
       position: relative; }
       .main__seccion2__articulo__figure:after {
-        background: rgba(232, 227, 219, 0.5);
+        background: rgba(255, 255, 255, 0.5);
         content: "";
         filter: sepia(50);
         height: 100%;
@@ -9442,7 +9446,6 @@ strong {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    overflow: hidden;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none; }
@@ -9456,7 +9459,8 @@ strong {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow: hidden; }
   @media all and (min-width: 720px) {
     .main__seccion4__articulo {
       flex-flow: row nowrap; }
@@ -9469,24 +9473,25 @@ strong {
  * Sección 5: Los reviews.
  */
 .main__seccion5 {
-  background: #A83E4C;
-  color: #E8E3DB;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
+  background: #CCE5FF;
+  color: #040507;
+  display: grid;
   padding: 20px; }
+  .main__seccion5__articulo {
+    overflow: hidden; }
+    .main__seccion5__articulo:first-child {
+      min-width: 280px; }
+    .main__seccion5__articulo__contenido__imagen {
+      max-width: 250px; }
   @media all and (min-width: 720px) {
     .main__seccion5 {
-      flex-flow: row nowrap; } }
-  .main__seccion5__articulo {
-    flex: 1 1 auto; }
-    .main__seccion5__articulo:first-child {
-      flex: 0 0 280px; }
+      grid-column-gap: 10%;
+      grid-template-columns: 280px auto; } }
 
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);
-  color: #E8E3DB;
+  color: #fff;
   padding: 1rem 1rem 6rem 1rem;
   position: relative;
   text-align: left; }
@@ -9504,7 +9509,7 @@ strong {
         .footer__menu__logo {
           justify-content: space-between; } }
       .footer__menu__logo--secundario {
-        background: #E8E3DB;
+        background: #fff;
         border-radius: 4rem;
         flex: 0 0 auto;
         flex-basis: auto;
@@ -9526,8 +9531,8 @@ strong {
             flex-basis: auto;
             flex-flow: row nowrap; } }
         .footer__menu__logo__lista__item__enlace {
-          border-bottom: 2px dotted rgba(232, 227, 219, 0.2);
-          color: #E8E3DB;
+          border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
+          color: #fff;
           display: block;
           font-family: "Roboto";
           padding: 0.5rem 1rem;
@@ -9535,17 +9540,17 @@ strong {
           @media all and (min-width: 720px) {
             .footer__menu__logo__lista__item__enlace {
               border-bottom: none;
-              background: #E8E3DB;
+              background: #fff;
               color: #040507;
               font-size: 0.75rem; } }
           .footer__menu__logo__lista__item__enlace:hover {
             background: #040507;
-            color: #E8E3DB; }
+            color: #fff; }
 
 .footer__contenido {
   align-content: flex-start;
   align-items: baseline;
-  color: #E8E3DB;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   flex-flow: column wrap;
@@ -9622,7 +9627,7 @@ strong {
       color: #F2E41B;
       background: #040507; }
     .footer__botonera__boton:active {
-      color: #E8E3DB;
+      color: #fff;
       background: #040507; }
     .footer__botonera__boton:focus {
       outline: 1px dotted #040507; }
@@ -9656,24 +9661,40 @@ strong {
 
 /** Reviews */
 .reviews {
-  align-content: flex-start;
-  align-items: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  color: #040507;
   display: flex;
   flex-flow: row nowrap;
   justify-content: stretch;
-  overflow: hidden; }
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 20px 40px;
+  position: relative; }
+  .reviews::-webkit-scrollbar {
+    display: none; }
   .reviews__header__rating {
+    border-bottom: 1px dotted #464544;
     margin-top: 0;
     padding-top: 0; }
   .reviews__item {
-    flex: 0 0 280px;
-    padding: 20px; }
+    flex-flow: 0 0 280px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 20px;
+    min-width: 280px; }
+    .reviews__item:first-child {
+      margin-left: 0; }
   .reviews__contenido {
-    margin: 40px auto;
-    font-size: 18px; }
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 130%; }
     .reviews__contenido--autor {
+      font-family: "Roboto";
       font-style: italic;
-      font-size: 16px; }
+      font-size: 15px; }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {
@@ -9687,23 +9708,30 @@ strong {
   width: 100%; }
 
 /** Nuevo prototipo de Slider */
-/** .contenedor
- * border: 1px solid green
+/**
+ * border: 1px solid black
  * position: relative
- * overflow: hidden
- * height: calc( 100% - #$rem * 2 )
  *
  * &__ventana
- * 	align-content: flex-start
- * 	align-items: stretch
  * 	border: 1px solid pink
+ * 	overflow-x: scroll
+ * 	@include overflow()
  * 	display: flex
  * 	flex-flow: row nowrap
- * 	justify-content: flex-start
  *
  * 	&__items
  * 		border: 1px solid orange
+ * 		flex-flow: 0 0 auto
+ *
+ * overflow: hidden
+ * height: calc( 100% - #$rem * 2 )
+ *
+ * 	align-content: flex-start
+ *
+ * 		flex: 0 0 100%
+ *
+ *
  * 		height: 100%
- * 		flex: 0 0 300px */
+ * 		* */
 
 /*# sourceMappingURL=style.css.map */

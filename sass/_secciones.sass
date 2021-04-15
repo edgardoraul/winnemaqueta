@@ -244,6 +244,7 @@
 .main__seccion4
 	&__articulo
 		padding: ($rem / 2) $rem
+
 		&__cita
 			color: $color_negro
 			font-family: $fuente_subtitulo
@@ -262,11 +263,11 @@
 				font-size: $rem * 0.75
 				font-weight: 700
 				text-transform: uppercase
+
 		&__contenido
 			display: flex
 			flex-flow: row nowrap
 			justify-content: flex-start
-			overflow: hidden
 			overflow-x: scroll
 			-ms-overflow-style: none
 			scrollbar-width: none
@@ -284,6 +285,7 @@
 		display: flex
 		flex-flow: column nowrap
 		justify-content: space-between
+		overflow: hidden
 		@media all and ( min-width: $tablet )
 			flex-flow: row nowrap
 
@@ -300,16 +302,21 @@
 	**/
 .main
 	&__seccion5
-		background: $color_titulo
-		color: $color_blanco
-		display: flex
-		flex-flow: column nowrap
-		justify-content: space-between
+		background: $color_fondo5
+		color: $color_negro
+		display: grid
 		padding: $rem
-		@media all and ( min-width: $tablet )
-			flex-flow: row nowrap
 
 		&__articulo
-			flex: 1 1 auto
+			overflow: hidden
+
 			&:first-child
-				flex: 0 0 280px
+				min-width: 280px
+			
+			&__contenido
+				&__imagen
+					max-width: $mobile / 2
+		
+		@media all and ( min-width: $tablet )
+			grid-column-gap: 10%
+			grid-template-columns: 280px auto

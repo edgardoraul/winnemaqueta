@@ -160,19 +160,21 @@
 	
 /** Barra navegacion: atrás adelante **/
 .navegacionAtrasAdelante
-	align-content: space-around
+	align-content: space-evenly
 	align-items: center
 	display: flex
 	flex-flow: row nowrap
-	justify-content: center
-	overflow: hidden
+	justify-content: flex-start
+	text-align: center
 
 	&__enlace
-		flex: 0 0 15%
+		flex: 0 0 auto
 
 		&--atras
+			margin-right: $rem / 2
 			&:hover
-				transform: translateX(-$rem)
+				transform: translateX(-$rem / 2)
 		&--adelante
+			margin-left: $rem / 2
 			&:hover
-				transform: translateX($rem)
+				transform: translateX($rem / 2)

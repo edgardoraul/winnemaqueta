@@ -1,26 +1,39 @@
-
 /** Reviews **/
+
 .reviews
-	align-content: flex-start
-	align-items: flex-start
+	align-content: stretch
+	align-items: stretch
+	color: $color_negro
 	display: flex
 	flex-flow: row nowrap
 	justify-content: stretch
-	overflow: hidden
+	overflow-x: scroll
+	@include overflow()
+	padding: $rem ($rem * 2)
+	position: relative
 
 	&__header
 		&__rating
+			border-bottom: 1px dotted $color_texto
 			margin-top: 0
 			padding-top: 0
 
 	&__item
-		flex: 0 0 280px
+		flex-flow: 0 0 280px
+		background: $color_blanco
+		border-radius: $rem
 		padding: $rem
+		margin-left: $rem
+		min-width: 280px
+		&:first-child
+			margin-left: 0
 
 	&__contenido
-		margin: ($rem * 2) auto
-		font-size: $rem * 0.9
+		margin: $rem auto
+		font-size: $rem * 0.8
+		line-height: 130%
 
 		&--autor
+			font-family: $fuente_subtitulo
 			font-style: italic
-			font-size: $rem * 0.8
+			font-size: $rem * 0.75
