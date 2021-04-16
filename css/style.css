@@ -8968,7 +8968,7 @@ strong {
     font-size: 30px;
     padding: 20px 40px; }
   .boton--chico {
-    font-size: 12px;
+    font-size: 14px;
     padding: 4px 25px; }
   .boton--advertencia {
     background: #F2E41B;
@@ -9233,12 +9233,8 @@ strong {
     flex: 0 0 auto; }
     .navegacionAtrasAdelante__enlace--atras {
       margin-right: 10px; }
-      .navegacionAtrasAdelante__enlace--atras:hover {
-        transform: translateX(-10px); }
     .navegacionAtrasAdelante__enlace--adelante {
       margin-left: 10px; }
-      .navegacionAtrasAdelante__enlace--adelante:hover {
-        transform: translateX(10px); }
 
 /** Hay varios tipos de secciones:
  *
@@ -9666,14 +9662,22 @@ strong {
   color: #040507;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: stretch;
-  overflow-x: scroll;
+  justify-content: flex-start;
+  overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 20px 40px;
-  position: relative; }
+  padding: 20px 0;
+  position: relative;
+  scroll-snap-type: x mandatory;
+  -o-scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+  -moz-scroll-snap-type: x mandatory;
+  -webkit-scroll-snap-type: x mandatory; }
   .reviews::-webkit-scrollbar {
     display: none; }
+  @media all and (min-width: 720px) {
+    .reviews {
+      padding: 20px 10px; } }
   .reviews__header__rating {
     border-bottom: 1px dotted #464544;
     margin-top: 0;
@@ -9686,6 +9690,9 @@ strong {
     min-width: 280px; }
     .reviews__item:first-child {
       margin-left: 0; }
+    @media all and (min-width: 720px) {
+      .reviews__item {
+        box-shadow: 3px 3px 5px #464544; } }
   .reviews__contenido {
     margin: 20px auto;
     font-size: 16px;

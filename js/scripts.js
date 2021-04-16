@@ -279,32 +279,81 @@ function cargarScripts()
 	}
 	cargadorSlider();
 
-	// Un nuevo slider
-	const losItems = document.querySelectorAll(".contenedor__ventana__item");
-	const ventana = document.querySelector(".contenedor__ventana");
-	const anchoItem = losItems[0].clientWidth;
-	let anchoTotal = 0;
-	for(let i=0; i < losItems.length; i++)
+	/* Un nuevo tipo de slider que maneja los botones y los controla 
+	let slideIndex = 1;
+	showSlides(slideIndex);
+	const botonAtras = document.querySelector(".navegacionAtrasAdelante__enlace--atras");
+	const botonAdelante = document.querySelector(".navegacionAtrasAdelante__enlace--adelante");
+	botonAtras.addEventListener("click", () => {
+		plusSlides(-1);
+	});
+	botonAdelante.addEventListener("click", () => {
+		plusSlides(1);
+	});
+
+	// Atrás y adelante
+	function plusSlides(n)
 	{
-		anchoTotal = anchoTotal + losItems[i].clientWidth;
+		showSlides(slideIndex += n);
 	}
-	
 
-	console.log(anchoTotal);
-
-	function nuevoSlider()
+	function showSlides(n)
 	{
-		let i = 0;
-		function temporizadorInfinito()
+		let i;
+		const slides = document.querySelectorAll(".contenedor__ventana__item");
+
+		if( n > slides.length )
 		{
-			setTimeout( temporizadorInfinito, 500 );
-			console.log(losItems[i], anchoItem);
-
-			// Control del contador
-			i = ( i + 1 ) % losItems.length;
-			
+			slideIndex = 1;
 		}
-		temporizadorInfinito();
+		
+		if( n < 1 )
+		{
+			slideIndex = slides.length;
+		}
+		
+		for(i = 0; i < slides.length; i++)
+		{
+			// slides[i].style.left = "100%";
+		}
+		
+		// slides[slideIndex - 1].style.left = "auto";
+		
 	}
-	// nuevoSlider();
+	*/
+	
+	
+	
+	let slider = document.querySelector(".contenedor__ventana");
+	let sliderIndividual = document.querySelectorAll(".contenedor__ventana__item");
+	console.log(slider);
+	let contador = 1;
+	let width = sliderIndividual[0].clientWidth;
+	let intervalo = 3000;
+	
+	window.addEventListener("resize", function(){
+		width = sliderIndividual[0].clientWidth;
+	})
+
+	setInterval( () => {
+		// slides();
+	}, intervalo);
+
+
+
+	function slides()
+	{
+		slider.style.transform = "translate(" + ( -width * contador ) + "px)";
+		slider.style.transition = "transform .8s";
+		contador++;
+
+		if(contador == sliderIndividual.length)
+		{
+			setTimeout( () => {
+				slider.style.transform = "translate(0px)";
+				slider.style.transition = "transform 0s";
+				contador = 1;
+			}, 1500)
+		}
+	}
 }

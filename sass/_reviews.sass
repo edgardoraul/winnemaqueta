@@ -6,11 +6,18 @@
 	color: $color_negro
 	display: flex
 	flex-flow: row nowrap
-	justify-content: stretch
-	overflow-x: scroll
+	justify-content: flex-start
+	overflow-x: auto
 	@include overflow()
-	padding: $rem ($rem * 2)
+	padding: $rem 0
 	position: relative
+	scroll-snap-type: x mandatory
+	-o-scroll-snap-type: x mandatory
+	-ms-scroll-snap-type: x mandatory
+	-moz-scroll-snap-type: x mandatory
+	-webkit-scroll-snap-type: x mandatory
+	@media all and ( min-width: $tablet )
+		padding: $rem ($rem * 0.5)
 
 	&__header
 		&__rating
@@ -26,6 +33,10 @@
 		min-width: 280px
 		&:first-child
 			margin-left: 0
+		
+		@media all and ( min-width: $tablet )
+			box-shadow: 3px 3px 5px $color_texto
+			
 
 	&__contenido
 		margin: $rem auto
