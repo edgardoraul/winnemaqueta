@@ -8105,19 +8105,6 @@ template {
     transform: translateX(100%); }
   100% {
     transform: translateX(0); } }
-@keyframes cicloInfinito {
-  0% {
-    transform: translateX(-100%); }
-  20% {
-    transform: translate(-100%); }
-  40% {
-    transform: translate(0); }
-  60% {
-    transform: translate(0); }
-  80% {
-    transform: translateX(100%); }
-  100% {
-    transform: translate(100%); } }
 .fadeOutUp {
   animation-name: fadeOutUp;
   opacity: 0;
@@ -8180,24 +8167,34 @@ template {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
-.cicloInfinito {
-  animation-name: cicloInfinito;
+@keyframes ingDer {
+  0% {
+    left: 100%; }
+  10% {
+    left: 100%; }
+  100% {
+    left: 0; } }
+@keyframes salIzq {
+  0% {
+    left: 0; }
+  90% {
+    left: -1000px; }
+  100% {
+    left: -1000px; } }
+.ingDer {
+  animation-name: ingDer;
   animation-delay: 0;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; }
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
-/** .fadeIn
- * animation-name: fadeIn
- * @include animacionEstandar()
- * opacity: 0.5
- *
- * .fadeOut
- * 	animation-name: fadeOut
- * 	@include animacionEstandar() 
- */
+.izqSal {
+  animation-name: izqSal;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
+
 .clearboth,
 .separador {
   clear: both; }
@@ -9478,6 +9475,7 @@ strong {
     .main__seccion5__articulo:first-child {
       min-width: 280px; }
     .main__seccion5__articulo__contenido__imagen {
+      border-radius: 50%;
       max-width: 250px; }
   @media all and (min-width: 720px) {
     .main__seccion5 {
@@ -9686,13 +9684,14 @@ strong {
     background: #fff;
     border-radius: 20px;
     padding: 20px;
-    margin-left: 20px;
-    min-width: 280px; }
+    margin-left: 10%;
+    min-width: 100%; }
     .reviews__item:first-child {
       margin-left: 0; }
     @media all and (min-width: 720px) {
       .reviews__item {
-        box-shadow: 3px 3px 5px #464544; } }
+        box-shadow: 3px 3px 5px #464544;
+        min-width: 40%; } }
   .reviews__contenido {
     margin: 20px auto;
     font-size: 16px;

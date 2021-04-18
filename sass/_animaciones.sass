@@ -13,19 +13,6 @@
 	100%
 		transform: translateX(0)
 
-@keyframes cicloInfinito
-	0%
-		transform: translateX(-100%)
-	20%
-		transform: translate(-100%)
-	40%
-		transform: translate(0)
-	60%
-		transform: translate(0)
-	80%
-		transform: translateX(100%)
-	100%
-		transform: translate(100%)
 		
 
 		
@@ -102,23 +89,8 @@
 	@include animacionLenta()
 .slideOutRight
 	@include slideOutRight()
-	
 
-@mixin cicloInfinito()
-	animation-name: cicloInfinito
-	animation-delay: 0
-	animation-duration: 10s
-	animation-timing-function: linear
-	animation-fill-mode: both
-	animation-iteration-count: infinite
-	animation-direction: alternate
-.cicloInfinito
-	@include cicloInfinito()
 	
-	
-	
-
-
 
 // Menú abierto
 @mixin abierto()
@@ -136,13 +108,37 @@
 	visibility: hidden
 	z-index: -1
 
-// Animaciones a ser definidas con clases
-/** .fadeIn
-	animation-name: fadeIn
-	@include animacionEstandar()
-	opacity: 0.5
+// Para el slider de los reviews
+@keyframes ingDer
+	0%
+		left: 100%
+		// z-index: -1
+	10%
+		left: 100%
+		// z-index: 1
+	100%
+		left: 0
 
-	.fadeOut
-		animation-name: fadeOut
-		@include animacionEstandar() 
-	**/
+@keyframes salIzq
+	0%
+		left: 0
+		// z-index: 1
+	90%
+		left: -1000px
+		// z-index: 1
+	100%
+		left: -1000px
+		// z-index: -1
+
+@mixin ingDer()
+	animation-name: ingDer
+	@include animacionLenta()
+.ingDer
+	@include ingDer()
+
+@mixin izqSal()
+	animation-name: izqSal
+	@include animacionLenta()
+.izqSal
+	@include izqSal()
+	

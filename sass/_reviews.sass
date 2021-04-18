@@ -29,13 +29,15 @@
 		background: $color_blanco
 		border-radius: $rem
 		padding: $rem
-		margin-left: $rem
-		min-width: 280px
+		margin-left: 10%
+		min-width: 100%
 		&:first-child
 			margin-left: 0
 		
 		@media all and ( min-width: $tablet )
 			box-shadow: 3px 3px 5px $color_texto
+		@media all and ( min-width: $desktop )
+			min-width: 40%
 			
 
 	&__contenido

@@ -326,34 +326,44 @@ function cargarScripts()
 	
 	let slider = document.querySelector(".contenedor__ventana");
 	let sliderIndividual = document.querySelectorAll(".contenedor__ventana__item");
-	console.log(slider);
-	let contador = 1;
+
+	let contador = 0;
 	let width = sliderIndividual[0].clientWidth;
 	let intervalo = 3000;
 	
-	window.addEventListener("resize", function(){
+	let animacionSalida, animacionEntrada;
+
+	window.addEventListener("resize", function()
+	{
 		width = sliderIndividual[0].clientWidth;
 	})
 
-	setInterval( () => {
-		// slides();
-	}, intervalo);
-
-
-
+	/* setInterval( () => {
+		slides();
+	}, intervalo); */
+	
 	function slides()
 	{
-		slider.style.transform = "translate(" + ( -width * contador ) + "px)";
-		slider.style.transition = "transform .8s";
-		contador++;
+		animacionEntrada = "ingDer";
+		animacionSalida = "salIzq";
+		izq();
+		console.log(contador, sliderIndividual[contador]);
+		contador = ( contador + 1 ) % sliderIndividual.length;
+		der();
+		// Animando
 
-		if(contador == sliderIndividual.length)
+		// Desplazamiento hacia la izquierda y desaparece
+		function izq()
 		{
-			setTimeout( () => {
-				slider.style.transform = "translate(0px)";
-				slider.style.transition = "transform 0s";
-				contador = 1;
-			}, 1500)
+			sliderIndividual[contador].classList.add( animacionSalida );
+			sliderIndividual[contador].classList.remove( animacionEntrada );
+		}
+		
+		// Desplazamiento desde la derecha y se queda en el centro 
+		function der()
+		{
+			sliderIndividual[contador].classList.add( animacionEntrada );
+			sliderIndividual[contador].classList.remove( animacionSalida );
 		}
 	}
 }
