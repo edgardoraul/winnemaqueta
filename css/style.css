@@ -8167,6 +8167,7 @@ template {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both; }
 
+/**  */
 @keyframes ingDer {
   0% {
     left: 100%; }
@@ -9690,7 +9691,9 @@ strong {
       margin-left: 0; }
     @media all and (min-width: 720px) {
       .reviews__item {
-        box-shadow: 3px 3px 5px #464544;
+        box-shadow: 3px 3px 5px #464544; } }
+    @media all and (min-width: 1000px) {
+      .reviews__item {
         min-width: 40%; } }
   .reviews__contenido {
     margin: 20px auto;
