@@ -8912,13 +8912,14 @@ em {
   font-weight: 300;
   font-style: italic; }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Poppins"; }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
   font-family: "Roboto"; }
 
 img {
+  vertical-align: top;
   width: 100%; }
 
 strong {
@@ -8928,6 +8929,8 @@ strong {
 .alineacion--izquierda {
   text-align: left; }
 .alineacion--centrada {
+  margin-let: auto;
+    margin-let-margin-right: auto;
   text-align: center; }
 .alineacion--derecha {
   text-align: right; }
@@ -8996,6 +8999,10 @@ strong {
     .boton--transparente:hover {
       background: #040507;
       color: #fff; }
+
+/** Sistema de columnas y grids */
+.grid {
+  display: grid; }
 
 /* Encabezados */
 .header {
@@ -9114,8 +9121,10 @@ strong {
         .navegacion__lista__item__enlace i:before, .navegacion__lista__item__enlace span:before, .navegacion__lista__item__enlace .icomoon:before {
           display: inline-block;
           margin-left: 10px; }
-      .navegacion__lista__item--activo > .navegacion__lista__item__enlace:before {
-        display: none; }
+      .navegacion__lista__item--activo > .navegacion__lista__item__enlace {
+        color: #464544; }
+        .navegacion__lista__item--activo > .navegacion__lista__item__enlace:before {
+          display: none; }
     .navegacion__lista--abierto {
       height: auto;
       animation-name: fadeInDown;

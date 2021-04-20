@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Wines - Wine Connections</title>
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.7'
+		type='text/css' media='all' />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="application/json" href="css/style.css.map" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="img/favicon-128.png" sizes="128x128" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	<meta name="application-name" content="Wine Conecctions" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="img/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="img/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="img/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="img/mstile-310x310.png" />
+	<meta name="msapplication-notification"
+		content="frequency=30;polling-uri=https://notifications.buildmypinnedsite.com/?feed=www.wineconections.site/feed&amp;id=1;polling-uri2=https://notifications.buildmypinnedsite.com/?feed=www.wineconections.site/feed&amp;id=2;polling-uri3=https://notifications.buildmypinnedsite.com/?feed=www.wineconections.site/feed&amp;id=3;polling-uri4=https://notifications.buildmypinnedsite.com/?feed=www.wineconections.site/feed&amp;id=4;polling-uri5=https://notifications.buildmypinnedsite.com/?feed=www.wineconections.site/feed&amp;id=5;cycle=1" />
+</head>
+<body>
+	<!-- El header y la barra de navegación -->
+	<header>
+		<div class="header" id="header">
+
+			<!-- Bloque botón menú -->
+			<div class="header__boton__menu">
+				<a href="#" id="boton__menu" class="header__boton__menu--enlace">
+					<i class="icomoon icon-menu"></i>
+				</a>
+			</div>
+
+
+			<!-- Bloque Logo -->
+			<h1 class="header__logoTexto">
+				<a href="index.html" class="header__logoTexto__enlace">
+					Wine <span class="header__logoTexto__enlace--texto">Connections</span>
+				</a>
+			</h1>
+
+			<!-- Bloque Oculto de la navegación -->
+			<nav class="header__nav">
+				<div class="navegacion">
+					<ul id="header_nav" class="navegacion__lista animated ">
+						<li class="navegacion__lista__item">
+							<a class="navegacion__lista__item__enlace" href="index.html">Home<i
+									class="icomoon icon-home"></i></a>
+						</li>
+						<li class="navegacion__lista__item navegacion__lista__item--activo">
+							<a class="navegacion__lista__item__enlace" href="wines.html">Wines<i
+									class="icomoon icon-wine"></i></a>
+						</li>
+						<li class="navegacion__lista__item">
+							<a class="navegacion__lista__item__enlace" href="#">Wineries<i
+									class="icomoon icon-plus"></i></a>
+
+							<!-- Submenú -->
+							<ul class="navegacion__lista sublista">
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">Winery listing</a>
+								</li>
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">List your winery <i
+											class="icomoon icon-plus"></i></a>
+
+									<!-- Sub Submenú -->
+									<ul class="navegacion__lista sublista">
+										<li class="navegacion__lista__item">
+											<a href="#" class="navegacion__lista__item__enlace">Overview</a>
+										</li>
+										<li class="navegacion__lista__item">
+											<a href="#" class="navegacion__lista__item__enlace">Set Up</a>
+										</li>
+										<li class="navegacion__lista__item">
+											<a href="#" class="navegacion__lista__item__enlace">Financials</a>
+										</li>
+										<li class="navegacion__lista__item">
+											<a href="#" class="navegacion__lista__item__enlace">Additional Services</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="navegacion__lista__item">
+							<a class="navegacion__lista__item__enlace" href="#">Who we are <i
+									class="icomoon icon-plus"></i></a>
+
+							<!-- Submenú -->
+							<ul class="navegacion__lista sublista">
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">About Us</a>
+								</li>
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">Contact Us</a>
+								</li>
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">FAQ</a>
+								</li>
+								<li class="navegacion__lista__item">
+									<a href="#" class="navegacion__lista__item__enlace">Privacy Policy</a>
+								</li>
+								<li class="navegacion__lista__item sublista__item">
+									<a href="#" class="navegacion__lista__item__enlace">Privacy Policy</a>
+								</li>
+								<li class="navegacion__lista__item sublista__item">
+									<a href="#" class="navegacion__lista__item__enlace">Terms and conditions</a>
+								</li>
+							</ul>
+						</li>
+						<li class="navegacion__lista__item">
+							<a class="navegacion__lista__item__enlace" href="#">My shop <i class="icomoon icon-cart">
+								</i></a>
+						</li>
+						<li class="navegacion__lista__item">
+							<a class="navegacion__lista__item__enlace" href="#">My account <i class="icomoon icon-user">
+								</i></a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- Bloque botones de acción -->
+			<div class="header__boton">
+				<a href="#" class="header__boton__enlace boton boton--chico boton--advertencia">Get Start<i
+						class="separador"></i><i class="icomoon icon-arrow-right2"></i></a>
+				<!-- <a href="#" class="header__boton__enlace header__boton__enlace--ingreso">
+					<i class="icomoon icon-enter"></i>
+				</a>
+				<a href="#" class="header__boton__enlace header__boton__enlace--registro"></a>
+				<a href="#" class="header__boton__enlace--salir">
+					<i class="icomoon icon-switch"></i>
+				</a> -->
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="main">
+			<!-- El título principal de la página -->
+			<header>
+				<h2>Wines</h2>
+			</header>
+
+			<!-- La barra lateral y los filtros -->
+			<aside>
+				<div class="aside">
+
+				</div>
+			</aside>
+
+			<!-- El contenido principal -->
+			<section>
+				<header>
+					<h3>Todos los Wines</h3>
+				</header>
+				<div class="seccion6">
+					<article>
+						<figure>
+							<img src="img/21.jpg" alt="vino" >
+							<figcaption>
+								Nocheterna
+							</figcaption>
+						</figure>
+						<div>
+							<ul>
+								<li>Marca: <strong>Nocheterna</strong></li>
+								<li>Región: <strong>San Juan</strong></li>
+								<li>Bodega: <strong>Putruelle</strong></li>
+								<li>Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus ipsum perferendis.</li>
+							</ul>
+						</div>
+						<div>
+							<div><del>$ 856,23</del></div>
+							<div><em>% 20</em></div>
+							<div><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+				</div>
+			</section>
+		</div>
+
+	</main>
+		
+	<!-- El Footer -->
+	<footer>
+		<div class="footer">
+			<div class="footer__menu">
+
+				<!-- Parte del logo -->
+				<div class="footer__menu__logo">
+
+					<!-- Bloque Logo -->
+					<div class="header__logoTexto footer__menu__logo--secundario">
+						<a href="#" class="header__logoTexto__enlace">
+							Wine <span class="header__logoTexto__enlace--texto">Connections</span>
+						</a>
+					</div>
+
+					<!-- menu secundario -->
+					<ul class="footer__menu__logo__lista">
+						<li class="footer__menu__logo__lista__item footer__menu__logo__lista__item--activo">
+							<a href="#" class="footer__menu__logo__lista__item__enlace">FAQs</a>
+						</li>
+						<li class="footer__menu__logo__lista__item">
+							<a href="#" class="footer__menu__logo__lista__item__enlace">Contact Us</a>
+						</li>
+						<li class="footer__menu__logo__lista__item">
+							<a href="#" class="footer__menu__logo__lista__item__enlace">Shipping Info</a>
+						</li>
+						<li class="footer__menu__logo__lista__item">
+							<a href="#" class="footer__menu__logo__lista__item__enlace">Terms and Conditions</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- contenido secundario -->
+				<div class="footer__contenido">
+
+					<!-- contenido -->
+					<h3 class="footer__contenido__titulo">Lorem ipsum dolor, sit amet consectetur adipisicing elit</h3>
+					<div class="footer__contenido__texto  footer__contenido__texto--destacado">
+						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore necessitatibus sunt illo
+							veritatis id nesciunt repudiandae ex odio architecto, dicta iure molestiae, libero eius
+							aliquid officia aliquam corporis illum! Commodi?.</p>
+					</div>
+					<div class="footer__contenido__texto--copyright">
+						<p>© Wine Contections. All rights reserved.</p>
+						<p>Realizado por <a href="//globaldevelopment.com.ar" target="_blank"
+								title="Global Development">Global Development</a></p>
+					</div>
+
+
+					<!-- redes sociales -->
+					<div class="footer__contenido__sociales">
+						<div><strong>Decí "hola"</strong></div>
+						<div>info@meloinvento.com
+						</div>
+						<a href="#" class="footer__contenido__sociales--enlace"><i
+								class="icomoon icon-facebook"></i></a>
+						<a href="#" class="footer__contenido__sociales--enlace"><i class="icomoon icon-twitter"></i></a>
+						<a href="#" class="footer__contenido__sociales--enlace"><i
+								class="icomoon icon-whatsapp"></i></a>
+						<a href="#" class="footer__contenido__sociales--enlace"><i class="icomoon icon-gmail"></i></a>
+						<a href="#" class="footer__contenido__sociales--enlace"><i class="icomoon icon-youtube"></i></a>
+					</div>
+				</div>
+
+				<!-- botones de acción -->
+				<div class="footer__botonera" id="gotop">
+					<a href="#" class="footer__botonera__boton footer__botonera__boton--accion">
+						Continue building my wine's box
+						<i class="icomoon icon-cart"></i>
+					</a>
+					<a href="#" class="footer__botonera__boton animated">
+						<i class="icomoon icon-arrow-up2"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/scripts.js" async></script>
+</body>
+</html>
