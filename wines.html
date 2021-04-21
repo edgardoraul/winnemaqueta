@@ -48,11 +48,11 @@
 
 
 			<!-- Bloque Logo -->
-			<h1 class="header__logoTexto">
+			<div class="header__logoTexto">
 				<a href="index.html" class="header__logoTexto__enlace">
 					Wine <span class="header__logoTexto__enlace--texto">Connections</span>
 				</a>
-			</h1>
+			</div>
 
 			<!-- Bloque Oculto de la navegación -->
 			<nav class="header__nav">
@@ -151,52 +151,67 @@
 	</header>
 
 	<main>
-		<div class="main">
+		<div class="main grid grid--col grid--row">
+
+
 			<!-- El título principal de la página -->
-			<header>
-				<h2>Wines</h2>
+			<header class="main__header grid__header">
+				<h1 class="main__header__titulo">Wines</h1>
 			</header>
 
 			<!-- La barra lateral y los filtros -->
-			<aside>
-				<div class="aside">
-
-				</div>
-			</aside>
+			<div class="main__sidebar grid__sidebar">
+				<aside>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, vero! Cupiditate nisi atque veritatis earum voluptas rerum ea cum dolore optio explicabo voluptatibus, commodi officia blanditiis? Odio quibusdam quae sequi.
+				</aside>
+			</div>
 
 			<!-- El contenido principal -->
-			<section>
-				<header>
-					<h3>Todos los Wines</h3>
+			<section class="main__seccion grid__contenedor">
+				<header class="main__header">
+					<h3 class="main__header__titulo">Todos los Wines</h3>
 				</header>
+
+				<!-- Sección Principal -->
 				<div class="seccion6">
-					<article>
-						<figure>
-							<img src="img/21.jpg" alt="vino" >
-							<figcaption>
-								Nocheterna
+
+					<!-- Card1 -->
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
 							</figcaption>
 						</figure>
-						<div>
-							<ul>
-								<li>Marca: <strong>Nocheterna</strong></li>
-								<li>Región: <strong>San Juan</strong></li>
-								<li>Bodega: <strong>Putruelle</strong></li>
-								<li>Raiting: <i class="icomoon icon-star-full"></i>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i></li>
-								<li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus ipsum perferendis.</li>
+								<li class="card1__contenedor__lista__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus ipsum perferendis.</li>
 							</ul>
 						</div>
-						<div>
-							<div><del>$ 856,23</del></div>
-							<div><em>% 20</em></div>
-							<div><strong>$ 1.980,03</strong></div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
 						</div>
 					</article>
 				</div>
 			</section>
+
+			<!-- Paginación -->
+			<div class="paginacion grid__paginacion">
+				<a href="" class="boton boton--chico"><i class="icomoon icon-arrow-left2"></i></a>
+				<a href="" class="boton boton--chico boton--deshabilitado">1</a>
+				<a href="" class="boton boton--chico">2</a>
+				<a href="" class="boton boton--chico">3</a>
+				<a href="" class="boton boton--chico"><i class="icomoon icon-arrow-right2"></i></a>
+			</div>
 		</div>
 
 	</main>

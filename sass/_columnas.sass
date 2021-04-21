@@ -1,3 +1,23 @@
 /** Sistema de columnas y grids **/
 .grid
 	display: grid
+
+	&--col
+		grid-template-columns: repeat(3, fr)
+		grid-gap: $rem
+
+	&--row
+		grid-template-rows: repeat(3, auto)
+	
+	&__header
+		grid-column-start: 1
+		grid-column-end: -1
+	
+	&__contenedor
+		grid-column: 2/4
+
+	&__paginacion
+		grid-column: 2/4
+
+	&__sidebar
+		grid-column: 1/2

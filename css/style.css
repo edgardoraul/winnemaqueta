@@ -9003,6 +9003,20 @@ strong {
 /** Sistema de columnas y grids */
 .grid {
   display: grid; }
+  .grid--col {
+    grid-template-columns: repeat(3, fr);
+    grid-gap: 20px; }
+  .grid--row {
+    grid-template-rows: repeat(3, auto); }
+  .grid__header {
+    grid-column-start: 1;
+    grid-column-end: -1; }
+  .grid__contenedor {
+    grid-column: 2/4; }
+  .grid__paginacion {
+    grid-column: 2/4; }
+  .grid__sidebar {
+    grid-column: 1/2; }
 
 /* Encabezados */
 .header {
