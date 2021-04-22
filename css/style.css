@@ -9074,21 +9074,24 @@ strong {
 
 /** TITULARES DEL RESTO DE LAS PAGINAS */
 .encabezado {
+  align-items: center;
   background: #A83E4C;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: c; }
+  justify-content: space-between; }
   .encabezado__titulo {
     color: #fff;
     font-family: "Poppins";
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     font-size: 60px;
     margin: 0;
     text-transform: uppercase; }
   .encabezado__formulario {
-    flex: 1 1 auto; }
+    flex: 0 0 auto; }
+    @media all and (max-width: 720px) {
+      .encabezado__formulario {
+        display: none; } }
 
 .navegacion {
   background: #FE9776;
@@ -9539,6 +9542,8 @@ strong {
 /** CONTENEDORES GENERALES PARA TODA LA WEB */
 .contenedor {
   padding: 20px; }
+  .contenedor__seccion {
+    border: 1px solid green; }
 
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA */
 .sidebar {
@@ -9765,6 +9770,54 @@ strong {
       font-family: "Roboto";
       font-style: italic;
       font-size: 15px; }
+
+/** ESTILOS DE TODOS LOS FORMULARIOS Y SUS BOTONES */
+.formulario__label {
+  display: block;
+  position: relative;
+  overflow: hidden; }
+  .formulario__label__boton {
+    color: #040507;
+    margin-left: -50px;
+    padding: 100% 10px; }
+    .formulario__label__boton:hover {
+      cursor: pointer; }
+
+[type="search"] {
+  background: none;
+  border: 1px solid #040507;
+  color: #fff;
+  height: 60px;
+  padding: 10px;
+  padding-right: 60px;
+  outline: none; }
+
+/** TITULARES DE LA WEB EN GENERAL */
+.subtitulo {
+  padding: 20px 0; }
+  .subtitulo__texto {
+    margin: 0;
+    text-transform: uppercase; }
+
+/** CARDS DE PRODUCTOS */
+.contenedor_cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: fle;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media all and (min-width: 720px) {
+    .contenedor_cards {
+      max-width: 100%; } }
+
+.card1 {
+  border: 1px solid #040507;
+  flex: 1 1 50%; }
+  @media all and (min-width: 1000px) {
+    .card1 {
+      flex: 1 1 33%; } }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {

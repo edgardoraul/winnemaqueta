@@ -157,12 +157,12 @@
 			<!-- El título principal de la página -->
 			<header class="encabezado grid__header">
 				<h1 class="encabezado__titulo">Wines</h1>
-				<div class="encabezado__formulario">
-					<label for="search">
-						<input type="search" name="search" id="search" />
-						<i class="icomoon icon-search1"></i>
+				<form class="encabezado__formulario formulario">
+					<label class="formulario__label" for="search">
+						<input type="search" name="search" id="search" placeholder="Buscar vinagres de uva..." />
+						<i class="formulario__label__boton icomoon icon-search1"></i>
 					</label>
-				</div>
+				</form>
 			</header>
 
 			<!-- La barra lateral y los filtros -->
@@ -174,14 +174,164 @@
 
 			<!-- El contenido principal -->
 			<section class="contenedor grid__contenedor">
-				<header class="contenedor__header">
-					<h3 class="__header__titulo">Todos los Wines</h3>
+				<header class="subtitulo">
+					<h3 class="subtitulo__texto">Todos los Wines</h3>
 				</header>
 
 				<!-- Sección Principal -->
-				<div class="seccion6">
+				<div class="contenedor__seccion contenedor_cards">
 
 					<!-- Card1 -->
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
+					<article class="card1">
+						<figure class="card1__figura">
+							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >
+							<figcaption class="card1__figura__titulo">
+								Vini Nocheterna
+							</figcaption>
+						</figure>
+						<div class="card1__contenedor">
+							<ul class="card1__contenedor__lista">
+								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
+								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
+								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i>
+									<i class="icomoon icon-star-full"></i></li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+							</ul>
+						</div>
+						<div class="card1__atrib">
+							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
+							<div class="card1__atrib__descuento"><em>% 20</em></div>
+							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+						</div>
+					</article>
 					<article class="card1">
 						<figure class="card1__figura">
 							<img src="img/21.jpg" alt="vino" class="card1__figura__imagen" >

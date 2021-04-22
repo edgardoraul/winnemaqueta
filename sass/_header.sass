@@ -76,10 +76,13 @@
 	&__titulo
 		color: $color_blanco
 		font-family: $fuente_titulo
-		flex: 1 1 auto
+		flex: 1 1 100%
 		font-size: $rem * 3
 		margin: 0
 		text-transform: uppercase
 	
 	&__formulario
-		flex: 1 1 auto
+		flex: 0 0 auto
+		@media all and ( max-width: $tablet )
+			display: none
+			

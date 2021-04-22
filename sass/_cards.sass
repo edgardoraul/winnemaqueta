@@ -1,0 +1,18 @@
+/** CARDS DE PRODUCTOS **/
+.contenedor_cards
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between
+	align-items: flex-start
+	max-width: $mobile
+	margin-left: auto
+	margin-right: auto
+	@media all and ( min-width: $tablet )
+		max-width: 100%
+
+.card1
+	border: 1px solid $color_negro
+	flex: 1 1 50%
+
+	@media all and ( min-width: $desktop )
+		flex: 1 1 33%
