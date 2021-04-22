@@ -1,23 +1,22 @@
 /** Sistema de columnas y grids **/
 .grid
 	display: grid
-
-	&--col
-		grid-template-columns: repeat(3, fr)
-		grid-gap: $rem
-
-	&--row
-		grid-template-rows: repeat(3, auto)
 	
-	&__header
-		grid-column-start: 1
-		grid-column-end: -1
-	
-	&__contenedor
-		grid-column: 2/4
+	@media all and ( min-width: $tablet )
+		grid-template-areas: "header header header header" "sidebar contenido contenido contenido" "sidebar paginacion paginacion paginacion"
 
-	&__paginacion
-		grid-column: 2/4
+		&__header
+			grid-area: header
+		
+		&__contenedor
+			grid-area: contenido
+		
+		&__paginacion
+			grid-area: paginacion
 
-	&__sidebar
-		grid-column: 1/2
+		&__sidebar
+			grid-area: sidebar
+			max-width: 300px
+
+
+			

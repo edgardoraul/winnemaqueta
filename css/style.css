@@ -8908,6 +8908,16 @@ blockquote {
     float: left;
     vertical-align: bottom; }
 
+figure {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+figcaption {
+  margin: 0;
+  padding: 0;
+  display: block; }
+
 em {
   font-weight: 300;
   font-style: italic; }
@@ -8923,7 +8933,6 @@ img {
   width: 100%; }
 
 strong {
-  font-style: italic;
   font-weight: bold; }
 
 .alineacion--izquierda {
@@ -8958,6 +8967,7 @@ strong {
   font-size: 20px;
   font-weight: 300;
   padding: 6.6666666667px 40px;
+  margin: 2px 1px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase; }
@@ -9003,20 +9013,18 @@ strong {
 /** Sistema de columnas y grids */
 .grid {
   display: grid; }
-  .grid--col {
-    grid-template-columns: repeat(3, fr);
-    grid-gap: 20px; }
-  .grid--row {
-    grid-template-rows: repeat(3, auto); }
-  .grid__header {
-    grid-column-start: 1;
-    grid-column-end: -1; }
-  .grid__contenedor {
-    grid-column: 2/4; }
-  .grid__paginacion {
-    grid-column: 2/4; }
-  .grid__sidebar {
-    grid-column: 1/2; }
+  @media all and (min-width: 720px) {
+    .grid {
+      grid-template-areas: "header header header header" "sidebar contenido contenido contenido" "sidebar paginacion paginacion paginacion"; }
+      .grid__header {
+        grid-area: header; }
+      .grid__contenedor {
+        grid-area: contenido; }
+      .grid__paginacion {
+        grid-area: paginacion; }
+      .grid__sidebar {
+        grid-area: sidebar;
+        max-width: 300px; } }
 
 /* Encabezados */
 .header {
@@ -9063,6 +9071,24 @@ strong {
         color: #040507; }
     .header__logoTexto:hover {
       color: #464544; }
+
+/** TITULARES DEL RESTO DE LAS PAGINAS */
+.encabezado {
+  background: #A83E4C;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: c; }
+  .encabezado__titulo {
+    color: #fff;
+    font-family: "Poppins";
+    flex: 1 1 auto;
+    font-size: 60px;
+    margin: 0;
+    text-transform: uppercase; }
+  .encabezado__formulario {
+    flex: 1 1 auto; }
 
 .navegacion {
   background: #FE9776;
@@ -9256,6 +9282,10 @@ strong {
       margin-right: 10px; }
     .navegacionAtrasAdelante__enlace--adelante {
       margin-left: 10px; }
+
+/** PAGINACION */
+.paginacion {
+  padding: 20px; }
 
 /** Hay varios tipos de secciones:
  *
@@ -9505,6 +9535,15 @@ strong {
     .main__seccion5 {
       grid-column-gap: 10%;
       grid-template-columns: 280px auto; } }
+
+/** CONTENEDORES GENERALES PARA TODA LA WEB */
+.contenedor {
+  padding: 20px; }
+
+/** EL SIDEBAR GENERAL DE TODA LA WEBBERA */
+.sidebar {
+  background: #E8E3DB;
+  padding: 20px; }
 
 .footer {
   background-color: #464544;
