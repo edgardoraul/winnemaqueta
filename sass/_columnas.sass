@@ -1,22 +1,26 @@
 /** Sistema de columnas y grids **/
 .grid
 	display: grid
+
+	&--espaciada
+		grid-gap: $rem
 	
-	@media all and ( min-width: $tablet )
-		grid-template-areas: "header header header header" "sidebar contenido contenido contenido" "sidebar paginacion paginacion paginacion"
+	&--semiespaciada
+		grid-gap: $rem * 0.5
 
-		&__header
-			grid-area: header
-		
-		&__contenedor
-			grid-area: contenido
-		
-		&__paginacion
-			grid-area: paginacion
+	&--pagina
+		@media all and ( min-width: $tablet )
+			grid-template-areas: "header header header header" "sidebar contenido contenido contenido" "sidebar paginacion paginacion paginacion"
 
-		&__sidebar
-			grid-area: sidebar
-			max-width: 300px
-
-
+			&__header
+				grid-area: header
 			
+			&__contenedor
+				grid-area: contenido
+			
+			&__paginacion
+				grid-area: paginacion
+
+			&__sidebar
+				grid-area: sidebar
+				max-width: 300px

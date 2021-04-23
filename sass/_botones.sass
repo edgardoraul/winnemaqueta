@@ -29,6 +29,20 @@
 		font-size: $rem * 0.7
 		padding: ($rem / 5) ($rem * 1.25)
 	
+	&--redondo
+		border-radius: 50%
+		font-size: $rem
+		font-weight: lighter !important
+		height: $rem * 2
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0
+		width: $rem * 2
+		vertical-align: baseline
+		&:hover
+			transform: rotate(-180deg)
+	
 
 	// Estilos de acuerdo a su funcionalidad
 	&--advertencia

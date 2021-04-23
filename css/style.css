@@ -8981,6 +8981,19 @@ strong {
   .boton--chico {
     font-size: 14px;
     padding: 4px 25px; }
+  .boton--redondo {
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: lighter !important;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    vertical-align: baseline; }
+    .boton--redondo:hover {
+      transform: rotate(-180deg); }
   .boton--advertencia {
     background: #F2E41B;
     color: #040507; }
@@ -9013,16 +9026,20 @@ strong {
 /** Sistema de columnas y grids */
 .grid {
   display: grid; }
+  .grid--espaciada {
+    grid-gap: 20px; }
+  .grid--semiespaciada {
+    grid-gap: 10px; }
   @media all and (min-width: 720px) {
-    .grid {
+    .grid--pagina {
       grid-template-areas: "header header header header" "sidebar contenido contenido contenido" "sidebar paginacion paginacion paginacion"; }
-      .grid__header {
+      .grid--pagina__header {
         grid-area: header; }
-      .grid__contenedor {
+      .grid--pagina__contenedor {
         grid-area: contenido; }
-      .grid__paginacion {
+      .grid--pagina__paginacion {
         grid-area: paginacion; }
-      .grid__sidebar {
+      .grid--pagina__sidebar {
         grid-area: sidebar;
         max-width: 300px; } }
 
@@ -9075,7 +9092,7 @@ strong {
 /** TITULARES DEL RESTO DE LAS PAGINAS */
 .encabezado {
   align-items: center;
-  background: #A83E4C;
+  background: #8C7B6C;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
@@ -9542,8 +9559,6 @@ strong {
 /** CONTENEDORES GENERALES PARA TODA LA WEB */
 .contenedor {
   padding: 20px; }
-  .contenedor__seccion {
-    border: 1px solid green; }
 
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA */
 .sidebar {
@@ -9802,22 +9817,78 @@ strong {
 /** CARDS DE PRODUCTOS */
 .contenedor_cards {
   display: flex;
+  align-content: stretch;
+  justify-content: flex-start;
+  align-items: stretch;
   flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: fle;
-  max-width: 500px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  max-width: 500px; }
   @media all and (min-width: 720px) {
     .contenedor_cards {
       max-width: 100%; } }
 
 .card1 {
   border: 1px solid #040507;
-  flex: 1 1 50%; }
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  font-size: 15px;
+  max-width: 49%;
+  line-height: 140%; }
   @media all and (min-width: 1000px) {
     .card1 {
-      flex: 1 1 33%; } }
+      max-width: 32%;
+      font-size: 17px; } }
+  @media all and (min-width: 1250px) {
+    .card1 {
+      flex-basis: 24%;
+      max-width: 24%; } }
+  .card1__figura__titulo {
+    padding: 10px;
+    font-family: "Poppins";
+    font-weight: 900;
+    text-transform: uppercase; }
+  .card1__contenedor {
+    padding: 10px;
+    flex: 1 1 100%; }
+    .card1__contenedor__lista {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .card1__contenedor__lista__item {
+        border-bottom: 1px solid #464544;
+        margin-bottom: 5px; }
+        .card1__contenedor__lista__item:last-child {
+          border-bottom: none;
+          clear: both;
+          margin: 20px 0; }
+        .card1__contenedor__lista__item span, .card1__contenedor__lista__item .icomoon {
+          font-weight: bolder;
+          float: right; }
+        .card1__contenedor__lista__item .icomoon {
+          color: #F2E41B;
+          text-shadow: 0px 0px 1px #040507;
+          vertical-align: baseline; }
+  .card1__atrib {
+    align-items: center;
+    font-size: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 10px; }
+    .card1__atrib__descuento {
+      color: #A83E4C;
+      flex: 1 1 auto; }
+    .card1__atrib__final {
+      color: #040507;
+      font-weight: 900;
+      flex: 1 1 auto;
+      font-size: 25px; }
+    .card1__atrib__precio {
+      text-decoration: dashed;
+      flex: 1 1 auto; }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {

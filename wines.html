@@ -151,11 +151,11 @@
 	</header>
 
 	<main>
-		<div class="main grid">
+		<div class="main grid grid--pagina">
 
 
 			<!-- El título principal de la página -->
-			<header class="encabezado grid__header">
+			<header class="encabezado grid--pagina__header">
 				<h1 class="encabezado__titulo">Wines</h1>
 				<form class="encabezado__formulario formulario">
 					<label class="formulario__label" for="search">
@@ -166,20 +166,20 @@
 			</header>
 
 			<!-- La barra lateral y los filtros -->
-			<div class="sidebar grid__sidebar">
+			<div class="sidebar grid--pagina__sidebar">
 				<aside>
 					Lorem hitlex, dolor sit amet consectetur adipisicing elit. Quisquam, vero! Cupiditate nisi atque veritatis earum voluptas rerum ea cum dolore optio explicabo voluptatibus, commodi officia blanditiis? Odio quibusdam quae sequi.
 				</aside>
 			</div>
 
 			<!-- El contenido principal -->
-			<section class="contenedor grid__contenedor">
+			<section class="contenedor grid--pagina__contenedor">
 				<header class="subtitulo">
 					<h3 class="subtitulo__texto">Todos los Wines</h3>
 				</header>
 
 				<!-- Sección Principal -->
-				<div class="contenedor__seccion contenedor_cards">
+				<div class="contenedor__seccion contenedor_cards grid grid--semiespaciada">
 
 					<!-- Card1 -->
 					<article class="card1">
@@ -191,9 +191,9 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
@@ -202,9 +202,11 @@
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -216,9 +218,9 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
@@ -227,9 +229,11 @@
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -241,20 +245,22 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i></li>
-								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum.</li>
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -266,9 +272,9 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
@@ -277,9 +283,11 @@
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -291,9 +299,9 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
@@ -302,9 +310,11 @@
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -316,9 +326,9 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
@@ -327,9 +337,11 @@
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 					<article class="card1">
@@ -341,27 +353,29 @@
 						</figure>
 						<div class="card1__contenedor">
 							<ul class="card1__contenedor__lista">
-								<li class="card1__contenedor__lista__item">Marca: <strong>Nocheterna</strong></li>
-								<li class="card1__contenedor__lista__item">Región: <strong>San Juan</strong></li>
-								<li class="card1__contenedor__lista__item">Bodega: <strong>Putruelle</strong></li>
+								<li class="card1__contenedor__lista__item">Marca: <span>Nocheterna</span></li>
+								<li class="card1__contenedor__lista__item">Región: <span>San Juan</span></li>
+								<li class="card1__contenedor__lista__item">Bodega: <span>Putruelle</span></li>
 								<li class="card1__contenedor__lista__item">Raiting: <i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i>
 									<i class="icomoon icon-star-full"></i></li>
-								<li class="card1__contenedor__lista__item">Lorem hitlex dolor sit amet consectetur adipisicing elit. Porro, voluptatum. Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
+								<li class="card1__contenedor__lista__item">Reprehenderit odit beatae totam consequatur? Rerum accusamus hitlex perferendis.</li>
 							</ul>
 						</div>
 						<div class="card1__atrib">
-							<div class="card1__atrib__precio card1__atrib__precio--descuento"><del>$ 856,23</del></div>
-							<div class="card1__atrib__descuento"><em>% 20</em></div>
-							<div class="card1__atrib__final"><strong>$ 1.980,03</strong></div>
+
+							<div class="card1__atrib__final"><span>$ 800</span></div>
+							<a href="" class="boton boton--redondo">
+								<i class="icomoon icon-plus"></i>
+							</a>
 						</div>
 					</article>
 				</div>
 			</section>
 
 			<!-- Paginación -->
-			<div class="paginacion grid__paginacion">
+			<div class="paginacion grid--pagina__paginacion">
 				<a href="" class="boton boton--chico"><i class="icomoon icon-arrow-left2"></i></a>
 				<a href="" class="boton boton--chico boton--deshabilitado">1</a>
 				<a href="" class="boton boton--chico">2</a>
@@ -423,7 +437,7 @@
 
 					<!-- redes sociales -->
 					<div class="footer__contenido__sociales">
-						<div><strong>Decí "hola"</strong></div>
+						<div><span>Decí "hola"</span></div>
 						<div>info@meloinvento.com
 						</div>
 						<a href="#" class="footer__contenido__sociales--enlace"><i
