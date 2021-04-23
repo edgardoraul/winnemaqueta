@@ -3061,9 +3061,9 @@ strong {
   display: flex;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -3078,18 +3078,18 @@ strong {
 
 @media all and (min-width: 720px) {
   .contenedor_cards {
+    max-width: 100%;
     -webkit-box-pack: stretch;
         -ms-flex-pack: stretch;
             justify-content: stretch;
-    max-width: 100%;
   }
 }
 
 .card1 {
   border: 1px solid #040507;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 90%;
-          flex: 0 0 90%;
+      -ms-flex: 0 0 80%;
+          flex: 0 0 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3104,8 +3104,9 @@ strong {
 @media all and (min-width: 500px) {
   .card1 {
     -webkit-box-flex: 1;
-        -ms-flex: 1 1 45%;
-            flex: 1 1 45%;
+        -ms-flex: 1 1 48.5%;
+            flex: 1 1 48.5%;
+    max-width: 48.5%;
   }
 }
 
