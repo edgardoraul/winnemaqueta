@@ -13,13 +13,16 @@
 
 .card1
 	border: 1px solid $color_negro
-	flex: 1 1 45%
+	flex: 1 1 100%
 	display: flex
 	justify-content: space-between
 	flex-flow: column nowrap
 	font-size: $rem * 0.75
-	max-width: 49%
 	line-height: 140%
+
+	@media all and ( min-width: $mobile )
+		flex: 1 1 45%
+		max-width: 49%
 
 	@media all and ( min-width: $desktop )
 		max-width: 32%
