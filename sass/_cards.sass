@@ -2,36 +2,37 @@
 .contenedor_cards
 	display: flex
 	align-content: stretch
-	justify-content: flex-start
+	justify-content: stretch
 	align-items: stretch
 	flex-flow: row wrap
 	margin-left: auto
 	margin-right: auto
 	max-width: $mobile
 	@media all and ( min-width: $tablet )
+		justify-content: stretch
 		max-width: 100%
 
 .card1
 	border: 1px solid $color_negro
-	flex: 0 0 100%
+	flex: 0 0 90%
 	display: flex
-	justify-content: space-between
 	flex-flow: column nowrap
 	font-size: $rem * 0.75
 	line-height: 140%
-	max-width: 100%
+	//max-width: 90%
 
 	@media all and ( min-width: $mobile )
 		flex: 1 1 45%
-		max-width: 49%
+		//max-width: 49%
 
 	@media all and ( min-width: $desktop )
-		max-width: 32%
+		max-width: 32.6666667%
 		font-size: $rem * 0.85
+		flex-basis: 32.6666667%
 
 	@media all and ( min-width: $desktop * 1.25 )
-		flex-basis: 24%
-		max-width: 24%
+		flex-basis: 24.25%
+		max-width: 24.25%
 	
 	&__figura
 		&__titulo
