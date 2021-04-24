@@ -269,8 +269,8 @@ function cargarScripts()
 	const reviewsItems = document.querySelectorAll(".contenedor__ventana__item");
 	const flechaIzq = document.getElementById("flechaIzq");
 	const flechaDer = document.getElementById("flechaDer");
-	console.log(reviewsContenedor, reviewsItems, flechaDer, flechaIzq);
 
+	// Función que mueve a la izquierda o a la derecha
 	function escrolIzq()
 	{
 		reviewsContenedor.scrollLeft -= reviewsItems[0].offsetWidth + 20;	
@@ -284,7 +284,7 @@ function cargarScripts()
 	flechaIzq.addEventListener("click", escrolIzq, false);
 	flechaDer.addEventListener("click", escrolDer, false);
 
-	// Control con las flechas y el teclado
+	// Control con las flechas en el teclado
 	document.addEventListener("keydown", (e) => {
 		if(e.key == "ArrowLeft")
 		{

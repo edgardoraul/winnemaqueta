@@ -145,64 +145,60 @@
 	**/
 // Contenedor de las secciones de los pasos
 .pasos
-	align-items: flex-start
-	align-content: center
-	display: flex
-	flex-flow: column wrap
-	justify-content: flex-start
-	margin: auto
+	display: grid
+	grid-gap: $rem
+	margin-bottom: $rem * 4
+	margin-left: auto
+	margin-right: auto
+	margin-top: $rem
+	max-width: $desktop
 	padding: $rem
 
 	@media all and ( min-width: $tablet )
-		align-items: stretch
-		flex-flow: row wrap
-		justify-content: space-between
-		max-width: $tablet + 100
+		grid-gap: 2%
+		grid-template-columns: 49% 49%
 
-.main
-	&__seccion3
-		margin-top: 2 * $rem
-		max-width: $mobile / 3 * 2
-		position: relative
-		@media all and ( min-width: $tablet )
-			flex: 0 0 45%
+.main__seccion3
+	margin-top: 2 * $rem
+	max-width: $mobile / 3 * 2
+	margin-left: auto
+	margin-right: auto
+	@media all and ( min-width: $tablet )
+		max-width: 100%
 
-		&__articulo
-			&__media
-				align-content: flex-end
-				align-items: baseline
-				display: flex
-				flex-flow: row nowrap
-				justify-content: space-between
+	&__articulo
+		&__media
+			display: table-row
 
-				&__orden
-					color: $color_titulo
-					font-size: $rem * 8
-					font-weight: bolder
-					line-height: 100%
-					margin-right: $rem * 2
-
-			&__header
-				&__titulo
-					font-family: $fuente_titulo
-					font-size: $rem * 1.5
-					letter-spacing: -2px
+			&__orden
+				color: $color_titulo
+				display: table-cell
+				font-size: $rem * 8
+				font-weight: bolder
+				line-height: 100%
+				padding-right: $rem * 2
+				vertical-align: bottom
 				
-			&__contenido
-				font-size: $rem
-				line-height: 150%
-				max-width: $mobile / 3 * 2
+			&__imagen
+				display: table-cell
+
+		&__header
+			&__titulo
+				font-family: $fuente_titulo
+				font-size: $rem * 1.5
+				letter-spacing: -2px
+			
+		&__contenido
+			font-size: $rem
+			line-height: 150%
+			max-width: $mobile / 3 * 2
 
 
-	// Sacando el margen superior al primer elemento
-	&__seccion3:first-child
-		margin-top: 0
-
-	
+// Sacando el margen superior al primer elemento
+.main
 	// Haciendo más abajo en forma intercalada
 	&__seccion3:nth-child(even)
 		@media all and ( min-width: $tablet )
-			position: relative
 			top: 50vh
 
 
@@ -269,10 +265,7 @@
 			flex-flow: row nowrap
 			justify-content: flex-start
 			overflow-x: scroll
-			-ms-overflow-style: none
-			scrollbar-width: none
-			&::-webkit-scrollbar
-				display: none
+			// @include overflow()
 
 			&__logo
 				flex: 0 0 150px
@@ -300,22 +293,21 @@
 /**
 	Sección 5: Los reviews.
 	**/
-.main
-	&__seccion5
-		background: $color_fondo5
-		color: $color_negro
-		display: grid
+.main__seccion5
+	background: $color_fondo5
+	color: $color_negro
+	display: grid
 
-		&__articulo
-			overflow: hidden
-			&:first-child
-				min-width: 280px
-			
-			&__contenido
-				&__imagen
-					border-radius: 50%
-					max-width: $mobile / 2
+	&__articulo
+		overflow: hidden
+		&:first-child
+			min-width: 280px
 		
-		@media all and ( min-width: $tablet )
-			grid-column-gap: 10%
-			grid-template-columns: 280px auto
+		&__contenido
+			&__imagen
+				border-radius: 50%
+				max-width: $mobile / 2
+	
+	@media all and ( min-width: $tablet )
+		grid-column-gap: 10%
+		grid-template-columns: 280px auto
