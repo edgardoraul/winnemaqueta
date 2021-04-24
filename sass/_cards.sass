@@ -14,21 +14,26 @@
 
 .card1
 	border: 1px solid $color_negro
-	flex: 0 0 80%
+	flex-basis: 80%
+	flex-grow: 0
+	flex-shrink: 0
 	display: flex
 	flex-flow: column nowrap
 	font-size: $rem * 0.75
 	line-height: 140%
-	//max-width: 80%
 
 	@media all and ( min-width: $mobile )
-		flex: 1 1 48.5%
-		max-width: 48.5%
+		flex-basis: calc(50% - #{$rem * 0.25})
+		flex-grow: 1
+		flex-shrink: 1
+		max-width: calc(50% - #{$rem * 0.25})
+	@media all and ( min-width: $tablet )
+		font-size: $rem * 0.85
 
 	@media all and ( min-width: $desktop )
-		max-width: 32.6666667%
-		font-size: $rem * 0.85
-		flex-basis: 32.6666667%
+		font-size: $rem * 0.9
+		flex-basis: 32.666666667%
+		max-width: (98% / 3)
 
 	@media all and ( min-width: $desktop * 1.25 )
 		flex-basis: 24.25%
