@@ -439,7 +439,6 @@ template {
 i {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1145,15 +1144,6 @@ img {
 strong {
   font-weight: bold; }
 
-.alineacion--izquierda {
-  text-align: left; }
-.alineacion--centrada {
-  margin-let: auto;
-    margin-let-margin-right: auto;
-  text-align: center; }
-.alineacion--derecha {
-  text-align: right; }
-
 .granTitular {
   margin: 60px auto; }
   .granTitular__header__titulo {
@@ -1255,7 +1245,7 @@ strong {
         grid-area: paginacion; }
       .grid--pagina__sidebar {
         grid-area: sidebar;
-        max-width: 300px; } }
+        width: 300px; } }
 
 /* Encabezados */
 .header {
@@ -1332,7 +1322,7 @@ strong {
   width: 100%; }
   @media all and (min-width: 1000px) {
     .navegacion {
-      align-items: start;
+      align-items: flex-start;
       background: none;
       display: flex;
       justify-content: space-between;
@@ -1591,7 +1581,7 @@ strong {
     align-content: stretch;
     align-items: center;
     display: flex;
-    flex-flox: row nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between; }
     .main__seccion2__articulo__figure {
       flex: 1 1 50%;
@@ -1657,49 +1647,47 @@ strong {
       justify-content: space-between;
       max-width: 820px; } }
 
-.main {
-  /** Color intercambiable los números de orden */ }
-  .main__seccion3 {
-    margin-top: 40px;
-    max-width: 333.3333333333px;
-    position: relative; }
-    @media all and (min-width: 720px) {
-      .main__seccion3 {
-        flex: 0 0 45%; } }
-    .main__seccion3__articulo__media {
-      align-content: flex-end;
-      align-items: baseline;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between; }
-      .main__seccion3__articulo__media__orden {
-        color: #A83E4C;
-        font-size: 160px;
-        font-weight: bolder;
-        line-height: 100%;
-        margin-right: 40px; }
-    .main__seccion3__articulo__header__titulo {
-      font-family: "Poppins";
-      font-size: 30px;
-      letter-spacing: -2px; }
-    .main__seccion3__articulo__contenido {
-      font-size: 20px;
-      line-height: 150%;
-      max-width: 333.3333333333px; }
-  .main__seccion3:first-child {
-    margin-top: 0; }
+.main__seccion3 {
+  margin-top: 40px;
+  max-width: 333.3333333333px;
+  position: relative; }
   @media all and (min-width: 720px) {
-    .main__seccion3:nth-child(even) {
-      position: relative;
-      top: 50vh; } }
-  .main__seccion3:nth-child(even) .main__seccion3__articulo__media__orden {
-    filter: saturate(30); }
-  .main__seccion3:nth-child(odd) .main__seccion3__articulo__media__orden {
-    filter: invert(50); }
-  .main__seccion3:first-child .main__seccion3__articulo__media__orden {
-    filter: brightness(40%); }
-  .main__seccion3:last-child .main__seccion3__articulo__media__orden {
-    filter: hue-rotate(100deg); }
+    .main__seccion3 {
+      flex: 0 0 45%; } }
+  .main__seccion3__articulo__media {
+    align-content: flex-end;
+    align-items: baseline;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .main__seccion3__articulo__media__orden {
+      color: #A83E4C;
+      font-size: 160px;
+      font-weight: bolder;
+      line-height: 100%;
+      margin-right: 40px; }
+  .main__seccion3__articulo__header__titulo {
+    font-family: "Poppins";
+    font-size: 30px;
+    letter-spacing: -2px; }
+  .main__seccion3__articulo__contenido {
+    font-size: 20px;
+    line-height: 150%;
+    max-width: 333.3333333333px; }
+.main__seccion3:first-child {
+  margin-top: 0; }
+@media all and (min-width: 720px) {
+  .main__seccion3:nth-child(even) {
+    position: relative;
+    top: 50vh; } }
+.main__seccion3:nth-child(even) .main__seccion3__articulo__media__orden {
+  filter: saturate(30); }
+.main__seccion3:nth-child(odd) .main__seccion3__articulo__media__orden {
+  filter: invert(50); }
+.main__seccion3:first-child .main__seccion3__articulo__media__orden {
+  filter: brightness(40%); }
+.main__seccion3:last-child .main__seccion3__articulo__media__orden {
+  filter: hue-rotate(100deg); }
 
 /**
  * Sección 4: Slider de contenido y slider de logos, marcas, etc.
@@ -1779,6 +1767,18 @@ strong {
   background: #E8E3DB;
   padding: 20px; }
 
+.widget__contenido {
+  padding: 10px 0;
+  border-bottom: 2px solid #040507; }
+  .widget__contenido__titulo {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between; }
+    .widget__contenido__titulo h4, .widget__contenido__titulo h5 {
+      margin: 0;
+      padding: 0; }
+
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);
@@ -1849,7 +1849,7 @@ strong {
   @media all and (min-width: 720px) {
     .footer__contenido {
       flex-flow: row wrap; } }
-  @media all and (mmin-width: 720px) {
+  @media all and (min-width: 720px) {
     .footer__contenido__texto, .footer__contenido__texto--copyright, .footer__contenido__titulo, .footer__contenido__sociales {
       flex: 1 1 40%; } }
   .footer__contenido__titulo {
@@ -2003,12 +2003,12 @@ strong {
 /** ESTILOS DE TODOS LOS FORMULARIOS Y SUS BOTONES */
 .formulario__label {
   display: block;
-  position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .formulario__label__boton {
     background: none;
-    display: inline-block;
     color: #040507;
+    display: inline-block;
     margin-left: -62px;
     padding: 19px; }
     .formulario__label__boton:hover {
@@ -2019,9 +2019,27 @@ strong {
   border: 1px solid #040507;
   color: #040507;
   height: 60px;
+  outline: none;
   padding: 10px;
-  padding-right: 60px;
-  outline: none; }
+  padding-right: 60px; }
+
+.widget [type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden; }
+.widget label {
+  display: inline-block;
+  font-size: 15px;
+  background: #fff;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #040507;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  border: 1px solid #040507; }
+.widget input:checked ~ label {
+  background: #040507;
+  color: #fff; }
 
 /** TITULARES DE LA WEB EN GENERAL */
 .subtitulo {
