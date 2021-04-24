@@ -1180,7 +1180,7 @@ strong {
     padding: 20px 40px; }
   .boton--chico {
     font-size: 14px;
-    padding: 4px 25px; }
+    padding: 8px 25px; }
   .boton--redondo {
     border-radius: 50%;
     font-size: 20px;
@@ -1499,6 +1499,7 @@ strong {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  padding-left: 20px;
   text-align: center; }
   .navegacionAtrasAdelante__enlace {
     flex: 0 0 auto; }
@@ -1744,8 +1745,7 @@ strong {
 .main__seccion5 {
   background: #CCE5FF;
   color: #040507;
-  display: grid;
-  padding: 20px; }
+  display: grid; }
   .main__seccion5__articulo {
     overflow: hidden; }
     .main__seccion5__articulo:first-child {
@@ -1951,6 +1951,9 @@ strong {
   z-index: -1; }
 
 /** Reviews */
+.contenedor_reviews {
+  padding-bottom: 20px; }
+
 .reviews {
   align-content: stretch;
   align-items: stretch;
@@ -1961,18 +1964,11 @@ strong {
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 20px 0;
   position: relative;
   scroll-snap-type: x mandatory;
-  -o-scroll-snap-type: x mandatory;
-  -ms-scroll-snap-type: x mandatory;
-  -moz-scroll-snap-type: x mandatory;
-  -webkit-scroll-snap-type: x mandatory; }
+  scroll-behavior: smooth; }
   .reviews::-webkit-scrollbar {
     display: none; }
-  @media all and (min-width: 720px) {
-    .reviews {
-      padding: 20px 10px; } }
   .reviews__header__rating {
     border-bottom: 1px dotted #464544;
     margin-top: 0;
@@ -1980,17 +1976,15 @@ strong {
   .reviews__item {
     background: #fff;
     border-radius: 20px;
-    padding: 20px;
-    margin-left: 10%;
-    min-width: 100%; }
+    margin-left: 20px;
+    min-width: 100%;
+    overflow: hidden;
+    padding: 20px; }
     .reviews__item:first-child {
       margin-left: 0; }
-    @media all and (min-width: 720px) {
+    @media all and (min-width: 500px) {
       .reviews__item {
-        box-shadow: 3px 3px 5px #464544; } }
-    @media all and (min-width: 1000px) {
-      .reviews__item {
-        min-width: 40%; } }
+        min-width: 300px; } }
   .reviews__contenido {
     margin: 20px auto;
     font-size: 16px;
@@ -2037,9 +2031,6 @@ strong {
   padding: 5px 15px;
   text-transform: uppercase;
   border: 1px solid #040507; }
-.widget input:checked ~ label {
-  background: #040507;
-  color: #fff; }
 
 /** TITULARES DE LA WEB EN GENERAL */
 .subtitulo {
@@ -2051,8 +2042,8 @@ strong {
 /** CARDS DE PRODUCTOS */
 .contenedor_cards {
   display: flex;
-  align-content: stretch;
-  justify-content: center;
+  align-content: flex-start;
+  justify-content: stretch;
   align-items: stretch;
   flex-flow: row wrap;
   margin-left: auto;
@@ -2065,18 +2056,23 @@ strong {
 
 .card1 {
   border: 1px solid #040507;
-  flex-basis: 80%;
+  flex-basis: 100%;
   flex-grow: 0;
   flex-shrink: 0;
   display: flex;
   flex-flow: column nowrap;
   font-size: 15px;
-  line-height: 140%; }
+  line-height: 140%;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
   @media all and (min-width: 500px) {
     .card1 {
       flex-basis: calc(50% - 5px);
       flex-grow: 1;
       flex-shrink: 1;
+      margin-right: 0;
+      margin-left: 0;
       max-width: calc(50% - 5px); } }
   @media all and (min-width: 720px) {
     .card1 {

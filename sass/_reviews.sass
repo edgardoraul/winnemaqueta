@@ -1,4 +1,6 @@
 /** Reviews **/
+.contenedor_reviews
+	padding-bottom: $rem
 
 .reviews
 	align-content: stretch
@@ -9,15 +11,10 @@
 	justify-content: flex-start
 	overflow-x: auto
 	@include overflow()
-	padding: $rem 0
 	position: relative
 	scroll-snap-type: x mandatory
-	-o-scroll-snap-type: x mandatory
-	-ms-scroll-snap-type: x mandatory
-	-moz-scroll-snap-type: x mandatory
-	-webkit-scroll-snap-type: x mandatory
-	@media all and ( min-width: $tablet )
-		padding: $rem ($rem * 0.5)
+	scroll-behavior: smooth
+
 
 	&__header
 		&__rating
@@ -28,16 +25,15 @@
 	&__item
 		background: $color_blanco
 		border-radius: $rem
-		padding: $rem
-		margin-left: 10%
+		margin-left: $rem
 		min-width: 100%
+		overflow: hidden
+		padding: $rem
 		&:first-child
 			margin-left: 0
-		
-		@media all and ( min-width: $tablet )
-			box-shadow: 3px 3px 5px $color_texto
-		@media all and ( min-width: $desktop )
-			min-width: 40%
+
+		@media all and ( min-width: $mobile )
+			min-width: 300px
 			
 
 	&__contenido

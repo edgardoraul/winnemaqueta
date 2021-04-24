@@ -71,7 +71,7 @@ function cargarScripts()
 
 	/* El "ir arriba" **************************************/
 	// Escuchando el evento del scrolling
-	const botonGoTop = document.querySelector("#gotop");
+	const botonGoTop = document.getElementById("gotop");
 	// window.addEventListener("scroll", esconder_mostrar);
 	// window.addEventListener("load", esconder_mostrar);
 	function esconder_mostrar(ev)
@@ -191,8 +191,6 @@ function cargarScripts()
  */
 
 	/* Las funciones para manipular los sliders */
-	// window.addEventListener("DOMContentLoaded", cargador);
-
 	function cargadorSlider()
 	{
 		// Contenedor de los items
@@ -213,18 +211,13 @@ function cargarScripts()
 		
 		slider.style.minHeight = altoItem + "px";
 
-		/* 
-		// const slidersIframes = document.getElementsByTagName("iframe");
-		*/
 
 		// Animación de entrada y salida
 		let animacionEntrada, animacionSalida;
 		
 		// Agregando los z-index de acuerdo a su orden
 		for( let i = 0; i < slidersItems.length; i++ )
-		{
-			// slidersItems[i].style.zIndex = slidersItems.length - i;
-			
+		{			
 			// Controlando si tiene una animación o no
 			if( slider.classList.contains("animacion__carrousel") )
 			{
@@ -239,14 +232,6 @@ function cargarScripts()
 			}
 			// console.log( slidersItems[i] );
 		}
-
-		/* // Agrandando los iframes
-		for( let i = 0; i < slidersIframes.length; i++ )
-		{
-			slidersIframes[i].height = "100%";
-			slidersIframes[i].width = "auto";
-		} */
-
 
 		
 		// Función que se autoejecuta cada 3 segundos
@@ -279,91 +264,35 @@ function cargarScripts()
 	}
 	cargadorSlider();
 
-	/* Un nuevo tipo de slider que maneja los botones y los controla 
-	let slideIndex = 1;
-	showSlides(slideIndex);
-	const botonAtras = document.querySelector(".navegacionAtrasAdelante__enlace--atras");
-	const botonAdelante = document.querySelector(".navegacionAtrasAdelante__enlace--adelante");
-	botonAtras.addEventListener("click", () => {
-		plusSlides(-1);
-	});
-	botonAdelante.addEventListener("click", () => {
-		plusSlides(1);
-	});
+	/******* LOS REVIEWS *******/
+	const reviewsContenedor = document.querySelector(".contenedor__ventana");
+	const reviewsItems = document.querySelectorAll(".contenedor__ventana__item");
+	const flechaIzq = document.getElementById("flechaIzq");
+	const flechaDer = document.getElementById("flechaDer");
+	console.log(reviewsContenedor, reviewsItems, flechaDer, flechaIzq);
 
-	// Atrás y adelante
-	function plusSlides(n)
+	function escrolIzq()
 	{
-		showSlides(slideIndex += n);
+		reviewsContenedor.scrollLeft -= reviewsItems[0].offsetWidth + 20;	
+	}
+	function escrolDer()
+	{
+		reviewsContenedor.scrollLeft += reviewsItems[0].offsetWidth + 20;
 	}
 
-	function showSlides(n)
-	{
-		let i;
-		const slides = document.querySelectorAll(".contenedor__ventana__item");
+	// Control con los botones
+	flechaIzq.addEventListener("click", escrolIzq, false);
+	flechaDer.addEventListener("click", escrolDer, false);
 
-		if( n > slides.length )
+	// Control con las flechas y el teclado
+	document.addEventListener("keydown", (e) => {
+		if(e.key == "ArrowLeft")
 		{
-			slideIndex = 1;
+			escrolIzq();
 		}
-		
-		if( n < 1 )
+		else if(e.key == "ArrowRight")
 		{
-			slideIndex = slides.length;
+			escrolDer();
 		}
-		
-		for(i = 0; i < slides.length; i++)
-		{
-			// slides[i].style.left = "100%";
-		}
-		
-		// slides[slideIndex - 1].style.left = "auto";
-		
-	}
-	*/
-	
-	
-	
-	let slider = document.querySelector(".contenedor__ventana");
-	let sliderIndividual = document.querySelectorAll(".contenedor__ventana__item");
-
-	let contador = 0;
-	let width = sliderIndividual[0].clientWidth;
-	let intervalo = 3000;
-	
-	let animacionSalida, animacionEntrada;
-
-	window.addEventListener("resize", function()
-	{
-		width = sliderIndividual[0].clientWidth;
-	})
-
-	/* setInterval( () => {
-		slides();
-	}, intervalo); */
-	
-	function slides()
-	{
-		animacionEntrada = "ingDer";
-		animacionSalida = "salIzq";
-		izq();
-		console.log(contador, sliderIndividual[contador]);
-		contador = ( contador + 1 ) % sliderIndividual.length;
-		der();
-		// Animando
-
-		// Desplazamiento hacia la izquierda y desaparece
-		function izq()
-		{
-			sliderIndividual[contador].classList.add( animacionSalida );
-			sliderIndividual[contador].classList.remove( animacionEntrada );
-		}
-		
-		// Desplazamiento desde la derecha y se queda en el centro 
-		function der()
-		{
-			sliderIndividual[contador].classList.add( animacionEntrada );
-			sliderIndividual[contador].classList.remove( animacionSalida );
-		}
-	}
+	}, false);
 }
