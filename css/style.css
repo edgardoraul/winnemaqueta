@@ -305,79 +305,137 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes slideOutLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-100%); } }
+
 @keyframes slideOutLeft {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(-100%); } }
+@-webkit-keyframes slideInRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
 @keyframes slideInRight {
   0% {
     transform: translateX(100%); }
   100% {
     transform: translateX(0); } }
 .fadeOutUp {
-  animation-name: fadeOutUp;
+  -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp;
   opacity: 0;
   visibility: hidden;
-  animation-delay: 0;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .fadeOutDown {
-  animation-name: fadeOutDown;
+  -webkit-animation-name: fadeOutDown;
+          animation-name: fadeOutDown;
   opacity: 0;
   visibility: hidden;
-  animation-delay: 0;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .fadeInDown {
-  animation-name: fadeInDown;
+  -webkit-animation-name: fadeInDown;
+          animation-name: fadeInDown;
   opacity: 1;
   visibility: visible;
-  animation-delay: 0;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .fadeInUp {
-  animation-name: fadeInUp;
-  animation-delay: 0;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .slideInLeft {
-  animation-name: slideInLeft;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: slideInLeft;
+          animation-name: slideInLeft;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .slideInRight {
-  animation-name: slideInRight;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: slideInRight;
+          animation-name: slideInRight;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .slideOutLeft {
-  animation-name: slideOutLeft;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .slideOutRight {
-  animation-name: slideOutRight;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: slideOutRight;
+          animation-name: slideOutRight;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 /**  */
+@-webkit-keyframes ingDer {
+  0% {
+    left: 100%; }
+  10% {
+    left: 100%; }
+  100% {
+    left: 0; } }
 @keyframes ingDer {
   0% {
     left: 100%; }
@@ -385,6 +443,13 @@ template {
     left: 100%; }
   100% {
     left: 0; } }
+@-webkit-keyframes salIzq {
+  0% {
+    left: 0; }
+  90% {
+    left: -1000px; }
+  100% {
+    left: -1000px; } }
 @keyframes salIzq {
   0% {
     left: 0; }
@@ -393,18 +458,28 @@ template {
   100% {
     left: -1000px; } }
 .ingDer {
-  animation-name: ingDer;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: ingDer;
+          animation-name: ingDer;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .izqSal {
-  animation-name: izqSal;
-  animation-delay: 0;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both; }
+  -webkit-animation-name: izqSal;
+          animation-name: izqSal;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
 
 .clearboth,
 .separador {
@@ -437,7 +512,7 @@ template {
   font-style: normal;
   font-display: block; }
 i {
-  /* use !important to prevent issues with browser extensions that change fonts */
+  /* use !important to prevent issues with browser extensions that change fonts. */
   font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
@@ -1391,25 +1466,35 @@ strong {
           display: none; }
     .navegacion__lista--abierto {
       height: auto;
-      animation-name: fadeInDown;
+      -webkit-animation-name: fadeInDown;
+              animation-name: fadeInDown;
       opacity: 1;
       visibility: visible;
-      animation-delay: 0;
-      animation-duration: 0.2s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: both;
+      -webkit-animation-delay: 0;
+              animation-delay: 0;
+      -webkit-animation-duration: 0.2s;
+              animation-duration: 0.2s;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
       opacity: 1;
       visibility: visible;
       z-index: 2; }
     .navegacion__lista--cerrado {
       height: 0;
-      animation-name: fadeOutUp;
+      -webkit-animation-name: fadeOutUp;
+              animation-name: fadeOutUp;
       opacity: 0;
       visibility: hidden;
-      animation-delay: 0;
-      animation-duration: 0.2s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: both;
+      -webkit-animation-delay: 0;
+              animation-delay: 0;
+      -webkit-animation-duration: 0.2s;
+              animation-duration: 0.2s;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
       opacity: 0;
       visibility: hidden;
       z-index: -1; }
@@ -1417,37 +1502,52 @@ strong {
 .sublista {
   display: block;
   height: 0;
-  animation-name: fadeOutUp;
+  -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp;
   opacity: 0;
   visibility: hidden;
-  animation-delay: 0;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: both;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
   opacity: 0;
   visibility: hidden;
   z-index: -1; }
   .sublista--abierto {
     height: auto;
-    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
     opacity: 1;
     visibility: visible;
-    animation-delay: 0;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
     opacity: 1;
     visibility: visible;
     z-index: 2; }
   .sublista--cerrado {
     height: 0;
-    animation-name: fadeOutUp;
+    -webkit-animation-name: fadeOutUp;
+            animation-name: fadeOutUp;
     opacity: 0;
     visibility: hidden;
-    animation-delay: 0;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
     opacity: 0;
     visibility: hidden;
     z-index: -1; }
@@ -1468,13 +1568,18 @@ strong {
   .navegacion__lista__item:hover > .sublista {
     display: block;
     height: auto;
-    animation-name: fadeInDown;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
     opacity: 1;
     visibility: visible;
-    animation-delay: 0;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
     opacity: 1;
     visibility: visible;
     z-index: 2; } }
@@ -1592,7 +1697,8 @@ strong {
       .main__seccion2__articulo__figure:after {
         background: rgba(255, 255, 255, 0.5);
         content: "";
-        filter: sepia(50);
+        -webkit-filter: sepia(50);
+                filter: sepia(50);
         height: 100%;
         left: 0;
         position: absolute;
@@ -1601,8 +1707,10 @@ strong {
       .main__seccion2__articulo__figure__imagen {
         display: block;
         height: 100vh;
-        object-fit: cover;
-        object-position: 25% center; }
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: 25% center;
+           object-position: 25% center; }
     .main__seccion2__articulo__header {
       flex: 1 1 50%;
       left: calc( 33% - ( 20px * 5 ) );
@@ -1651,7 +1759,8 @@ strong {
   margin-top: 40px;
   max-width: 333.3333333333px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  position: relative; }
   @media all and (min-width: 720px) {
     .main__seccion3 {
       max-width: 100%; } }
@@ -1680,13 +1789,17 @@ strong {
   .main__seccion3:nth-child(even) {
     top: 50vh; } }
 .main__seccion3:nth-child(even) .main__seccion3__articulo__media__orden {
-  filter: saturate(30); }
+  -webkit-filter: saturate(30);
+          filter: saturate(30); }
 .main__seccion3:nth-child(odd) .main__seccion3__articulo__media__orden {
-  filter: invert(50); }
+  -webkit-filter: invert(50);
+          filter: invert(50); }
 .main__seccion3:first-child .main__seccion3__articulo__media__orden {
-  filter: brightness(40%); }
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%); }
 .main__seccion3:last-child .main__seccion3__articulo__media__orden {
-  filter: hue-rotate(100deg); }
+  -webkit-filter: hue-rotate(100deg);
+          filter: hue-rotate(100deg); }
 
 /**
  * Sección 4: Slider de contenido y slider de logos, marcas, etc.
@@ -1959,7 +2072,8 @@ strong {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: relative;
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
   scroll-behavior: smooth; }
   .reviews::-webkit-scrollbar {
     display: none; }
@@ -2124,7 +2238,8 @@ strong {
       flex: 1 1 auto;
       font-size: 25px; }
     .card1__atrib__precio {
-      text-decoration: dashed;
+      -webkit-text-decoration: dashed;
+              text-decoration: dashed;
       flex: 1 1 auto; }
 
 /** ES un modelo reutilizable de slider chico */
@@ -2164,5 +2279,3 @@ strong {
  *
  * 	height: 100%
  * 	* */
-
-/*# sourceMappingURL=style.css.map */
