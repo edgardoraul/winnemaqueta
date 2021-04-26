@@ -305,137 +305,79 @@ template {
 [hidden] {
   display: none; }
 
-@-webkit-keyframes slideOutLeft {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(-100%); } }
-
 @keyframes slideOutLeft {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(-100%); } }
-@-webkit-keyframes slideInRight {
-  0% {
-    transform: translateX(100%); }
-  100% {
-    transform: translateX(0); } }
 @keyframes slideInRight {
   0% {
     transform: translateX(100%); }
   100% {
     transform: translateX(0); } }
 .fadeOutUp {
-  -webkit-animation-name: fadeOutUp;
-          animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
   opacity: 0;
   visibility: hidden;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-delay: 0;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .fadeOutDown {
-  -webkit-animation-name: fadeOutDown;
-          animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
   opacity: 0;
   visibility: hidden;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-delay: 0;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .fadeInDown {
-  -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
+  animation-name: fadeInDown;
   opacity: 1;
   visibility: visible;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-delay: 0;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .fadeInUp {
-  -webkit-animation-name: fadeInUp;
-          animation-name: fadeInUp;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: fadeInUp;
+  animation-delay: 0;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .slideInLeft {
-  -webkit-animation-name: slideInLeft;
-          animation-name: slideInLeft;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: slideInLeft;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .slideInRight {
-  -webkit-animation-name: slideInRight;
-          animation-name: slideInRight;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: slideInRight;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .slideOutLeft {
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: slideOutLeft;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .slideOutRight {
-  -webkit-animation-name: slideOutRight;
-          animation-name: slideOutRight;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: slideOutRight;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 /**  */
-@-webkit-keyframes ingDer {
-  0% {
-    left: 100%; }
-  10% {
-    left: 100%; }
-  100% {
-    left: 0; } }
 @keyframes ingDer {
   0% {
     left: 100%; }
@@ -443,13 +385,6 @@ template {
     left: 100%; }
   100% {
     left: 0; } }
-@-webkit-keyframes salIzq {
-  0% {
-    left: 0; }
-  90% {
-    left: -1000px; }
-  100% {
-    left: -1000px; } }
 @keyframes salIzq {
   0% {
     left: 0; }
@@ -458,28 +393,18 @@ template {
   100% {
     left: -1000px; } }
 .ingDer {
-  -webkit-animation-name: ingDer;
-          animation-name: ingDer;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: ingDer;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .izqSal {
-  -webkit-animation-name: izqSal;
-          animation-name: izqSal;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both; }
+  animation-name: izqSal;
+  animation-delay: 0;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; }
 
 .clearboth,
 .separador {
@@ -512,7 +437,7 @@ template {
   font-style: normal;
   font-display: block; }
 i {
-  /* use !important to prevent issues with browser extensions that change fonts. */
+  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
@@ -1325,7 +1250,7 @@ strong {
 /* Encabezados */
 .header {
   align-items: center;
-  background: #fff;
+  background: #FF8361;
   display: flex;
   justify-content: space-between;
   left: 0;
@@ -1371,7 +1296,7 @@ strong {
 /** TITULARES DEL RESTO DE LAS PAGINAS */
 .encabezado {
   align-items: center;
-  background: #CFC5B6;
+  background: #FF8361;
   padding: 20px;
   display: flex;
   flex-flow: row nowrap;
@@ -1466,35 +1391,25 @@ strong {
           display: none; }
     .navegacion__lista--abierto {
       height: auto;
-      -webkit-animation-name: fadeInDown;
-              animation-name: fadeInDown;
+      animation-name: fadeInDown;
       opacity: 1;
       visibility: visible;
-      -webkit-animation-delay: 0;
-              animation-delay: 0;
-      -webkit-animation-duration: 0.2s;
-              animation-duration: 0.2s;
-      -webkit-animation-timing-function: ease-in-out;
-              animation-timing-function: ease-in-out;
-      -webkit-animation-fill-mode: both;
-              animation-fill-mode: both;
+      animation-delay: 0;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
       opacity: 1;
       visibility: visible;
       z-index: 2; }
     .navegacion__lista--cerrado {
       height: 0;
-      -webkit-animation-name: fadeOutUp;
-              animation-name: fadeOutUp;
+      animation-name: fadeOutUp;
       opacity: 0;
       visibility: hidden;
-      -webkit-animation-delay: 0;
-              animation-delay: 0;
-      -webkit-animation-duration: 0.2s;
-              animation-duration: 0.2s;
-      -webkit-animation-timing-function: ease-in-out;
-              animation-timing-function: ease-in-out;
-      -webkit-animation-fill-mode: both;
-              animation-fill-mode: both;
+      animation-delay: 0;
+      animation-duration: 0.2s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
       opacity: 0;
       visibility: hidden;
       z-index: -1; }
@@ -1502,52 +1417,37 @@ strong {
 .sublista {
   display: block;
   height: 0;
-  -webkit-animation-name: fadeOutUp;
-          animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
   opacity: 0;
   visibility: hidden;
-  -webkit-animation-delay: 0;
-          animation-delay: 0;
-  -webkit-animation-duration: 0.2s;
-          animation-duration: 0.2s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-delay: 0;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
   opacity: 0;
   visibility: hidden;
   z-index: -1; }
   .sublista--abierto {
     height: auto;
-    -webkit-animation-name: fadeInDown;
-            animation-name: fadeInDown;
+    animation-name: fadeInDown;
     opacity: 1;
     visibility: visible;
-    -webkit-animation-delay: 0;
-            animation-delay: 0;
-    -webkit-animation-duration: 0.2s;
-            animation-duration: 0.2s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-delay: 0;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
     opacity: 1;
     visibility: visible;
     z-index: 2; }
   .sublista--cerrado {
     height: 0;
-    -webkit-animation-name: fadeOutUp;
-            animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
     opacity: 0;
     visibility: hidden;
-    -webkit-animation-delay: 0;
-            animation-delay: 0;
-    -webkit-animation-duration: 0.2s;
-            animation-duration: 0.2s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-delay: 0;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
     opacity: 0;
     visibility: hidden;
     z-index: -1; }
@@ -1568,18 +1468,13 @@ strong {
   .navegacion__lista__item:hover > .sublista {
     display: block;
     height: auto;
-    -webkit-animation-name: fadeInDown;
-            animation-name: fadeInDown;
+    animation-name: fadeInDown;
     opacity: 1;
     visibility: visible;
-    -webkit-animation-delay: 0;
-            animation-delay: 0;
-    -webkit-animation-duration: 0.2s;
-            animation-duration: 0.2s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-delay: 0;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
     opacity: 1;
     visibility: visible;
     z-index: 2; } }
@@ -1697,8 +1592,7 @@ strong {
       .main__seccion2__articulo__figure:after {
         background: rgba(255, 255, 255, 0.5);
         content: "";
-        -webkit-filter: sepia(50);
-                filter: sepia(50);
+        filter: sepia(50);
         height: 100%;
         left: 0;
         position: absolute;
@@ -1707,10 +1601,8 @@ strong {
       .main__seccion2__articulo__figure__imagen {
         display: block;
         height: 100vh;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: 25% center;
-           object-position: 25% center; }
+        object-fit: cover;
+        object-position: 25% center; }
     .main__seccion2__articulo__header {
       flex: 1 1 50%;
       left: calc( 33% - ( 20px * 5 ) );
@@ -1789,17 +1681,13 @@ strong {
   .main__seccion3:nth-child(even) {
     top: 50vh; } }
 .main__seccion3:nth-child(even) .main__seccion3__articulo__media__orden {
-  -webkit-filter: saturate(30);
-          filter: saturate(30); }
+  filter: saturate(30); }
 .main__seccion3:nth-child(odd) .main__seccion3__articulo__media__orden {
-  -webkit-filter: invert(50);
-          filter: invert(50); }
+  filter: invert(50); }
 .main__seccion3:first-child .main__seccion3__articulo__media__orden {
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%); }
+  filter: brightness(40%); }
 .main__seccion3:last-child .main__seccion3__articulo__media__orden {
-  -webkit-filter: hue-rotate(100deg);
-          filter: hue-rotate(100deg); }
+  filter: hue-rotate(100deg); }
 
 /**
  * Sección 4: Slider de contenido y slider de logos, marcas, etc.
@@ -1871,7 +1759,7 @@ strong {
 
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA */
 .sidebar {
-  background: #E8E3DB;
+  border: 1px solid #040507;
   padding: 20px; }
 
 .widget__contenido {
@@ -1885,6 +1773,33 @@ strong {
     .widget__contenido__titulo h4, .widget__contenido__titulo h5 {
       margin: 0;
       padding: 0; }
+
+.widget [type="checkbox"] {
+  opacity: 0.5;
+  position: absolute;
+  visibility: hidden; }
+.widget .opcion {
+  display: inline; }
+.widget label {
+  background: #fff;
+  border: 1px solid #040507;
+  color: #040507;
+  display: inline-block;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0.1em 0.75em;
+  text-transform: uppercase;
+  user-select: none; }
+  .widget label:hover {
+    cursor: pointer; }
+.widget [type="checkbox"]:checked + label {
+  color: #fff;
+  background: #040507; }
+
+/** LOS FILTROS. SE MANEJA DESDE AQUI */
+.filtros__item {
+  display: none; }
 
 .footer {
   background-color: #464544;
@@ -2072,8 +1987,7 @@ strong {
   -ms-overflow-style: none;
   scrollbar-width: none;
   position: relative;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth; }
   .reviews::-webkit-scrollbar {
     display: none; }
@@ -2126,21 +2040,6 @@ strong {
   outline: none;
   padding: 10px;
   padding-right: 60px; }
-
-.widget [type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-  visibility: hidden; }
-.widget label {
-  display: inline-block;
-  font-size: 15px;
-  background: #fff;
-  font-family: "Roboto";
-  font-weight: 300;
-  color: #040507;
-  padding: 5px 15px;
-  text-transform: uppercase;
-  border: 1px solid #040507; }
 
 /** TITULARES DE LA WEB EN GENERAL */
 .subtitulo {
@@ -2238,8 +2137,7 @@ strong {
       flex: 1 1 auto;
       font-size: 25px; }
     .card1__atrib__precio {
-      -webkit-text-decoration: dashed;
-              text-decoration: dashed;
+      text-decoration: dashed;
       flex: 1 1 auto; }
 
 /** ES un modelo reutilizable de slider chico */
@@ -2279,3 +2177,5 @@ strong {
  *
  * 	height: 100%
  * 	* */
+
+/*# sourceMappingURL=style.css.map */

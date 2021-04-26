@@ -1,6 +1,6 @@
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA **/
 .sidebar
-	background: $color_2
+	border: 1px solid $color_negro
 	padding: $rem
 
 .widget
@@ -17,3 +17,37 @@
 			h4, h5
 				margin: 0
 				padding: 0
+
+
+.widget
+	[type="checkbox"]
+		opacity: 0.5
+		position: absolute
+		visibility: hidden
+	
+	.opcion
+		display: inline
+
+	label
+		background: $color_blanco
+		border: 1px solid $color_negro
+		color: $color_negro
+		display: inline-block
+		font-family: $fuente_subtitulo
+		font-size: $rem * 0.75
+		font-weight: 400
+		padding: 0.1em 0.75em
+		text-transform: uppercase
+		user-select: none
+		&:hover
+			cursor: pointer
+	
+	[type="checkbox"]:checked + label
+		color: $color_blanco
+		background: $color_negro
+
+
+/** LOS FILTROS. SE MANEJA DESDE AQUI **/
+.filtros
+	&__item
+		display: none
