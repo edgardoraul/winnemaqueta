@@ -159,7 +159,7 @@
 				<h1 class="encabezado__titulo">Wines</h1>
 				<form class="encabezado__formulario formulario">
 					<label class="formulario__label" for="search">
-						<input type="search" name="search" id="search" placeholder="Buscar vinagres de uva..." />
+						<input type="search" name="search" id="search" />
 						<button role="button" class="formulario__label__boton">
 							<i class="icon-search1"></i>
 						</button>
@@ -174,62 +174,67 @@
 						<header class="widget__header centrado">
 							<h3 class="widget__header__titulo">Filtro 1</h3>
 						</header>
-						<div class="widget__contenido">
-							<div class="widget__contenido__titulo">
-								<input type="checkbox" name="filtro_1" id="filtro_1" />
-								<h5>Color</h5>
-								<i class="icomoon icon-arrow-down2"></i>
-							</div>
-							<label for="filtro_1">
+						<form action="">
+							<div class="widget__contenido">
+								<label class="formulario__label--boton" for="filtro_1">
+									<h5 class="widget__contenido__titulo">Color
+										<i class="icomoon icon-arrow-down2"></i>
+									</h5>
+								</label>
+								<input type="checkbox" class="formulario__input--checkbox" name="filtro_1" id="filtro_1" />
+	
 								<div class="widget__contenido__formulario">
 									<div class="opcion">
-										<input type="checkbox" name="rojo" id="rojo" value="1" />
+										<input  type="checkbox" class="formulario__input--checkbox" name="rojo" id="rojo" value="1" />
 										<label class="formulario__label" for="rojo">
 											Rojo
 										</label>
 									</div>								
 									<div class="opcion">
-										<input type="checkbox" name="verde" id="verde" value="2" />
+										<input type="checkbox" class="formulario__input--checkbox" name="verde" id="verde" value="2" />
 										<label class="formulario__label" for="verde">
 											Verde
 										</label>
 									</div>
 									<div class="opcion">
-										<input type="checkbox" name="amarillo" id="amarillo" value="3" />
+										<input type="checkbox" class="formulario__input--checkbox" name="amarillo" id="amarillo" value="3" />
 										<label class="formulario__label" for="amarillo">
 											Amarillo
 										</label>
 									</div>
 								</div>
-							</label>
-						</div>
-						<div class="widget__contenido">
-							<div>
-								<label class="widget__contenido__titulo">
-									<input type="checkbox" name="color" id="color" />
-									<h4>Tipo de Uvita</h4>
-									<i class="icomoon icon-arrow-down2"></i>
+							</div>
+							<div class="widget__contenido">
+								<input type="checkbox" class="formulario__input--checkbox" name="filtro_2" id="filtro_2" />
+								<label class="formulario__label--boton" for="filtro_2">
+									<h5 class="widget__contenido__titulo">Tipo de Uva
+										<i class="icomoon icon-arrow-down2"></i>
+									</h5>
+									<div class="widget__contenido__formulario">
+										<div class="opcion">
+											<input  type="checkbox" class="formulario__input--checkbox" name="torrontes" id="torrontes" value="1" />
+											<label class="formulario__label" for="torrontes">
+												Torrontes
+											</label>
+										</div>								
+										<div class="opcion">
+											<input type="checkbox" class="formulario__input--checkbox" name="chinche" id="chinche" value="2" />
+											<label class="formulario__label" for="chinche">
+												Chinche
+											</label>
+										</div>
+										<div class="opcion">
+											<input type="checkbox" class="formulario__input--checkbox" name="moscatel" id="moscatel" value="3" />
+											<label class="formulario__label" for="moscatel">
+												Moscatel
+											</label>
+										</div>
+									</div>
 								</label>
 							</div>
-							<div class="widget__contenido__formulario">
-								<label class="formulario__label" for="torrontes">
-									<input type="checkbox" name="torrontes" id="torrontes" value="1" />
-									Torrontés
-								</label>
-								<label class="formulario__label" for="chinche">
-									<input type="checkbox" name="chinche" id="chinche" value="2" />
-									Chinche
-								</label>
-								<label class="formulario__label" for="moscatel">
-									<input type="checkbox" name="moscatel" id="moscatel" value="3" />
-									Moscatel
-								</label>
-								<label class="formulario__label" for="malbec">
-									<input type="checkbox" name="malbec" id="malbec" value="3" />
-									Malbec
-								</label>
-							</div>
-						</div>
+							<button type="reset" role="button" class="boton boton--chico boton--advertencia">Reset</button>
+							<button type="submit" role="button" class="boton boton--chico boton--transparente">Done</button>
+						</form>
 					</div>
 				</aside>
 			</div>

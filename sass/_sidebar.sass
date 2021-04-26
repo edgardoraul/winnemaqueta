@@ -1,11 +1,10 @@
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA **/
 .sidebar
-	border: 1px solid $color_negro
 	padding: $rem
 
 .widget
 	&__contenido
-		padding: ($rem * 0.5) 0
+		position: relative
 		border-bottom: 2px solid $color_negro
 
 		&__titulo
@@ -13,10 +12,15 @@
 			display: flex
 			flex-flow: row nowrap
 			justify-content: space-between
+			margin: 0
+			padding: 0 ($rem * 0.25)
+			text-transform: uppercase
+		
+		&__formulario
+			display: none
 
-			h4, h5
-				margin: 0
-				padding: 0
+.formulario__input--checkbox:checked ~ .widget__contenido__formulario
+	display: block
 
 
 .widget
@@ -28,26 +32,24 @@
 	.opcion
 		display: inline
 
-	label
+	.formulario__label
 		background: $color_blanco
 		border: 1px solid $color_negro
+		border-radius: $rem
 		color: $color_negro
 		display: inline-block
 		font-family: $fuente_subtitulo
 		font-size: $rem * 0.75
 		font-weight: 400
-		padding: 0.1em 0.75em
+		padding: 0.25em 0.75em
+		line-height: 1
 		text-transform: uppercase
 		user-select: none
 		&:hover
 			cursor: pointer
 	
-	[type="checkbox"]:checked + label
+	.formulario__input--checkbox:checked + .formulario__label
 		color: $color_blanco
 		background: $color_negro
-
-
+	
 /** LOS FILTROS. SE MANEJA DESDE AQUI **/
-.filtros
-	&__item
-		display: none

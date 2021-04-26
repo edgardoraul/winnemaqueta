@@ -1759,20 +1759,24 @@ strong {
 
 /** EL SIDEBAR GENERAL DE TODA LA WEBBERA */
 .sidebar {
-  border: 1px solid #040507;
   padding: 20px; }
 
 .widget__contenido {
-  padding: 10px 0;
+  position: relative;
   border-bottom: 2px solid #040507; }
   .widget__contenido__titulo {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between; }
-    .widget__contenido__titulo h4, .widget__contenido__titulo h5 {
-      margin: 0;
-      padding: 0; }
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 5px;
+    text-transform: uppercase; }
+  .widget__contenido__formulario {
+    display: none; }
+
+.formulario__input--checkbox:checked ~ .widget__contenido__formulario {
+  display: block; }
 
 .widget [type="checkbox"] {
   opacity: 0.5;
@@ -1780,27 +1784,26 @@ strong {
   visibility: hidden; }
 .widget .opcion {
   display: inline; }
-.widget label {
+.widget .formulario__label {
   background: #fff;
   border: 1px solid #040507;
+  border-radius: 20px;
   color: #040507;
   display: inline-block;
   font-family: "Roboto";
   font-size: 15px;
   font-weight: 400;
-  padding: 0.1em 0.75em;
+  padding: 0.25em 0.75em;
+  line-height: 1;
   text-transform: uppercase;
   user-select: none; }
-  .widget label:hover {
+  .widget .formulario__label:hover {
     cursor: pointer; }
-.widget [type="checkbox"]:checked + label {
+.widget .formulario__input--checkbox:checked + .formulario__label {
   color: #fff;
   background: #040507; }
 
 /** LOS FILTROS. SE MANEJA DESDE AQUI */
-.filtros__item {
-  display: none; }
-
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);
