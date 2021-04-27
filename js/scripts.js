@@ -200,67 +200,70 @@ function cargarScripts()
 		const slidersItems = document.querySelectorAll(".slider__item");
 
 		// El ancho del contenedor de los items
-		let altoItem = slidersItems[0].clientHeight;
-		slider.style.minHeight = altoItem + "px";
-
-		// Cambia el tamaño cada vez que se redimensiona la pantalla
-		window.addEventListener("resize", () => {
-			altoItem = slidersItems[i].clientHeight;
+		if(slidersItems.length != 0)
+		{
+			let altoItem = slidersItems[0].clientHeight;
 			slider.style.minHeight = altoItem + "px";
-		});
-		
-		slider.style.minHeight = altoItem + "px";
+
+			// Cambia el tamaño cada vez que se redimensiona la pantalla
+			window.addEventListener("resize", () => {
+				altoItem = slidersItems[i].clientHeight;
+				slider.style.minHeight = altoItem + "px";
+			});
+
+			slider.style.minHeight = altoItem + "px";
 
 
-		// Animación de entrada y salida
-		let animacionEntrada, animacionSalida;
-		
-		// Agregando los z-index de acuerdo a su orden
-		for( let i = 0; i < slidersItems.length; i++ )
-		{			
-			// Controlando si tiene una animación o no
-			if( slider.classList.contains("animacion__carrousel") )
-			{
-				animacionEntrada = "slideInRight";
-				animacionSalida = "slideOutLeft";
-				slidersItems[i].classList.add(animacionSalida);
+			// Animación de entrada y salida
+			let animacionEntrada, animacionSalida;
+			
+			// Agregando los z-index de acuerdo a su orden
+			for( let i = 0; i < slidersItems.length; i++ )
+			{			
+				// Controlando si tiene una animación o no
+				if( slider.classList.contains("animacion__carrousel") )
+				{
+					animacionEntrada = "slideInRight";
+					animacionSalida = "slideOutLeft";
+					slidersItems[i].classList.add(animacionSalida);
+				}
+				else if( slidersItems[i].classList.contains("animacion__fade") )
+				{
+					animacionEntrada = "fadeIn";
+					animacionSalida = "fadeOut";
+				}
+				// console.log( slidersItems[i] );
 			}
-			else if( slidersItems[i].classList.contains("animacion__fade") )
+
+
+			// Función que se autoejecuta cada 3 segundos
+			let i = 0;
+			function temporizadorInfinito()
 			{
-				animacionEntrada = "fadeIn";
-				animacionSalida = "fadeOut";
+				setTimeout( temporizadorInfinito, 5000 );
+				izq();
+	
+				// Control del contador
+				i = ( i + 1 ) % slidersItems.length;
+				der();
+				// console.log( slidersItems[i] );
 			}
-			// console.log( slidersItems[i] );
-		}
-
-		
-		// Función que se autoejecuta cada 3 segundos
-		let i = 0;
-		function temporizadorInfinito()
-		{
-			setTimeout( temporizadorInfinito, 5000 );
-			izq();
-
-			// Control del contador
-			i = ( i + 1 ) % slidersItems.length;
-			der();
-			// console.log( slidersItems[i] );
-		}
-		temporizadorInfinito();
-
-		 // Desplazamiento hacia la izquierda y desaparece
-		function izq()
-		{
-			slidersItems[i].classList.add( animacionSalida );
-			slidersItems[i].classList.remove( animacionEntrada );
-		}
-		
-		// Desplazamiento desde la derecha y se queda en el centro 
-		function der()
-		{
-			slidersItems[i].classList.add( animacionEntrada );
-			slidersItems[i].classList.remove( animacionSalida );
-		}
+			temporizadorInfinito();
+	
+			 // Desplazamiento hacia la izquierda y desaparece
+			function izq()
+			{
+				slidersItems[i].classList.add( animacionSalida );
+				slidersItems[i].classList.remove( animacionEntrada );
+			}
+			
+			// Desplazamiento desde la derecha y se queda en el centro 
+			function der()
+			{
+				slidersItems[i].classList.add( animacionEntrada );
+				slidersItems[i].classList.remove( animacionSalida );
+			}
+		}		
 	}
 	cargadorSlider();
 
@@ -279,10 +282,16 @@ function cargarScripts()
 	{
 		reviewsContenedor.scrollLeft += reviewsItems[0].offsetWidth + 20;
 	}
-
+	
 	// Control con los botones
-	flechaIzq.addEventListener("click", escrolIzq, false);
-	flechaDer.addEventListener("click", escrolDer, false);
+	if(flechaDer != null)
+	{
+		flechaDer.addEventListener("click", escrolDer, false);
+	}
+	if(flechaIzq != null)
+	{
+		flechaIzq.addEventListener("click", escrolIzq, false);
+	}
 
 	// Control con las flechas en el teclado
 	document.addEventListener("keydown", (e) => {
@@ -295,4 +304,20 @@ function cargarScripts()
 			escrolDer();
 		}
 	}, false);
+
+
+	/* LOS BOTONES DE LA BARRA LATERAL. FILTROS */
+	const filtros = document.querySelectorAll(".widget__contenido__titulo .icon-arrow-down2");
+	console.log(filtros);
+	if(filtros != null)
+	{
+		for(let i = 0; filtros.length < i; i++)
+		{
+			filtros[i].parentNode.parentNode.addEventListener("click", () => {
+				filtros[i].classList.remove("icon-arrow-down2");
+				filtros[i].classList.add("icon-arrow-up2");
+				console.log(i);
+			});
+		}
+	}
 }

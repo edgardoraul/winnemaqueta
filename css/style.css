@@ -1715,7 +1715,11 @@ strong {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    overflow-x: scroll; }
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .main__seccion4__articulo__contenido::-webkit-scrollbar {
+      display: none; }
     .main__seccion4__articulo__contenido__logo {
       flex: 0 0 150px;
       width: 150px; }
@@ -1761,47 +1765,76 @@ strong {
 .sidebar {
   padding: 20px; }
 
+.widget__header__titulo {
+  color: #040507;
+  font-family: "Poppins";
+  font-size: 40px;
+  text-transform: uppercase;
+  word-spacing: -2px; }
 .widget__contenido {
   position: relative;
   border-bottom: 2px solid #040507; }
   .widget__contenido__titulo {
     align-items: center;
+    color: #040507;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     margin: 0;
-    padding: 0 5px;
+    padding: 5px 0;
     text-transform: uppercase; }
+    .widget__contenido__titulo:hover {
+      cursor: pointer; }
   .widget__contenido__formulario {
-    display: none; }
+    display: none;
+    margin: 10px 0; }
 
 .formulario__input--checkbox:checked ~ .widget__contenido__formulario {
   display: block; }
 
 .widget [type="checkbox"] {
-  opacity: 0.5;
+  opacity: 0;
   position: absolute;
   visibility: hidden; }
 .widget .opcion {
   display: inline; }
+  .widget .opcion--bloque {
+    border-top: 1px dotted #CFC5B6;
+    padding: 10px 0; }
+    .widget .opcion--bloque:first-child {
+      border-top: none; }
+    .widget .opcion--bloque [type="radio"] {
+      opacity: 0;
+      position: absolute;
+      visibility: hidden; }
+    .widget .opcion--bloque label {
+      color: #040507;
+      align-items: center;
+      display: flex;
+      justify-content: space-between; }
+      .widget .opcion--bloque label:hover {
+        cursor: pointer; }
 .widget .formulario__label {
   background: #fff;
   border: 1px solid #040507;
-  border-radius: 20px;
   color: #040507;
   display: inline-block;
   font-family: "Roboto";
   font-size: 15px;
-  font-weight: 400;
-  padding: 0.25em 0.75em;
+  font-weight: 600;
+  padding: 9px 15px;
   line-height: 1;
-  text-transform: uppercase;
-  user-select: none; }
+  user-select: none;
+  word-spacing: -1px; }
   .widget .formulario__label:hover {
     cursor: pointer; }
+  .widget .formulario__label--radio {
+    font-family: "Roboto"; }
 .widget .formulario__input--checkbox:checked + .formulario__label {
   color: #fff;
   background: #040507; }
+.widget .formulario__input--radio:checked + .formulario__label--radio .icomoon::before {
+  content: ""; }
 
 /** LOS FILTROS. SE MANEJA DESDE AQUI */
 .footer {

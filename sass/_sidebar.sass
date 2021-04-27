@@ -3,21 +3,35 @@
 	padding: $rem
 
 .widget
+	&__header
+		&__titulo
+			color: $color_negro
+			font-family: $fuente_titulo
+			font-size: $rem * 2
+			text-transform: uppercase
+			word-spacing: -2px
+
 	&__contenido
 		position: relative
 		border-bottom: 2px solid $color_negro
 
 		&__titulo
 			align-items: center
+			color: $color_negro
 			display: flex
 			flex-flow: row nowrap
 			justify-content: space-between
 			margin: 0
-			padding: 0 ($rem * 0.25)
+			padding: ($rem * 0.25) 0
 			text-transform: uppercase
+			&:hover
+				cursor: pointer
+				
 		
 		&__formulario
 			display: none
+			margin: ($rem * 0.5) 0
+
 
 .formulario__input--checkbox:checked ~ .widget__contenido__formulario
 	display: block
@@ -25,31 +39,56 @@
 
 .widget
 	[type="checkbox"]
-		opacity: 0.5
+		opacity: 0
 		position: absolute
 		visibility: hidden
 	
 	.opcion
 		display: inline
+		&--bloque
+			border-top: 1px dotted $color_gris
+			padding: ($rem * 0.5 ) 0
+			&:first-child
+				border-top: none
+			
+			[type="radio"]
+				opacity: 0
+				position: absolute
+				visibility: hidden
+
+			label
+				color: $color_negro
+				align-items: center
+				display: flex
+				justify-content: space-between
+				&:hover
+					cursor: pointer
 
 	.formulario__label
 		background: $color_blanco
 		border: 1px solid $color_negro
-		border-radius: $rem
 		color: $color_negro
 		display: inline-block
 		font-family: $fuente_subtitulo
 		font-size: $rem * 0.75
-		font-weight: 400
-		padding: 0.25em 0.75em
+		font-weight: 600
+		padding: ($rem * 0.45) ($rem * 0.75)
 		line-height: 1
-		text-transform: uppercase
 		user-select: none
+		word-spacing: -1px
 		&:hover
 			cursor: pointer
+
+		&--radio
+			font-family: $fuente_subtitulo
 	
 	.formulario__input--checkbox:checked + .formulario__label
 		color: $color_blanco
 		background: $color_negro
+	
+	.formulario__input--radio:checked + .formulario__label--radio
+		.icomoon
+			&::before
+				content: "\ea55"
 	
 /** LOS FILTROS. SE MANEJA DESDE AQUI **/

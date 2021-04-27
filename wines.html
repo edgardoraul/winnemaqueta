@@ -205,16 +205,16 @@
 								</div>
 							</div>
 							<div class="widget__contenido">
-								<input type="checkbox" class="formulario__input--checkbox" name="filtro_2" id="filtro_2" />
 								<label class="formulario__label--boton" for="filtro_2">
 									<h5 class="widget__contenido__titulo">Tipo de Uva
 										<i class="icomoon icon-arrow-down2"></i>
 									</h5>
+									<input type="checkbox" class="formulario__input--checkbox" name="filtro_2" id="filtro_2" />
 									<div class="widget__contenido__formulario">
 										<div class="opcion">
 											<input  type="checkbox" class="formulario__input--checkbox" name="torrontes" id="torrontes" value="1" />
 											<label class="formulario__label" for="torrontes">
-												Torrontes
+												Torrontés
 											</label>
 										</div>								
 										<div class="opcion">
@@ -232,8 +232,35 @@
 									</div>
 								</label>
 							</div>
-							<button type="reset" role="button" class="boton boton--chico boton--advertencia">Reset</button>
-							<button type="submit" role="button" class="boton boton--chico boton--transparente">Done</button>
+							<div class="widget__contenido">
+								<label class="formulario__label--boton" for="filtro_3">
+									<h5 class="widget__contenido__titulo">Ordenar por criterios
+										<i class="icomoon icon-arrow-down2"></i>
+									</h5>
+									<input type="checkbox" class="formulario__input--checkbox" name="filtro_3" id="filtro_3" />
+									<div class="widget__contenido__formulario">
+										<div class="opcion--bloque">
+											<input class="formulario__input--radio" type="radio" name="filtro3" id="precio" />
+											<label class="formulario__label--radio" for="precio">
+												Precio
+												<i class="icomoon icon-radio-unchecked"></i>
+											</label>
+										</div>
+
+										<div class="opcion--bloque">
+											<input class="formulario__input--radio" type="radio" name="filtro3" id="region" />
+											<label class="formulario__label--radio" for="region">
+												Región
+												<i class="icomoon icon-radio-unchecked"></i>
+											</label>
+										</div>
+									</div>
+								</label>
+							</div>
+							<div class="subtitulo">
+								<button type="reset" role="button" class="boton boton--chico boton--advertencia">Reset</button>
+								<button type="submit" role="button" class="boton boton--chico boton--transparente">Done</button>
+							</div>
 						</form>
 					</div>
 				</aside>
