@@ -1301,6 +1301,9 @@ strong {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between; }
+  @media all and (max-width: 720px) {
+    .encabezado {
+      text-align: center; } }
   .encabezado__titulo {
     color: #040507;
     font-family: "Poppins";
@@ -1765,6 +1768,9 @@ strong {
 .sidebar {
   padding: 20px; }
 
+@media all and (max-width: 720px) {
+  .widget__filtro {
+    display: none; } }
 .widget__header__titulo {
   color: #040507;
   font-family: "Poppins";
@@ -1785,6 +1791,12 @@ strong {
     text-transform: uppercase; }
     .widget__contenido__titulo:hover {
       cursor: pointer; }
+    .widget__contenido__titulo::after {
+      content: "";
+      font-family: "icomoon"; }
+    .widget__contenido__titulo--clickeado::after {
+      content: "";
+      font-family: "icomoon"; }
   .widget__contenido__formulario {
     display: none;
     margin: 10px 0; }
@@ -1836,7 +1848,39 @@ strong {
 .widget .formulario__input--radio:checked + .formulario__label--radio .icomoon::before {
   content: ""; }
 
-/** LOS FILTROS. SE MANEJA DESDE AQUI */
+/** FORMULARIO DE BUSQUEDA */
+.sidebar__searchForm {
+  border: 1px solid #040507;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: center; }
+  @media all and (min-width: 720px) {
+    .sidebar__searchForm {
+      display: none; } }
+  .sidebar__searchForm__boton {
+    align-self: center;
+    border-left: 1px solid #040507;
+    color: #040507;
+    flex: 0 0 60px;
+    height: 62px;
+    text-align: center;
+    width: 60px; }
+    .sidebar__searchForm__boton button {
+      background: none;
+      border: none;
+      outline: none; }
+      .sidebar__searchForm__boton button:hover {
+        cursor: pointer; }
+  .sidebar__searchForm__input {
+    flex: 1 1 auto; }
+    .sidebar__searchForm__input input[type="search"] {
+      border: none;
+      height: 62px;
+      margin: 0;
+      width: 100%;
+      padding: 0 10px; }
+
 .footer {
   background-color: #464544;
   background: rgba(184, 91, 63, 0.5);

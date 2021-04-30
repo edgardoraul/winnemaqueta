@@ -3,6 +3,10 @@
 	padding: $rem
 
 .widget
+	&__filtro
+		@media all and ( max-width: $tablet )
+			display: none
+
 	&__header
 		&__titulo
 			color: $color_negro
@@ -26,6 +30,14 @@
 			text-transform: uppercase
 			&:hover
 				cursor: pointer
+			&::after
+				content: "\ea3e"
+				font-family: "icomoon"
+			
+			&--clickeado
+				&::after
+					content: "\ea3a"
+					font-family: "icomoon"
 				
 		
 		&__formulario
@@ -91,4 +103,41 @@
 			&::before
 				content: "\ea55"
 	
-/** LOS FILTROS. SE MANEJA DESDE AQUI **/
+
+/** FORMULARIO DE BUSQUEDA **/
+.sidebar
+	&__searchForm
+		border: 1px solid $color_negro
+		display: flex
+		justify-content: stretch
+		align-items: stretch
+		align-content: center
+		
+		@media all and ( min-width: $tablet )
+			display: none
+			
+		&__boton
+			align-self: center
+			border-left: 1px solid $color_negro
+			color: $color_negro
+			flex: 0 0 ($rem * 3)
+			height: $rem * 3.1
+			text-align: center
+			width: $rem * 3
+
+			button
+				background: none
+				border: none
+				outline: none
+				&:hover
+					cursor: pointer
+		
+		&__input
+			flex: 1 1 auto
+
+			input[type="search"]
+				border: none
+				height: $rem * 3.1
+				margin: 0
+				width: 100%
+				padding: 0 ($rem * 0.5)

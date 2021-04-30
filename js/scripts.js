@@ -306,18 +306,50 @@ function cargarScripts()
 	}, false);
 
 
-	/* LOS BOTONES DE LA BARRA LATERAL. FILTROS */
-	const filtros = document.querySelectorAll(".widget__contenido__titulo .icon-arrow-down2");
-	console.log(filtros);
-	if(filtros != null)
+	/* MOSTRAR Y OCULTAR LOS FILTROS */	
+	const filtros = document.querySelector(".widget__filtro");
+	const botonFiltro = document.querySelector("#botonFiltro");
+	botonFiltro.addEventListener("click", filtreador, false);
+	function filtreador(ev)
 	{
-		for(let i = 0; filtros.length < i; i++)
+		ev.preventDefault();
+		if( filtros.style.display == "block" )
 		{
-			filtros[i].parentNode.parentNode.addEventListener("click", () => {
-				filtros[i].classList.remove("icon-arrow-down2");
-				filtros[i].classList.add("icon-arrow-up2");
-				console.log(i);
-			});
+			filtros.style.display = "none";
 		}
+		else
+		{
+			filtros.style.display = "block";
+		}
+	}
+	window.addEventListener("resize", ()=>{
+		if(window.innerWidth > 719)
+		{
+			filtros.style.display = "block";
+		}
+		else
+		{
+			filtros.style.display = "none";
+		}
+	});
+
+	/* DAR VUELTA LAS FLECHITAS */
+	const flechitas = document.querySelectorAll(".widget__contenido__titulo");
+	console.log(flechitas);
+	for(let i = 0; flechitas.length > i; i++)
+	{
+		console.log("hola");
+		flechitas[i].addEventListener("click", () => {
+			if(flechitas[i].classList.contains("widget__contenido__titulo--clickeado"))
+			{
+				flechitas[i].classList.remove("widget__contenido__titulo--clickeado");
+				console.log("removido");
+			}
+			else
+			{
+				flechitas[i].classList.add("widget__contenido__titulo--clickeado");
+				console.log("agregado");
+			}
+		});
 	}
 }

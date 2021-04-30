@@ -137,8 +137,9 @@
 
 			<!-- Bloque botones de acción -->
 			<div class="header__boton">
-				<a href="#" class="header__boton__enlace boton boton--chico boton--advertencia">Get Start<i
-						class="separador"></i><i class="icomoon icon-arrow-right2"></i></a>
+				<a href="#" class="header__boton__enlace boton boton--chico boton--negro">
+					Get Start
+				</a>
 				<!-- <a href="#" class="header__boton__enlace header__boton__enlace--ingreso">
 					<i class="icomoon icon-enter"></i>
 				</a>
@@ -170,7 +171,29 @@
 			<!-- La barra lateral y los filtros -->
 			<div class="sidebar grid--pagina__sidebar">
 				<aside>
-					<div class="widget">
+					<!-- otro formulario de búsqueda -->
+					<form class="sidebar__searchForm">
+						<div class="sidebar__searchForm__input">
+							<input class="" type="search" name="search" id="search" />
+						</div>
+						<div class="sidebar__searchForm__boton">
+							<button role="button" class="sidebar__searchForm__boton">
+								<i class="icon-search1"></i>
+							</button>
+						</div>
+						<div class="sidebar__searchForm__boton">
+							<button class="sidebar__searchForm__boton" id="botonFiltro">
+								<sup>Filtro</sup>
+								<i class="icomoon icon-list"></i>
+							</button>
+						</div>
+					</form>
+
+
+
+
+					<!-- Los widgets -->
+					<div class="widget widget__filtro">
 						<header class="widget__header centrado">
 							<h3 class="widget__header__titulo">Filtro 1</h3>
 						</header>
@@ -178,7 +201,6 @@
 							<div class="widget__contenido">
 								<label class="formulario__label--boton" for="filtro_1">
 									<h5 class="widget__contenido__titulo">Color
-										<i class="icomoon icon-arrow-down2"></i>
 									</h5>
 								</label>
 								<input type="checkbox" class="formulario__input--checkbox" name="filtro_1" id="filtro_1" />
@@ -207,7 +229,6 @@
 							<div class="widget__contenido">
 								<label class="formulario__label--boton" for="filtro_2">
 									<h5 class="widget__contenido__titulo">Tipo de Uva
-										<i class="icomoon icon-arrow-down2"></i>
 									</h5>
 									<input type="checkbox" class="formulario__input--checkbox" name="filtro_2" id="filtro_2" />
 									<div class="widget__contenido__formulario">
@@ -235,7 +256,6 @@
 							<div class="widget__contenido">
 								<label class="formulario__label--boton" for="filtro_3">
 									<h5 class="widget__contenido__titulo">Ordenar por criterios
-										<i class="icomoon icon-arrow-down2"></i>
 									</h5>
 									<input type="checkbox" class="formulario__input--checkbox" name="filtro_3" id="filtro_3" />
 									<div class="widget__contenido__formulario">
