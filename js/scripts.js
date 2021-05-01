@@ -323,7 +323,7 @@ function cargarScripts()
 		}
 	}
 	window.addEventListener("resize", () => {
-		if(window.innerWidth > 719)
+		if( window.innerWidth > 719 )
 		{
 			filtros.style.display = "block";
 		}

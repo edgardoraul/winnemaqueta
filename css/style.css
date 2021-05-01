@@ -1799,6 +1799,7 @@ strong {
       content: "";
       font-family: "icomoon"; }
   .widget__contenido__formulario {
+    background: #fff;
     display: none;
     margin: 10px 0; }
 
