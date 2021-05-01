@@ -1275,10 +1275,11 @@ strong {
         display: none; } }
   .header__logoTexto {
     font-family: "Roboto";
-    font-weight: lighter;
+    font-weight: bolder;
     font-size: 20px;
     letter-spacing: -2px;
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
     @media all and (min-width: 500px) {
       .header__logoTexto {
         font-size: 25px; } }
@@ -1286,7 +1287,7 @@ strong {
       .header__logoTexto {
         font-size: 30px; } }
     .header__logoTexto__enlace {
-      color: #A83E4C;
+      color: #fff;
       text-decoration: none; }
       .header__logoTexto__enlace--texto {
         color: #040507; }
@@ -1318,7 +1319,7 @@ strong {
         display: none; } }
 
 .navegacion {
-  background: #FE9776;
+  background: #FF8361;
   left: 0;
   position: absolute;
   top: 60px;
