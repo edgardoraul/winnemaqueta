@@ -338,7 +338,6 @@ function cargarScripts()
 	console.log(flechitas);
 	for(let i = 0; flechitas.length > i; i++)
 	{
-		console.log("hola");
 		flechitas[i].addEventListener("click", () => {
 			if(flechitas[i].classList.contains("widget__contenido__titulo--clickeado"))
 			{
