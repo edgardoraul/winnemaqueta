@@ -276,11 +276,13 @@ function cargarScripts()
 	// Función que mueve a la izquierda o a la derecha
 	function escrolIzq()
 	{
-		reviewsContenedor.scrollLeft -= reviewsItems[0].offsetWidth + 20;	
+		reviewsContenedor.scrollLeft -= reviewsItems[0].offsetWidth + 20;
+		console.log(reviewsContenedor.scrollLeft);
 	}
 	function escrolDer()
 	{
 		reviewsContenedor.scrollLeft += reviewsItems[0].offsetWidth + 20;
+		console.log(reviewsContenedor.scrollLeft);
 	}
 	
 	// Control con los botones
@@ -305,11 +307,36 @@ function cargarScripts()
 		}
 	}, false);
 
+	// Contador automático de slider. Controla que exista.
+	if(reviewsItems != null)
+	{
+		let cuenta = 0;
+		function escrollInfinito()
+		{
+			setTimeout( escrollInfinito, 5000 );
+			if(reviewsContenedor.scrollLeft * reviewsItems.length <= reviewsContenedor.scrollWidth)
+			{
+				escrolDer();
+			}
+			else
+			{
+				escrolIzq();
+			}
+			cuenta = ( cuenta + 1 ) % reviewsItems.length;
+		}
+		escrollInfinito();
+	}
+
 
 	/* MOSTRAR Y OCULTAR LOS FILTROS */	
 	const filtros = document.querySelector(".widget__filtro");
 	const botonFiltro = document.querySelector("#botonFiltro");
-	botonFiltro.addEventListener("click", filtreador, false);
+
+	// Controla que exista
+	if(botonFiltro != null)
+	{
+		botonFiltro.addEventListener("click", filtreador, false);
+	}
 	function filtreador(ev)
 	{
 		ev.preventDefault();
@@ -322,16 +349,21 @@ function cargarScripts()
 			filtros.style.display = "block";
 		}
 	}
-	window.addEventListener("resize", () => {
-		if( window.innerWidth > 719 )
-		{
-			filtros.style.display = "block";
-		}
-		else
-		{
-			filtros.style.display = "none";
-		}
-	});
+
+	// Controla que existan
+	if(filtros != null)
+	{
+		window.addEventListener("resize", () => {
+			if( window.innerWidth > 719 )
+			{
+				filtros.style.display = "block";
+			}
+			else
+			{
+				filtros.style.display = "none";
+			}
+		});
+	}
 
 	/* DAR VUELTA LAS FLECHITAS */
 	const flechitas = document.querySelectorAll(".widget__contenido__titulo");
@@ -339,15 +371,15 @@ function cargarScripts()
 	for(let i = 0; flechitas.length > i; i++)
 	{
 		flechitas[i].addEventListener("click", () => {
-			if(flechitas[i].classList.contains("widget__contenido__titulo--clickeado"))
-			{
-				flechitas[i].classList.remove("widget__contenido__titulo--clickeado");
-				console.log("removido");
-			}
-			else
+			if(!flechitas[i].classList.contains("widget__contenido__titulo--clickeado"))
 			{
 				flechitas[i].classList.add("widget__contenido__titulo--clickeado");
 				console.log("agregado");
+			}
+			else
+			{
+				flechitas[i].classList.remove("widget__contenido__titulo--clickeado");
+				console.log("removido");
 			}
 		});
 	}

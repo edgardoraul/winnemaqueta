@@ -1813,8 +1813,7 @@ strong {
 .widget .opcion {
   display: inline; }
   .widget .opcion--bloque {
-    border-top: 1px dotted #CFC5B6;
-    padding: 10px 0; }
+    border-top: 1px dotted #CFC5B6; }
     .widget .opcion--bloque:first-child {
       border-top: none; }
     .widget .opcion--bloque [type="radio"] {
@@ -1825,7 +1824,8 @@ strong {
       color: #040507;
       align-items: center;
       display: flex;
-      justify-content: space-between; }
+      justify-content: space-between;
+      padding: 10px 0; }
       .widget .opcion--bloque label:hover {
         cursor: pointer; }
 .widget .formulario__label {
