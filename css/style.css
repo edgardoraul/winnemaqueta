@@ -2234,6 +2234,13 @@ strong {
     clip-path: ellipse(25% 20% at 90% 10%); }
   100% {
     clip-path: ellipse(25% 20% at 125% 30%); } }
+@keyframes onda3 {
+  0% {
+    clip-path: ellipse(25% 20% at -25% 125%); }
+  50% {
+    clip-path: ellipse(25% 20% at 90% 50%); }
+  100% {
+    clip-path: ellipse(25% 20% at 125% -25%); } }
 .main--animado {
   position: relative; }
   .main--animado::after, .main--animado::before {
@@ -2250,6 +2257,24 @@ strong {
   .main--animado::after {
     animation: onda2 16s linear infinite alternate;
     clip-path: ellipse(25% 20% at 0% 0%); }
+
+.journey__mascara {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+  .journey__mascara::after {
+    animation: onda3 20s linear infinite alternate-reverse;
+    background: rgba(255, 131, 97, 0.25);
+    clip-path: circle(25% 20% at 0% 0%);
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%; }
 
 .journey {
   align-content: center;
