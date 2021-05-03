@@ -1275,11 +1275,10 @@ strong {
         display: none; } }
   .header__logoTexto {
     font-family: "Roboto";
-    font-weight: bolder;
+    font-weight: lighter;
     font-size: 20px;
     letter-spacing: -2px;
-    margin: 0;
-    text-transform: uppercase; }
+    margin: 0; }
     @media all and (min-width: 500px) {
       .header__logoTexto {
         font-size: 25px; } }
@@ -2221,6 +2220,91 @@ strong {
     .card1__atrib__precio {
       text-decoration: dashed;
       flex: 1 1 auto; }
+
+/** ANIMACION */
+@keyframes onda1 {
+  0% {
+    clip-path: ellipse(15% 50% at 0% -50%); }
+  100% {
+    clip-path: ellipse(15% 50% at 0% 150%); } }
+@keyframes onda2 {
+  0% {
+    clip-path: ellipse(25% 20% at -25% 0%); }
+  80% {
+    clip-path: ellipse(25% 20% at 90% 10%); }
+  100% {
+    clip-path: ellipse(25% 20% at 125% 30%); } }
+.main--animado {
+  position: relative; }
+  .main--animado::after, .main--animado::before {
+    background: rgba(255, 131, 97, 0.25);
+    content: "";
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+  .main--animado::before {
+    animation: onda1 10s ease-in infinite alternate-reverse;
+    clip-path: ellipse(15% 50% at 0% 10%); }
+  .main--animado::after {
+    animation: onda2 16s linear infinite alternate;
+    clip-path: ellipse(25% 20% at 0% 0%); }
+
+.journey {
+  align-content: center;
+  align-items: stretch;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin: 0 auto; }
+  .journey__item {
+    box-shadow: 0px 0px 1px #fff;
+    flex: 0 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+    width: 250px; }
+    .journey__item:hover {
+      box-shadow: 0px 0px 3px #040507; }
+    .journey__item__label {
+      border: 1px solid #CFC5B6;
+      display: block;
+      height: 100%; }
+      .journey__item__label:hover {
+        cursor: pointer; }
+    .journey__item__imagen {
+      object-fit: scale-down; }
+    .journey__item__titulo {
+      background-clip: text;
+      color: #040507;
+      font-family: "Roboto";
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.5;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle; }
+    .journey__item--elegido {
+      opacity: 0.4;
+      position: absolute;
+      visibility: hidden; }
+    .journey__item--elegido:checked + .journey__item__label::before {
+      border: 30px solid #FF8361;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      content: "";
+      position: absolute; }
+    .journey__item--elegido:checked + .journey__item__label::after {
+      color: #fff;
+      content: "";
+      font-family: "icomoon";
+      left: 0;
+      padding: 5px;
+      position: absolute;
+      top: 0; }
+    .journey__item--elegido:checked + .journey__item__label {
+      border-color: #FF8361; }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {

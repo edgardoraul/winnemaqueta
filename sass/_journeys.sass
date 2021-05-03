@@ -1,0 +1,106 @@
+/** ANIMACION **/
+@keyframes onda1
+	0%
+		clip-path: ellipse(15% 50% at 0% -50%)
+	100%
+		clip-path: ellipse(15% 50% at 0% 150%)
+
+@keyframes onda2
+	0%
+		clip-path: ellipse(25% 20% at -25% 0%)
+	80%
+		clip-path: ellipse(25% 20% at 90% 10%)		
+	100%
+		clip-path: ellipse(25% 20% at 125% 30%)
+
+.main--animado
+	position: relative
+
+	&::after, &::before
+		background: rgba($color_ladrillo, 0.25)
+		content: ""
+		left: 0
+		height: 100%
+		position: absolute
+		top: 0
+		width: 100%
+	
+	&::before
+		animation: onda1 10s ease-in infinite alternate-reverse
+		clip-path: ellipse(15% 50% at 0% 10%)
+	
+	&::after
+		animation: onda2 16s linear infinite alternate
+		clip-path: ellipse(25% 20% at 0% 0%)
+
+
+
+.journey
+	align-content: center
+	align-items: stretch
+	display: flex
+	justify-content: space-around
+	flex-flow: row wrap
+	margin: 0 auto
+
+	&__item
+		box-shadow: 0px 0px 1px $color_blanco
+		flex: 0 0 auto
+		margin-bottom: $rem
+		position: relative
+		width: $mobile * 0.5
+		&:hover
+			box-shadow: 0px 0px 3px $color_negro
+
+		&__label
+			border: 1px solid $color_gris
+			display: block
+			height: 100%
+			&:hover
+				cursor: pointer
+			
+		&__imagen
+			object-fit: scale-down
+
+		&__titulo
+			background-clip: text
+			color: $color_negro
+			font-family: $fuente_subtitulo
+			font-size: $rem * 1.25
+			font-weight: 600
+			letter-spacing: -1px
+			line-height: 1.5
+			padding: $rem * 0.5
+			text-align: center
+			vertical-align: middle
+
+		// Ocultando el input radio/checkbox
+		&--elegido
+			opacity: 0.4
+			position: absolute
+			visibility: hidden
+
+		// El elgido
+		&--elegido:checked + &__label
+			&::before
+				border: ($rem * 1.5) solid $color_ladrillo
+				border-bottom-color: transparent
+				border-right-color: transparent
+				content: ""
+				position: absolute
+
+		&--elegido:checked + &__label	
+			&::after
+				color: $color_blanco
+				content: "\ea11"
+				font-family: "icomoon"
+				left: 0
+				padding: $rem * 0.25
+				position: absolute
+				top: 0
+
+		&--elegido:checked + &__label
+			border-color: $color_ladrillo
+
+
+

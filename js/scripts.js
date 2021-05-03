@@ -308,7 +308,7 @@ function cargarScripts()
 	}, false);
 
 	// Contador automático de slider. Controla que exista.
-	if(reviewsItems != null)
+	if(reviewsItems.length > 0)
 	{
 		let cuenta = 0;
 		function escrollInfinito()
