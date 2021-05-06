@@ -200,7 +200,7 @@ function cargarScripts()
 		const slidersItems = document.querySelectorAll(".slider__item");
 
 		// El ancho del contenedor de los items
-		if(slidersItems.length != 0)
+		if(slidersItems.length !== 0)
 		{
 			let altoItem = slidersItems[0].clientHeight;
 			slider.style.minHeight = altoItem + "px";
@@ -277,12 +277,10 @@ function cargarScripts()
 	function escrolIzq()
 	{
 		reviewsContenedor.scrollLeft -= reviewsItems[0].offsetWidth + 20;
-		console.log(reviewsContenedor.scrollLeft);
 	}
 	function escrolDer()
 	{
 		reviewsContenedor.scrollLeft += reviewsItems[0].offsetWidth + 20;
-		console.log(reviewsContenedor.scrollLeft);
 	}
 	
 	// Control con los botones
@@ -313,8 +311,8 @@ function cargarScripts()
 		let cuenta = 0;
 		function escrollInfinito()
 		{
-			setTimeout( escrollInfinito, 5000 );
-			if(reviewsContenedor.scrollLeft * reviewsItems.length <= reviewsContenedor.scrollWidth)
+			setTimeout( escrollInfinito, 1000 );
+			if( cuenta + 1 < reviewsItems.length )
 			{
 				escrolDer();
 			}
@@ -323,6 +321,7 @@ function cargarScripts()
 				escrolIzq();
 			}
 			cuenta = ( cuenta + 1 ) % reviewsItems.length;
+			console.log(reviewsContenedor.scrollLeft);
 		}
 		escrollInfinito();
 	}
@@ -367,7 +366,6 @@ function cargarScripts()
 
 	/* DAR VUELTA LAS FLECHITAS */
 	const flechitas = document.querySelectorAll(".widget__contenido__titulo");
-	console.log(flechitas);
 	for(let i = 0; flechitas.length > i; i++)
 	{
 		flechitas[i].addEventListener("click", () => {
