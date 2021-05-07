@@ -2290,11 +2290,16 @@ strong {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
-  margin: 0 auto; }
+  margin: 0 auto;
+  transition: all 0.5 ease-in-out; }
   .journey--oculto {
-    visibility: hidden;
+    height: 0;
     opacity: 0;
-    height: 0; }
+    visibility: hidden; }
+  .journey--mostrado {
+    height: 100%;
+    opacity: 1;
+    visibility: visible; }
   .journey__item {
     align-content: space-between;
     align-items: stretch;
@@ -2367,8 +2372,9 @@ strong {
     border: 1px solid #040507;
     display: block;
     outline: none;
-    width: 100%;
-    padding: 10px; }
+    padding: 10px;
+    user-select: none;
+    width: 100%; }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {

@@ -438,6 +438,7 @@ function cargarScripts()
 		botonSeguir.addEventListener("click", ()=>{
 			document.querySelectorAll(".journey--oculto").forEach(element => {
 				element.classList.remove("journey--oculto");
+				element.classList.add("journey--mostrado");
 			});
 
 			const tuNombreApellido = document.querySelector("#tuNombreApellido");
