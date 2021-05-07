@@ -170,15 +170,33 @@
 			
 			<!-- El contenido principal -->
 			<section class="contenedor main--animado">
-				<header class="subtitulo centrado">
-					<h3 class="subtitulo__texto">Mal venido a algunos de nuestros Journeys</h3>
-				</header>
 				
 				<!-- Una pequeña máscara -->
 				<div class="journey__mascara"></div>
+				
+				<!-- Presentación -->
+				<div class="journey--presentacion">
+					<header class="journey--presentacion__header centrado">
+						<h3 class="journey--presentacion__header__titulo">Let’s start by getting on a first name basis</h3>
+					</header>
+					<label class="subtitulo subtitulo__texto centrado journey--presentacion__label" for="nombrecito">
+						What should we call you?
+					</label>
+					<input maxlength="100" class="journey--presentacion__texto" type="text" name="nombrecito" id="nombrecito" />
+					
+					<div class="centrado separador--vertical">
+						<input id="botonSeguir" class="centrado boton boton--deshabilitado" disabled role="button" value="Seguí nomás" />
+					</div>
+				</div>
 
 				<!-- Sección Principal de los journeys-->
-				<div class="journey">
+				<header class="journey--oculto separador--vertical centrado">
+					<h3 class="subtitulo__texto journey__pregunta">
+						<span id="tuNombreApellido"></span>
+						¿Cómo te considerás experimentalmente?</h3>
+				</header>
+				<div class="journey journey--oculto" id="elComienzo">
+
 					<div class="journey__item">
 						<input class="journey__item--elegido" type="radio" name="journey--1" id="journey--1" />
 						<label class="journey__item__label" for="journey--1">

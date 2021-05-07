@@ -305,6 +305,13 @@ template {
 [hidden] {
   display: none; }
 
+.separador--vertical {
+  margin-bottom: 20px;
+  margin-top: 20px; }
+.separador--horizontal {
+  margin-left: 20px;
+  margin-right: 20px; }
+
 @keyframes slideOutLeft {
   0% {
     transform: translateX(0); }
@@ -2224,23 +2231,23 @@ strong {
 /** ANIMACION */
 @keyframes onda1 {
   0% {
-    clip-path: ellipse(15% 50% at 0% -50%); }
+    clip-path: ellipse(150px 150px at 90% -50%); }
   100% {
-    clip-path: ellipse(15% 50% at 0% 150%); } }
+    clip-path: ellipse(150px 150px at -50% 150%); } }
 @keyframes onda2 {
   0% {
-    clip-path: ellipse(25% 20% at -25% 0%); }
-  80% {
-    clip-path: ellipse(25% 20% at 90% 10%); }
+    clip-path: ellipse(50px 50px at -25% 0%); }
+  50% {
+    clip-path: ellipse(50px 50px at 90% 10%); }
   100% {
-    clip-path: ellipse(25% 20% at 125% 30%); } }
+    clip-path: ellipse(50px 50px at 125% 70%); } }
 @keyframes onda3 {
   0% {
-    clip-path: ellipse(25% 20% at -25% 125%); }
+    clip-path: ellipse(25% 25% at -50% 150%); }
   50% {
-    clip-path: ellipse(25% 20% at 90% 50%); }
+    clip-path: ellipse(25% 25% at 70% 40%); }
   100% {
-    clip-path: ellipse(25% 20% at 125% -25%); } }
+    clip-path: ellipse(25% 25% at 100% -50%); } }
 .main--animado {
   position: relative; }
   .main--animado::after, .main--animado::before {
@@ -2250,13 +2257,14 @@ strong {
     height: 100%;
     position: absolute;
     top: 0;
-    width: 100%; }
+    width: 100%;
+    z-index: -1; }
   .main--animado::before {
-    animation: onda1 10s ease-in infinite alternate-reverse;
-    clip-path: ellipse(15% 50% at 0% 10%); }
+    animation: onda1 17s ease-in infinite alternate-reverse;
+    clip-path: ellipse(15% 15% at 40% -10%); }
   .main--animado::after {
     animation: onda2 16s linear infinite alternate;
-    clip-path: ellipse(25% 20% at 0% 0%); }
+    clip-path: ellipse(25% 25% at 30% -30%); }
 
 .journey__mascara {
   height: 100%;
@@ -2264,11 +2272,11 @@ strong {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 1; }
+  z-index: -1; }
   .journey__mascara::after {
     animation: onda3 20s linear infinite alternate-reverse;
-    background: rgba(255, 131, 97, 0.25);
-    clip-path: circle(25% 20% at 0% 0%);
+    background: rgba(204, 229, 255, 0.25);
+    clip-path: circle(40% 40% at -30% 40%);
     content: "";
     left: 0;
     height: 100%;
@@ -2283,9 +2291,18 @@ strong {
   justify-content: space-around;
   flex-flow: row wrap;
   margin: 0 auto; }
+  .journey--oculto {
+    visibility: hidden;
+    opacity: 0;
+    height: 0; }
   .journey__item {
+    align-content: space-between;
+    align-items: stretch;
     box-shadow: 0px 0px 1px #fff;
+    display: flex;
     flex: 0 0 auto;
+    flex-flow: column nowrap;
+    justify-content: space-between;
     margin-bottom: 20px;
     position: relative;
     width: 250px; }
@@ -2330,6 +2347,28 @@ strong {
       top: 0; }
     .journey__item--elegido:checked + .journey__item__label {
       border-color: #FF8361; }
+
+/** LAS PREGUNTAS */
+.journey--presentacion {
+  background: #CCE5FF;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  padding: 20px; }
+  .journey--presentacion__header__titulo {
+    color: #040507;
+    font-family: "Poppins";
+    font-size: 50px;
+    line-height: 1; }
+  .journey--presentacion__label {
+    display: block; }
+  .journey--presentacion__texto {
+    background: none;
+    border: 1px solid #040507;
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 10px; }
 
 /** ES un modelo reutilizable de slider chico */
 .slider__contenedor {

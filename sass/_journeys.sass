@@ -1,25 +1,25 @@
 /** ANIMACION **/
 @keyframes onda1
 	0%
-		clip-path: ellipse(15% 50% at 0% -50%)
+		clip-path: ellipse(150px 150px at 90% -50%)
 	100%
-		clip-path: ellipse(15% 50% at 0% 150%)
+		clip-path: ellipse(150px 150px at -50% 150%)
 
 @keyframes onda2
 	0%
-		clip-path: ellipse(25% 20% at -25% 0%)
-	80%
-		clip-path: ellipse(25% 20% at 90% 10%)		
+		clip-path: ellipse(50px 50px at -25% 0%)
+	50%
+		clip-path: ellipse(50px 50px at 90% 10%)		
 	100%
-		clip-path: ellipse(25% 20% at 125% 30%)
+		clip-path: ellipse(50px 50px at 125% 70%)
 
 @keyframes onda3
 	0%
-		clip-path: ellipse(25% 20% at -25% 125%)
+		clip-path: ellipse(25% 25% at -50% 150%)
 	50%
-		clip-path: ellipse(25% 20% at 90% 50%)		
+		clip-path: ellipse(25% 25% at 70% 40%)		
 	100%
-		clip-path: ellipse(25% 20% at 125% -25%)
+		clip-path: ellipse(25% 25% at 100% -50%)
 
 .main--animado
 	position: relative
@@ -32,14 +32,15 @@
 		position: absolute
 		top: 0
 		width: 100%
+		z-index: -1
 	
 	&::before
-		animation: onda1 10s ease-in infinite alternate-reverse
-		clip-path: ellipse(15% 50% at 0% 10%)
+		animation: onda1 17s ease-in infinite alternate-reverse
+		clip-path: ellipse(15% 15% at 40% -10%)
 	
 	&::after
 		animation: onda2 16s linear infinite alternate
-		clip-path: ellipse(25% 20% at 0% 0%)
+		clip-path: ellipse(25% 25% at 30% -30%)
 
 .journey__mascara
 	height: 100%
@@ -47,11 +48,11 @@
 	position: absolute
 	top: 0
 	width: 100%
-	z-index: 1
+	z-index: -1
 	&::after
 		animation: onda3 20s linear infinite alternate-reverse
-		background: rgba($color_ladrillo, 0.25)
-		clip-path: circle(25% 20% at 0% 0%)
+		background: rgba($color_fondo5, 0.25)
+		clip-path: circle(40% 40% at -30% 40%)
 		content: ""
 		left: 0
 		height: 100%
@@ -67,9 +68,19 @@
 	flex-flow: row wrap
 	margin: 0 auto
 
+	&--oculto
+		visibility: hidden
+		opacity: 0
+		height: 0
+
 	&__item
+		align-content: space-between
+		align-items: stretch
 		box-shadow: 0px 0px 1px $color_blanco
+		display: flex
 		flex: 0 0 auto
+		flex-flow: column nowrap
+		justify-content: space-between
 		margin-bottom: $rem
 		position: relative
 		width: $mobile * 0.5
@@ -113,7 +124,7 @@
 				content: ""
 				position: absolute
 
-		&--elegido:checked + &__label	
+		&--elegido:checked + &__label
 			&::after
 				color: $color_blanco
 				content: "\ea11"
@@ -128,3 +139,28 @@
 
 
 
+/** LAS PREGUNTAS **/
+.journey--presentacion
+	background: $color_fondo5
+	margin-left: auto
+	margin-right: auto
+	max-width: $mobile
+	padding: $rem
+
+	&__header
+		&__titulo
+			color: $color_negro
+			font-family: $fuente_titulo
+			font-size: $rem * 2.5
+			line-height: 1
+	
+	&__label
+		display: block
+
+	&__texto
+		background: none
+		border: 1px solid $color_negro
+		display: block
+		outline: none
+		width: 100%
+		padding: $rem * 0.5
